@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (KKHandle)
+@interface UIColor (KKHandler)
 
 + (UIColor *)colorWithHexString:(NSString *)color;
 

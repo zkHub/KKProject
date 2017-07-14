@@ -17,8 +17,8 @@
 		0AFCAAE71F176FEC00D60FA4 /* KKProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAAE61F176FEC00D60FA4 /* KKProjectTests.m */; };
 		0AFCAAF21F176FEC00D60FA4 /* KKProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAAF11F176FEC00D60FA4 /* KKProjectUITests.m */; };
 		0AFCAB091F177BF000D60FA4 /* KKUtilityClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB021F177BF000D60FA4 /* KKUtilityClass.m */; };
-		0AFCAB0A1F177BF000D60FA4 /* NSString+KKHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB041F177BF000D60FA4 /* NSString+KKHandle.m */; };
-		0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB061F177BF000D60FA4 /* UIColor+KKHandle.m */; };
+		0AFCAB0A1F177BF000D60FA4 /* NSString+KKHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB041F177BF000D60FA4 /* NSString+KKHandler.m */; };
+		0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB061F177BF000D60FA4 /* UIColor+KKHandler.m */; };
 		0AFCAB0C1F177BF000D60FA4 /* KKBackgroudConstantConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB081F177BF000D60FA4 /* KKBackgroudConstantConnect.m */; };
 		3CA01A50093785FEA5777A91 /* Pods_KKProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93D1ECD53CB2105A2163ECA /* Pods_KKProject.framework */; };
 		9A3F381992FD31DD53BC24F0 /* Pods_KKProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677B7E1466ACA14B4BBCF537 /* Pods_KKProjectUITests.framework */; };
@@ -63,10 +63,10 @@
 		0AFCAB001F177BF000D60FA4 /* PrefixHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
 		0AFCAB011F177BF000D60FA4 /* KKUtilityClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKUtilityClass.h; sourceTree = "<group>"; };
 		0AFCAB021F177BF000D60FA4 /* KKUtilityClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKUtilityClass.m; sourceTree = "<group>"; };
-		0AFCAB031F177BF000D60FA4 /* NSString+KKHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KKHandle.h"; sourceTree = "<group>"; };
-		0AFCAB041F177BF000D60FA4 /* NSString+KKHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KKHandle.m"; sourceTree = "<group>"; };
-		0AFCAB051F177BF000D60FA4 /* UIColor+KKHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KKHandle.h"; sourceTree = "<group>"; };
-		0AFCAB061F177BF000D60FA4 /* UIColor+KKHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KKHandle.m"; sourceTree = "<group>"; };
+		0AFCAB031F177BF000D60FA4 /* NSString+KKHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KKHandler.h"; sourceTree = "<group>"; };
+		0AFCAB041F177BF000D60FA4 /* NSString+KKHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KKHandler.m"; sourceTree = "<group>"; };
+		0AFCAB051F177BF000D60FA4 /* UIColor+KKHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KKHandler.h"; sourceTree = "<group>"; };
+		0AFCAB061F177BF000D60FA4 /* UIColor+KKHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KKHandler.m"; sourceTree = "<group>"; };
 		0AFCAB071F177BF000D60FA4 /* KKBackgroudConstantConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKBackgroudConstantConnect.h; sourceTree = "<group>"; };
 		0AFCAB081F177BF000D60FA4 /* KKBackgroudConstantConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKBackgroudConstantConnect.m; sourceTree = "<group>"; };
 		455A40355481092452BC8126 /* Pods-KKProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectUITests/Pods-KKProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,10 +180,10 @@
 				0AFCAB001F177BF000D60FA4 /* PrefixHeader.h */,
 				0AFCAB011F177BF000D60FA4 /* KKUtilityClass.h */,
 				0AFCAB021F177BF000D60FA4 /* KKUtilityClass.m */,
-				0AFCAB031F177BF000D60FA4 /* NSString+KKHandle.h */,
-				0AFCAB041F177BF000D60FA4 /* NSString+KKHandle.m */,
-				0AFCAB051F177BF000D60FA4 /* UIColor+KKHandle.h */,
-				0AFCAB061F177BF000D60FA4 /* UIColor+KKHandle.m */,
+				0AFCAB031F177BF000D60FA4 /* NSString+KKHandler.h */,
+				0AFCAB041F177BF000D60FA4 /* NSString+KKHandler.m */,
+				0AFCAB051F177BF000D60FA4 /* UIColor+KKHandler.h */,
+				0AFCAB061F177BF000D60FA4 /* UIColor+KKHandler.m */,
 				0AFCAB071F177BF000D60FA4 /* KKBackgroudConstantConnect.h */,
 				0AFCAB081F177BF000D60FA4 /* KKBackgroudConstantConnect.m */,
 			);
@@ -497,8 +497,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AFCAAD11F176FEB00D60FA4 /* ViewController.m in Sources */,
-				0AFCAB0A1F177BF000D60FA4 /* NSString+KKHandle.m in Sources */,
-				0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandle.m in Sources */,
+				0AFCAB0A1F177BF000D60FA4 /* NSString+KKHandler.m in Sources */,
+				0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandler.m in Sources */,
 				0AFCAB0C1F177BF000D60FA4 /* KKBackgroudConstantConnect.m in Sources */,
 				0AFCAACE1F176FEB00D60FA4 /* AppDelegate.m in Sources */,
 				0AFCAACB1F176FEB00D60FA4 /* main.m in Sources */,

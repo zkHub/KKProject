@@ -9,7 +9,10 @@
 #ifndef PrefixHeader_h
 #define PrefixHeader_h
 
-#import "NSString+KKHandle.h"
+#import "NSString+KKHandler.h"
+#import "UIColor+KKHandler.h"
+
+
 
 //shceme为realese时define，而debug时ndef
 #ifndef __OPTIMIZE__

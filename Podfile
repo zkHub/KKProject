@@ -12,7 +12,7 @@ pod 'OpenUDID'
 pod 'Reachability'
 pod 'MJRefresh'
 pod 'MBProgressHUD'
-pod 'JSON'
+#pod 'JSON'
 
 
   target 'KKProjectTests' do

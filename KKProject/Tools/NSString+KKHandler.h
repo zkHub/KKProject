@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (KKHandle)
+@interface NSString (KKHandler)
 
 - (NSString*)md5String;
 

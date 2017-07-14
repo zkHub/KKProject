@@ -6,13 +6,13 @@
 //  Copyright © 2017年 zhangke. All rights reserved.
 //
 
-#import "NSString+KKHandle.h"
+#import "NSString+KKHandler.h"
 #import <CommonCrypto/CommonDigest.h>
 
 
 static NSString *encodeCharacters = @"`~!@#$%^&*()_+-= []\\{}|;':\",./<>?";
 
-@implementation NSString (KKHandle)
+@implementation NSString (KKHandler)
 
 - (NSString *)md5String {
     const char *str = [self UTF8String];

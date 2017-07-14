@@ -6,9 +6,9 @@
 //  Copyright © 2017年 zhangke. All rights reserved.
 //
 
-#import "UIColor+KKHandle.h"
+#import "UIColor+KKHandler.h"
 
-@implementation UIColor (KKHandle)
+@implementation UIColor (KKHandler)
 
 + (UIColor *)colorWithHexString:(NSString *)color {
     NSString *cString = [[color stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
