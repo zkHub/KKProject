@@ -1,6 +1,0 @@
-framework module Pods_KKProjectUITests {
-  umbrella header "Pods-KKProjectUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
