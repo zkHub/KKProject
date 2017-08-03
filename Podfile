@@ -13,7 +13,8 @@ pod 'Reachability'
 pod 'MJRefresh'
 pod 'MBProgressHUD'
 #pod 'JSON'
-
+pod 'ReactiveObjC'
+#pod 'ReactiveCocoa', '~> 6.0'
 
   target 'KKProjectTests' do
     inherit! :search_paths

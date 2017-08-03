@@ -16,7 +16,7 @@
 
 //shceme为realese时define，而debug时ndef
 #ifndef __OPTIMIZE__
-#warning NSLogs will be shown
+//#warning NSLogs will be shown
 #else
 #define NSLog(...) {}
 #endif

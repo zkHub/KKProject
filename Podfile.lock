@@ -18,6 +18,7 @@ PODS:
   - MJRefresh (3.1.12)
   - OpenUDID (1.0.0)
   - Reachability (3.2)
+  - ReactiveObjC (3.0.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - MJRefresh
   - OpenUDID
   - Reachability
+  - ReactiveObjC
   - SDWebImage
 
 SPEC CHECKSUMS:
@@ -36,8 +38,9 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: bf4653b5bb32dcceea27894cb22c64fd9144c813
+PODFILE CHECKSUM: 5a3f7c222ab0cadffae56df334654eb6428c8ee0
 
 COCOAPODS: 1.1.1
