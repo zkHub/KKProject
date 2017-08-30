@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+#import "TestViewController.h"
+
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameText;
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
@@ -21,10 +24,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    
     RAC(self.loginBtn,enabled) = [RACSignal combineLatest:@[self.nameText.rac_textSignal,self.passwordText.rac_textSignal] reduce:^(NSString *name,NSString *password){
         return @(name.length>0 && password.length>0);
     }];
-    
     
     [[self.nameText.rac_textSignal
       filter:^BOOL(NSString * _Nullable value) {//筛选
@@ -92,7 +95,7 @@
 - (void)test
 {
     RACSignal *signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        double delayInSeconds = 5.0;
+        double delayInSeconds = 2.0;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             [subscriber sendNext:@"A"];
@@ -113,6 +116,8 @@
 - (void)doA:(NSString *)A withB:(NSString *)B
 {
     NSLog(@"A:%@ and B:%@", A, B);
+    TestViewController *testvc = [[TestViewController alloc]init];
+    [self.navigationController pushViewController:testvc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,8 +10,8 @@
 
 @interface NSString (KKHandler)
 
-- (NSString*)md5String;
-
+- (NSString*)MD5String;
+- (NSString*)SHA1String;
 
 /**
  gbk与utf8编码字母与字符编码结果一样，中文会不一样  gbk可以解utf8，但中文会乱码，utf8解gbk失败
