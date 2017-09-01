@@ -10,6 +10,7 @@
 
 @interface NSString (KKHandler)
 
+- (NSString*)transformToPinyin;
 - (NSString*)MD5String;
 - (NSString*)SHA1String;
 

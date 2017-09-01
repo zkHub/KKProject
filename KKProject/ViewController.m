@@ -20,9 +20,18 @@
 
 @implementation ViewController
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *string = @"翟让";
+    
+    [string transformToPinyin];
+    
+    
     
     
     RAC(self.loginBtn,enabled) = [RACSignal combineLatest:@[self.nameText.rac_textSignal,self.passwordText.rac_textSignal] reduce:^(NSString *name,NSString *password){

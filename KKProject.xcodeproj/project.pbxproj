@@ -659,7 +659,6 @@
 			baseConfigurationReference = E8D1B7E25233A7B6B9264835 /* Pods-KKProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -695,7 +694,6 @@
 			baseConfigurationReference = DD50190C4C913B289BA0C87F /* Pods-KKProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

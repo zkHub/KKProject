@@ -14,7 +14,25 @@ static NSString *encodeCharacters = @"`~!@#$%^&*()_+-= []\\{}|;':\",./<>?";
 
 @implementation NSString (KKHandler)
 
+- (NSString *)transformToPinyin {
+    
+    NSMutableString *mutableString = [NSMutableString stringWithString:self];
+    
+    //不支持多音字，需要手动处理
+    if (mutableString.length > 0){
+        if ([mutableString containsString:@"翟"]) {
+            mutableString = [mutableString stringByReplacingOccurrencesOfString:@"翟" withString:@"zhai"].mutableCopy;
+        }
+    }
+
+    CFStringTransform((CFMutableStringRef)mutableString, NULL, kCFStringTransformToLatin, false);
+    NSString *pinyinString = (NSMutableString *)[mutableString stringByFoldingWithOptions:NSDiacriticInsensitiveSearch locale:[NSLocale currentLocale]];
+    return pinyinString;
+}
+
+
 - (NSString *)MD5String {
+    
     const char *str = [self UTF8String];
     if (str == NULL) {
         str = "";
@@ -29,7 +47,8 @@ static NSString *encodeCharacters = @"`~!@#$%^&*()_+-= []\\{}|;':\",./<>?";
     return outputString;
 }
 
-- (NSString*)SHA1String {
+- (NSString *)SHA1String {
+    
     const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
     NSData *data = [NSData dataWithBytes:cstr length:self.length];
     
@@ -47,6 +66,7 @@ static NSString *encodeCharacters = @"`~!@#$%^&*()_+-= []\\{}|;':\",./<>?";
 
 
 - (NSString *)encodeURLString {
+    
     NSCharacterSet *characters = [[NSCharacterSet characterSetWithCharactersInString:encodeCharacters] invertedSet];
     NSString *encodedUrl = [self stringByAddingPercentEncodingWithAllowedCharacters:characters];
     if (encodedUrl) {
@@ -55,7 +75,8 @@ static NSString *encodeCharacters = @"`~!@#$%^&*()_+-= []\\{}|;':\",./<>?";
         return @"";
     }
 }
-- (NSString*)encodeURLStringWithCFStringEncoding:(CFStringEncoding)encoding {
+- (NSString *)encodeURLStringWithCFStringEncoding:(CFStringEncoding)encoding {
+    
     NSString *encodedUrl = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes
                                                         (kCFAllocatorDefault,
                                                          (CFStringRef)self,
@@ -70,7 +91,8 @@ static NSString *encodeCharacters = @"`~!@#$%^&*()_+-= []\\{}|;':\",./<>?";
     }
 }
 
-- (NSString*)decodeURLString {
+- (NSString *)decodeURLString {
+    
     NSString *decodeUrl = [self stringByRemovingPercentEncoding];//UTF-8
     if (decodeUrl) {
         return decodeUrl;
@@ -78,7 +100,8 @@ static NSString *encodeCharacters = @"`~!@#$%^&*()_+-= []\\{}|;':\",./<>?";
         return @"";
     }
 }
-- (NSString*)decodeURLStringWithCFStringEncoding:(CFStringEncoding)encoding {
+- (NSString *)decodeURLStringWithCFStringEncoding:(CFStringEncoding)encoding {
+    
     NSString *decodeUrl = (NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding
                                                         (kCFAllocatorDefault,
                                                          (CFStringRef)self,
