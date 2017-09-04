@@ -28,11 +28,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     NSString *string = @"翟让";
-    
+
     [string transformToPinyin];
     
-    
-    
+    NSString * result = [string SHA1String];
+
     
     RAC(self.loginBtn,enabled) = [RACSignal combineLatest:@[self.nameText.rac_textSignal,self.passwordText.rac_textSignal] reduce:^(NSString *name,NSString *password){
         return @(name.length>0 && password.length>0);
