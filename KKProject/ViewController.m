@@ -32,7 +32,9 @@
     [string transformToPinyin];
     
     NSString * result = [string SHA1String];
-
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:[NSNull null] forKey:@"key"];
+    
     
     RAC(self.loginBtn,enabled) = [RACSignal combineLatest:@[self.nameText.rac_textSignal,self.passwordText.rac_textSignal] reduce:^(NSString *name,NSString *password){
         return @(name.length>0 && password.length>0);
@@ -82,7 +84,11 @@
         NSLog(@"login:%@",x);
     }];
     
-    
+    KKPHTextView *textView = [[KKPHTextView alloc]initWithFrame:CGRectMake(20, 120, 100, 100)];
+    textView.placeholder = @"sdfdsfsfwrwrwrhhtwfsdfsfs";
+    textView.font = [UIFont systemFontOfSize:15];
+    textView.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:textView];
 
 }
 

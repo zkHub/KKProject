@@ -11,6 +11,7 @@
 
 #import "NSString+KKHandler.h"
 #import "UIColor+KKHandler.h"
+#import "KKPHTextView.h"
 
 
 
