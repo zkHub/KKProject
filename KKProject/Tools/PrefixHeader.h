@@ -26,7 +26,7 @@
 #define SLLog(fmt, ...) NSLog((@"line:%d, \n" fmt), __LINE__, ##__VA_ARGS__);  //带行数
 #define SCLog(fmt, ...) NSLog((fmt), ##__VA_ARGS__); //不带函数名和行数
 
-
+#define DeviceVersion ([UIDevice currentDevice].systemVersion.floatValue)
 
 //屏幕宽度
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)

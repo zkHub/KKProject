@@ -20,7 +20,7 @@
         self.placeHolderLabel.numberOfLines = 0;
         self.placeHolderLabel.textColor = [UIColor lightGrayColor];
         [self addSubview:self.placeHolderLabel];
-        if ([UIDevice currentDevice].systemVersion.floatValue >= 9.0) {
+        if (DeviceVersion >= 9.0) {
             [self setValue:self.placeHolderLabel forKey:@"_placeholderLabel"];
         }
         self.font = [UIFont systemFontOfSize:17];
