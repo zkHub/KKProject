@@ -15,8 +15,9 @@
 
 @interface UtilityHandler : NSObject
 
-+(UtilityHandler*)shareHandler;
++ (UtilityHandler*)shareHandler;
 
++ (void)showIvarPropertyMethodForClass:(Class)className;
 
 /**
  G 年代标志符（公元）
@@ -36,7 +37,7 @@
  设置dateFormat属性 
  self.dateFormatter.dateFormat = @"G yyyy-MM-dd a HH:mm:ss.SSS EEEE z";
  */
-@property (nonatomic,strong) NSDateFormatter *dateFormatter;
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 
 
 

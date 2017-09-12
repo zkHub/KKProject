@@ -10,9 +10,9 @@
 #define PrefixHeader_h
 
 #import "NSString+KKHandler.h"
+#import "KKUtilityClass.h"
 #import "UIColor+KKHandler.h"
 #import "KKPHTextView.h"
-
 
 
 //shceme为realese时define，而debug时ndef
