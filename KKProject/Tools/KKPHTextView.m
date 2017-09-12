@@ -14,13 +14,15 @@
 -(instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+
         self.placeHolderLabel = [[UILabel alloc] init];
         self.placeHolderLabel.text = @"";
         self.placeHolderLabel.numberOfLines = 0;
         self.placeHolderLabel.textColor = [UIColor lightGrayColor];
         [self addSubview:self.placeHolderLabel];
-        [self setValue:self.placeHolderLabel forKey:@"_placeholderLabel"];
-        
+        if ([UIDevice currentDevice].systemVersion.floatValue >= 9.0) {
+            [self setValue:self.placeHolderLabel forKey:@"_placeholderLabel"];
+        }
         self.font = [UIFont systemFontOfSize:17];
 
     }

@@ -12,7 +12,7 @@
 
 
 /**
- 设置UITextView的placeHolder
+ 设置UITextView的placeHolder---支持iOS9.0以上
  */
 @property (nonatomic,strong) NSString *placeholder;
 

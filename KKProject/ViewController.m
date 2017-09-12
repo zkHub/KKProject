@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "TestViewController.h"
-
+#import <objc/runtime.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameText;
@@ -26,6 +26,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    //拷贝出成员变量列表
+    unsigned int ivarCount = 0;
+    Ivar *ivars = class_copyIvarList([self class], &ivarCount);
+    for (int i = 0; i < ivarCount; i++) {
+        //获取成员变量并打印
+        Ivar ivar = ivars[i];
+        NSLog(@"%s",ivar_getName(ivar));
+    }
+    free(ivars);
+    //拷贝出属性列表
+    unsigned int propertyCount = 0;
+    objc_property_t *propertys = class_copyPropertyList([self class],&propertyCount);
+    for (int i = 0; i < propertyCount; i++) {
+        //获取属性并打印
+        objc_property_t property = propertys[i];
+        NSLog(@"%s",property_getName(property));
+    }
+    free(propertys);
+    //拷贝出方法列表
+    unsigned int methodsCount = 0;
+    Method *methods = class_copyMethodList([self class], &methodsCount);
+    for (NSUInteger i = 0; i < methodsCount; i++) {
+        // 获取方法名称
+        SEL methodSEL = method_getName(methods[i]);
+        const char *methodName = sel_getName(methodSEL);
+        NSLog(@"%s",methodName);
+    }
+    free(methods);
     
     NSString *string = @"翟让";
 
