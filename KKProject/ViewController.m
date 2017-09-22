@@ -33,6 +33,7 @@
     [string transformToPinyin];
     
     NSString * result = [string SHA1String];
+    NSLog(@"%@",result);
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [dict setObject:[NSNull null] forKey:@"key"];
     
@@ -85,7 +86,7 @@
         NSLog(@"login:%@",x);
     }];
     
-    KKPHTextView *textView = [[KKPHTextView alloc]initWithFrame:CGRectMake(20, 120, 100, 100)];
+    KKPHTextView *textView = [[KKPHTextView alloc]initWithFrame:CGRectMake(20, 64, 100, 100)];
     textView.placeholder = @"sdfdsfsfwrwrwrhhtwfsdfsfs";
     textView.font = [UIFont systemFontOfSize:15];
     textView.backgroundColor = [UIColor blueColor];
