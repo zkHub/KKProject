@@ -11,11 +11,10 @@ pod 'SDWebImage'
 pod 'OpenUDID'
 pod 'Reachability'
 pod 'Masonry'
+pod 'MJExtension'
 pod 'MJRefresh'
 pod 'MBProgressHUD'
-#pod 'JSON'
 pod 'ReactiveObjC'
-#pod 'ReactiveCocoa', '~> 6.0'
 pod 'FMDB'
 
   target 'KKProjectTests' do
