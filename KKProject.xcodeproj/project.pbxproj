@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0A0653F61F3416F600A9B17A /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0653F51F3416F600A9B17A /* TestViewController.m */; };
+		0A3BCE0D1F8DB99200DD2EDE /* MusicPlayingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BCE0C1F8DB99200DD2EDE /* MusicPlayingController.m */; };
+		0A3BCE101F8DB9AC00DD2EDE /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BCE0E1F8DB9AB00DD2EDE /* AudioPlayer.m */; };
+		0A44F2441F94B3C800A871E1 /* XFFollowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A44F2431F94B3C800A871E1 /* XFFollowButton.m */; };
 		0A52741C1F5E9F0400D74D9C /* KKPHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A52741B1F5E9F0400D74D9C /* KKPHTextView.m */; };
+		0A7FC6351F8CB4F4004E4B17 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7FC6341F8CB4F4004E4B17 /* AVFoundation.framework */; };
 		0AFCAACB1F176FEB00D60FA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAACA1F176FEB00D60FA4 /* main.m */; };
 		0AFCAACE1F176FEB00D60FA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAACD1F176FEB00D60FA4 /* AppDelegate.m */; };
 		0AFCAAD11F176FEB00D60FA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAAD01F176FEB00D60FA4 /* ViewController.m */; };
@@ -47,8 +51,15 @@
 /* Begin PBXFileReference section */
 		0A0653F41F3416F600A9B17A /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		0A0653F51F3416F600A9B17A /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		0A3BCE0B1F8DB99200DD2EDE /* MusicPlayingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPlayingController.h; sourceTree = "<group>"; };
+		0A3BCE0C1F8DB99200DD2EDE /* MusicPlayingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicPlayingController.m; sourceTree = "<group>"; };
+		0A3BCE0E1F8DB9AB00DD2EDE /* AudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		0A3BCE0F1F8DB9AC00DD2EDE /* AudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		0A44F2421F94B3C800A871E1 /* XFFollowButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFFollowButton.h; sourceTree = "<group>"; };
+		0A44F2431F94B3C800A871E1 /* XFFollowButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFFollowButton.m; sourceTree = "<group>"; };
 		0A52741A1F5E9F0400D74D9C /* KKPHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKPHTextView.h; sourceTree = "<group>"; };
 		0A52741B1F5E9F0400D74D9C /* KKPHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKPHTextView.m; sourceTree = "<group>"; };
+		0A7FC6341F8CB4F4004E4B17 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0AFCAAC61F176FEB00D60FA4 /* KKProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFCAACA1F176FEB00D60FA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AFCAACC1F176FEB00D60FA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A7FC6351F8CB4F4004E4B17 /* AVFoundation.framework in Frameworks */,
 				3CA01A50093785FEA5777A91 /* Pods_KKProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,8 +156,14 @@
 				0AFCAACD1F176FEB00D60FA4 /* AppDelegate.m */,
 				0AFCAACF1F176FEB00D60FA4 /* ViewController.h */,
 				0AFCAAD01F176FEB00D60FA4 /* ViewController.m */,
+				0A3BCE0F1F8DB9AC00DD2EDE /* AudioPlayer.h */,
+				0A3BCE0E1F8DB9AB00DD2EDE /* AudioPlayer.m */,
+				0A3BCE0B1F8DB99200DD2EDE /* MusicPlayingController.h */,
+				0A3BCE0C1F8DB99200DD2EDE /* MusicPlayingController.m */,
 				0A0653F41F3416F600A9B17A /* TestViewController.h */,
 				0A0653F51F3416F600A9B17A /* TestViewController.m */,
+				0A44F2421F94B3C800A871E1 /* XFFollowButton.h */,
+				0A44F2431F94B3C800A871E1 /* XFFollowButton.m */,
 				0AFCAAD21F176FEB00D60FA4 /* Main.storyboard */,
 				0AFCAAD81F176FEB00D60FA4 /* Assets.xcassets */,
 				0AFCAADA1F176FEB00D60FA4 /* LaunchScreen.storyboard */,
@@ -203,6 +221,7 @@
 		1522A7EF2FE3CA0330D5DA6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A7FC6341F8CB4F4004E4B17 /* AVFoundation.framework */,
 				D93D1ECD53CB2105A2163ECA /* Pods_KKProject.framework */,
 				4F5F3D8F2A4519E97EDD89CD /* Pods_KKProjectTests.framework */,
 				677B7E1466ACA14B4BBCF537 /* Pods_KKProjectUITests.framework */,
@@ -539,9 +558,12 @@
 				0AFCAAD11F176FEB00D60FA4 /* ViewController.m in Sources */,
 				0AFCAB0A1F177BF000D60FA4 /* NSString+KKHandler.m in Sources */,
 				0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandler.m in Sources */,
+				0A44F2441F94B3C800A871E1 /* XFFollowButton.m in Sources */,
 				0AFCAB0C1F177BF000D60FA4 /* KKBackgroudConstantConnect.m in Sources */,
+				0A3BCE0D1F8DB99200DD2EDE /* MusicPlayingController.m in Sources */,
 				0A52741C1F5E9F0400D74D9C /* KKPHTextView.m in Sources */,
 				0AFCAACE1F176FEB00D60FA4 /* AppDelegate.m in Sources */,
+				0A3BCE101F8DB9AC00DD2EDE /* AudioPlayer.m in Sources */,
 				0AFCAACB1F176FEB00D60FA4 /* main.m in Sources */,
 				0A0653F61F3416F600A9B17A /* TestViewController.m in Sources */,
 				0AFCAB091F177BF000D60FA4 /* KKUtilityClass.m in Sources */,

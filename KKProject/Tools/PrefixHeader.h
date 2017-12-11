@@ -33,6 +33,11 @@
 //屏幕高度
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
 
+//切图以375为宽的缩放倍数
+#define WIDTH_SCALE SCREEN_WIDTH/375
+#define WIDTH_HEIGHT SCREEN_HEIGHT/567
+
+
 //RGB色值
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 //16进制颜色
