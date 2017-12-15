@@ -13,6 +13,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "AudioPlayer.h"
 #import "XFFollowButton.h"
+#import "KKAdjustedButton.h"
 
 
 #define urlString @"http://mp3.henduoge.com/s/2017-10-10/1507614801.mp3"
@@ -85,9 +86,25 @@
 
 }
 
+
+- (void)pushAction {
+    TestViewController *vc = [[TestViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    KKAdjustedButton *button = [KKAdjustedButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(90, 90, 200, 200);
+    [button setTitle:@"123" forState:(UIControlStateNormal)];
+    [button setImage:[UIImage imageNamed:@"1242x2208"] forState:(UIControlStateNormal)];
+    button.titleRect = CGRectMake(50, 50, 50, 50);
+    button.imageRect = CGRectMake(150, 150, 50, 50);
+    [button addTarget:self action:@selector(pushAction) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:button];
     
     [UtilityHandler showIvarPropertyMethodForClass:[UIAlertAction class]];
     CGFloat height = 142 + SCREEN_WIDTH/5;
@@ -121,7 +138,7 @@
 //    _audioPlayer = [AudioPlayer sharePlayer];
 
     
-    NSString *str1 = nil;
+    NSString *str1 = @"1";
     NSString *str = str1 ?: @"2";
     NSLog(@"%@",str);
     
@@ -133,7 +150,7 @@
     NSLog(@"%@",result);
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [dict setObject:[NSNull null] forKey:@"key"];
-    
+    [dict setSafeObject:[NSNull null] forKey:@"null"];
     
     RAC(self.loginBtn,enabled) = [RACSignal combineLatest:@[self.nameText.rac_textSignal,self.passwordText.rac_textSignal] reduce:^(NSString *name,NSString *password){
         return @(name.length>0 && password.length>0);

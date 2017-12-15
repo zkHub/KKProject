@@ -17,12 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     UIButton *button = [[UIButton alloc]init];
-    button.frame = CGRectMake(10, 64, 100, 100);
+    button.frame = CGRectMake(10, 90, 100, 100);
     button.backgroundColor = [UIColor redColor];
+    [button addTarget:self action:@selector(pushAction) forControlEvents:(UIControlEventTouchUpInside)];
+
     [self.view addSubview:button];
 }
-
+- (void)pushAction {
+    TestViewController *vc = [[TestViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

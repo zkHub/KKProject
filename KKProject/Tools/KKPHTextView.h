@@ -18,7 +18,7 @@
 @property (nonatomic,strong) NSString *placeholder;
 
 /**
- 为了方便修改一些属性，可以私有
+ 为了方便修改一些属性（可以私有）
  */
 @property (nonatomic,strong) UILabel *placeHolderLabel;
 

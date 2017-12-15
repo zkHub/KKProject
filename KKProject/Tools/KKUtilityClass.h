@@ -17,7 +17,14 @@
 
 + (UtilityHandler*)shareHandler;
 
+
+/**
+ runtime打印类属性及方法
+
+ @param className 类名
+ */
 + (void)showIvarPropertyMethodForClass:(Class)className;
+
 
 /**
  G 年代标志符（公元）
