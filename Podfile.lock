@@ -27,6 +27,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - SocketRocket (0.5.1)
 
 DEPENDENCIES:
   - AFNetworking
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - Reachability
   - ReactiveObjC
   - SDWebImage
+  - SocketRocket
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -51,7 +53,8 @@ SPEC CHECKSUMS:
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
 
-PODFILE CHECKSUM: 63ae8765713f3a59b5222d956dc4aeae3671f6ce
+PODFILE CHECKSUM: 5a7f1741b04b52b4c4aaf562440b8178004b730e
 
 COCOAPODS: 1.3.1

@@ -16,6 +16,7 @@ pod 'MJRefresh'
 pod 'MBProgressHUD'
 pod 'ReactiveObjC'
 pod 'FMDB'
+pod 'SocketRocket'
 
   target 'KKProjectTests' do
     inherit! :search_paths
