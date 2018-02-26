@@ -20,8 +20,7 @@
     
     // 设置手势与导航代理
     __weak __typeof(self) weakSelf = self;
-    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
-    {
+    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.interactivePopGestureRecognizer.delegate = weakSelf;
         self.delegate = weakSelf;
     }
