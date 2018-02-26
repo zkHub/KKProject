@@ -14,6 +14,7 @@
 #import "AudioPlayer.h"
 #import "XFFollowButton.h"
 #import "KKAdjustedButton.h"
+#import <Masonry/Masonry.h>
 
 
 #define urlString @"http://mp3.henduoge.com/s/2017-10-10/1507614801.mp3"
@@ -96,12 +97,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     [UtilityHandler showIvarPropertyMethodForClass:[UIButton class]];
     
     KKAdjustedButton *button = [KKAdjustedButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(90, 90, 200, 200);
     [button setTitle:@"123" forState:(UIControlStateNormal)];
-    [button setImage:[UIImage imageNamed:@"1242x2208"] forState:(UIControlStateNormal)];
+    [button setImage:[UIImage imageNamed:@"backBarButtonItem"] forState:(UIControlStateNormal)];
     button.titleRect = CGRectMake(50, 50, 50, 50);
     button.imageRect = CGRectMake(150, 150, 50, 50);
     [button addTarget:self action:@selector(pushAction) forControlEvents:(UIControlEventTouchUpInside)];
@@ -132,10 +135,10 @@
 //    }
 
     //创建一个item资源
-    AVPlayerItem *item = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:urlString]];
-    [item addObserver:self forKeyPath:@"status" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
-    [self.player replaceCurrentItemWithPlayerItem:item];
-    [self.player play];
+//    AVPlayerItem *item = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:urlString]];
+//    [item addObserver:self forKeyPath:@"status" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
+//    [self.player replaceCurrentItemWithPlayerItem:item];
+//    [self.player play];
 //    _audioPlayer = [AudioPlayer sharePlayer];
 
     
@@ -207,6 +210,20 @@
     textView.backgroundColor = [UIColor blueColor];
     [self.view addSubview:textView];
 
+    
+    
+    [textView mas_makeConstraints:^(MASConstraintMaker *make) {
+        MASViewAttribute *masTop = self.view.mas_top;
+
+        if (@available(iOS 11.0, *)) {
+            masTop = self.view.mas_safeAreaLayoutGuideTop;
+        }
+        make.top.mas_equalTo(masTop).offset(10);
+        make.left.mas_equalTo(self.view.mas_left).offset(10);
+        make.size.mas_equalTo(CGSizeMake(100, 100));
+    }];
+    
+    
 }
 
 

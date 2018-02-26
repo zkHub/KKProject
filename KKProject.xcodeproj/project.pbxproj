@@ -22,7 +22,6 @@
 		0AFCAAD41F176FEB00D60FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFCAAD21F176FEB00D60FA4 /* Main.storyboard */; };
 		0AFCAAD71F176FEB00D60FA4 /* KKProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAAD51F176FEB00D60FA4 /* KKProject.xcdatamodeld */; };
 		0AFCAAD91F176FEB00D60FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AFCAAD81F176FEB00D60FA4 /* Assets.xcassets */; };
-		0AFCAADC1F176FEB00D60FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFCAADA1F176FEB00D60FA4 /* LaunchScreen.storyboard */; };
 		0AFCAAE71F176FEC00D60FA4 /* KKProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAAE61F176FEC00D60FA4 /* KKProjectTests.m */; };
 		0AFCAAF21F176FEC00D60FA4 /* KKProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAAF11F176FEC00D60FA4 /* KKProjectUITests.m */; };
 		0AFCAB091F177BF000D60FA4 /* KKUtilityClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB021F177BF000D60FA4 /* KKUtilityClass.m */; };
@@ -78,7 +77,6 @@
 		0AFCAAD31F176FEB00D60FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AFCAAD61F176FEB00D60FA4 /* KKProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KKProject.xcdatamodel; sourceTree = "<group>"; };
 		0AFCAAD81F176FEB00D60FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0AFCAADB1F176FEB00D60FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AFCAADD1F176FEB00D60FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AFCAAE21F176FEC00D60FA4 /* KKProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFCAAE61F176FEC00D60FA4 /* KKProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKProjectTests.m; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 				0A44F2431F94B3C800A871E1 /* XFFollowButton.m */,
 				0AFCAAD21F176FEB00D60FA4 /* Main.storyboard */,
 				0AFCAAD81F176FEB00D60FA4 /* Assets.xcassets */,
-				0AFCAADA1F176FEB00D60FA4 /* LaunchScreen.storyboard */,
 				0AFCAADD1F176FEB00D60FA4 /* Info.plist */,
 				0AFCAAD51F176FEB00D60FA4 /* KKProject.xcdatamodeld */,
 				0AFCAAC91F176FEB00D60FA4 /* Supporting Files */,
@@ -375,7 +372,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AFCAADC1F176FEB00D60FA4 /* LaunchScreen.storyboard in Resources */,
 				0AFCAAD91F176FEB00D60FA4 /* Assets.xcassets in Resources */,
 				0AFCAAD41F176FEB00D60FA4 /* Main.storyboard in Resources */,
 			);
@@ -631,14 +627,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		0AFCAADA1F176FEB00D60FA4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0AFCAADB1F176FEB00D60FA4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -749,6 +737,7 @@
 			baseConfigurationReference = E8D1B7E25233A7B6B9264835 /* Pods-KKProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -776,6 +765,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fang.KKProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -784,6 +774,7 @@
 			baseConfigurationReference = DD50190C4C913B289BA0C87F /* Pods-KKProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -811,6 +802,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fang.KKProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

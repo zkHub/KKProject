@@ -10,13 +10,13 @@ pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'OpenUDID'
 pod 'Reachability'
-pod 'Masonry'
+pod 'Masonry', '~> 1.1.0'
 pod 'MJExtension'
 pod 'MJRefresh'
 pod 'MBProgressHUD'
 pod 'ReactiveObjC'
 pod 'FMDB'
-pod 'SocketRocket'
+pod 'SocketRocket', '~> 0.5.1'
 
   target 'KKProjectTests' do
     inherit! :search_paths

@@ -13,12 +13,12 @@
 
 
 /**
- 设置UITextView的placeHolder---支持iOS9.0以上
+ 设置UITextView的placeHolder
  */
 @property (nonatomic,strong) NSString *placeholder;
 
 /**
- 为了方便修改一些属性（可以私有）
+ 为了方便修改一些属性
  */
 @property (nonatomic,strong) UILabel *placeHolderLabel;
 
