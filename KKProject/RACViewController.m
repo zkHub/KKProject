@@ -7,7 +7,7 @@
 //
 
 #import "RACViewController.h"
-#import "ReactiveObjc.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface RACViewController ()
 

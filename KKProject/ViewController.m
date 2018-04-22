@@ -10,8 +10,6 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "TestViewController.h"
 #import <objc/runtime.h>
-#import <AVFoundation/AVFoundation.h>
-#import "XFFollowButton.h"
 #import "KKAdjustedButton.h"
 #import <Masonry/Masonry.h>
 
@@ -28,12 +26,6 @@
 
 
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-
-}
-
-
 - (void)pushAction {
     Class class = NSClassFromString(@"DispatchViewController");
     UIViewController *vc = [[class alloc]init];
@@ -46,10 +38,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     [UtilityHandler showIvarPropertyMethodForClass:[UIButton class]];
-    
+    [UtilityHandler showIvarPropertyMethodForClass:[UIAlertAction class]];
+
     KKAdjustedButton *button = [KKAdjustedButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(90, 90, 200, 200);
     [button setTitle:@"123" forState:(UIControlStateNormal)];
@@ -58,27 +51,6 @@
     button.imageRect = CGRectMake(150, 150, 50, 50);
     [button addTarget:self action:@selector(pushAction) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:button];
-    
-    [UtilityHandler showIvarPropertyMethodForClass:[UIAlertAction class]];
-    CGFloat height = 142 + SCREEN_WIDTH/5;
-    UIView *followView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT -64-height, SCREEN_WIDTH, height)];
-    
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 25, SCREEN_WIDTH, 24)];
-    label.text = @"跟进";
-    label.textAlignment = NSTextAlignmentCenter;
-    [followView addSubview:label];
-    for (int i = 0; i < 5; i++) {
-        XFFollowButton *button = [[XFFollowButton alloc]initWithFrame:CGRectMake(i*SCREEN_WIDTH/5, 300, SCREEN_WIDTH/5, SCREEN_WIDTH/5)];
-        [followView addSubview:button];
-    }
-
-    UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [cancelBtn setTitle:@"取消" forState:(UIControlStateNormal)];
-    [cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    cancelBtn.frame = CGRectMake(0, height-48, SCREEN_WIDTH, 48);
-    [followView addSubview:cancelBtn];
-    
-    [self.view addSubview:followView];
 
     
     NSString *string = @"翟让";
@@ -92,14 +64,11 @@
     [dict setSafeObject:[NSNull null] forKey:@"null"];
     
     
-    
     KKPHTextView *textView = [[KKPHTextView alloc]initWithFrame:CGRectMake(20, 64, 100, 100)];
-    textView.placeholder = @"sdfdsfsfwrwrwrhhtwfsdfsfs";
+    textView.placeholder = @"qwertyuiopasdfghjklzxcvbnm";
     textView.font = [UIFont systemFontOfSize:15];
     textView.backgroundColor = [UIColor blueColor];
     [self.view addSubview:textView];
-
-    
     
     [textView mas_makeConstraints:^(MASConstraintMaker *make) {
         MASViewAttribute *masTop = self.view.mas_top;
