@@ -23,4 +23,12 @@
 - (NSString*)decodeURLString;
 - (NSString*)decodeURLStringWithCFStringEncoding:(CFStringEncoding)encoding;
 
+
+/**
+ 判断字符串中是否包含emoji
+
+ @return BooL值
+ */
+- (BOOL)stringContainsEmoji;
+
 @end

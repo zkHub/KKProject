@@ -69,7 +69,7 @@ static NSString *encodeCharacters = @"`~!@#$%^&*()_+-= []\\{}|;':\",./<>?";
 - (NSString *)encodeURLString {
     
     NSCharacterSet *characters = [[NSCharacterSet characterSetWithCharactersInString:encodeCharacters] invertedSet];
-    NSString *encodedUrl = [self stringByAddingPercentEncodingWithAllowedCharacters:characters];
+    NSString *encodedUrl = [self stringByAddingPercentEncodingWithAllowedCharacters:characters];//UTF-8
     if (encodedUrl) {
         return encodedUrl;
     } else {
@@ -114,5 +114,46 @@ static NSString *encodeCharacters = @"`~!@#$%^&*()_+-= []\\{}|;':\",./<>?";
         return @"";
     }
 }
+
+
+
+- (BOOL)stringContainsEmoji {
+    __block BOOL returnValue = NO;
+    [self enumerateSubstringsInRange:NSMakeRange(0, [self length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+        const unichar hs = [substring characterAtIndex:0];
+        NSLog(@"%hu", hs);
+        if (0xd800 <= hs && hs <= 0xdbff) {
+            if (substring.length > 1) {
+                const unichar ls = [substring characterAtIndex:1];
+                const int uc = ((hs - 0xd800) * 0x400) + (ls - 0xdc00) + 0x10000;
+                //新添加emoji的话需要扩大范围
+                if (0x1d000 <= uc && uc <= 0x1ffff){
+                    returnValue = YES;
+                }
+            }
+        } else if (substring.length > 1) {
+            const unichar ls = [substring characterAtIndex:1];
+            //新添加emoji的话需要更改
+            if (ls == 0x20e3 || ls == 0xfe0f || ls == 0xd83c) {
+                returnValue = YES;
+            }
+        } else {
+            if (0x2100 <= hs && hs <= 0x27ff) {
+                returnValue = YES;
+            } else if (0x2B05 <= hs && hs <=0x2b07) {
+                returnValue = YES;
+            } else if (0x2934 <= hs && hs <=0x2935) {
+                returnValue = YES;
+            } else if (0x3297 <= hs && hs <=0x3299) {
+                returnValue = YES;
+            } else if (hs == 0xa9 || hs == 0xae || hs == 0x303d || hs == 0x3030 || hs == 0x2b55 || hs == 0x2b1c || hs == 0x2b1b || hs == 0x2b50) {
+                returnValue = YES;
+            }
+        }
+        
+    }];
+    return returnValue;
+}
+
 
 @end

@@ -1,3 +1,8 @@
+#添加使用库的地址
+source 'https://gitee.com/zkHub/MySpecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+
 # Uncomment the next line to define a global platform for your project
  platform :ios, '8.0'
 
@@ -6,17 +11,21 @@ target 'KKProject' do
    use_frameworks!
 
   # Pods for KKProject
-pod 'AFNetworking'
-pod 'SDWebImage'
-pod 'OpenUDID'
-pod 'Reachability'
-pod 'Masonry', '~> 1.1.0'
-pod 'MJExtension'
-pod 'MJRefresh'
-pod 'MBProgressHUD'
-pod 'ReactiveObjC'
-pod 'FMDB'
-pod 'SocketRocket', '~> 0.5.1'
+#    pod 'YYKit'
+    pod 'AFNetworking'
+    pod 'SDWebImage'
+    pod 'OpenUDID'
+    pod 'Reachability'
+    pod 'Masonry'
+    pod 'MJExtension'
+    pod 'MJRefresh'
+    pod 'MBProgressHUD'
+    pod 'ReactiveObjC'
+    pod 'FMDB'
+    pod 'SocketRocket'
+
+    #私有库
+#    pod 'podLibTest'
 
   target 'KKProjectTests' do
     inherit! :search_paths
