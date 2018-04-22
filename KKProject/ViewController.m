@@ -14,9 +14,6 @@
 #import <Masonry/Masonry.h>
 
 
-#define urlString @"http://mp3.henduoge.com/s/2017-10-10/1507614801.mp3"
-
-
 @interface ViewController ()
 
 
