@@ -6,7 +6,7 @@
 //  Copyright © 2017年 zhangke. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "KKBaseViewController.h"
 
 @interface TestViewController : UIViewController
 

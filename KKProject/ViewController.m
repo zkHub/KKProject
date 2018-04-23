@@ -24,7 +24,7 @@
 
 
 - (void)pushAction {
-    Class class = NSClassFromString(@"DispatchViewController");
+    Class class = NSClassFromString(@"LoadImageViewController");
     UIViewController *vc = [[class alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }

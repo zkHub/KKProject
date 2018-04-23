@@ -6,8 +6,8 @@
 //  Copyright © 2018年 zhangke. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "KKBaseViewController.h"
 
-@interface LoadImageViewController : UIViewController
+@interface LoadImageViewController : KKBaseViewController
 
 @end

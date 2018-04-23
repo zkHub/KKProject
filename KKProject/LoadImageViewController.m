@@ -7,7 +7,7 @@
 //
 
 #import "LoadImageViewController.h"
-
+#import <SDWebImage/UIImageView+WebCache.h>
 @interface LoadImageViewController ()
 
 @end
@@ -30,6 +30,8 @@
     for (int i = 0; i < 10; i++) {
         imageView2.image = [[UIImage alloc]initWithContentsOfFile:path];//19
     }
+    
+    [imageView sd_setImageWithURL:[NSURL URLWithString:@"https://upload-images.jianshu.io/upload_images/276769-02532b725b8bcc9f.jpg"] placeholderImage:[UIImage imageNamed:@"mainpage_客户管理"]];
     
     [self.view addSubview:imageView];
     [self.view addSubview:imageView2];
