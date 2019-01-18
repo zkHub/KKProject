@@ -33,9 +33,16 @@
 		0AFCAB0A1F177BF000D60FA4 /* NSString+KKHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB041F177BF000D60FA4 /* NSString+KKHandler.m */; };
 		0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB061F177BF000D60FA4 /* UIColor+KKHandler.m */; };
 		0AFCAB0C1F177BF000D60FA4 /* KKBackgroudConstantConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB081F177BF000D60FA4 /* KKBackgroudConstantConnect.m */; };
+		125501B621D5D2660057AE0A /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 125501B521D5D2660057AE0A /* CollectionViewController.m */; };
+		1264AC1121F0A583008AA568 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1264AC1021F0A583008AA568 /* NotificationCenter.framework */; };
+		1264AC1521F0A583008AA568 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC1421F0A583008AA568 /* TodayViewController.m */; };
+		1264AC1821F0A583008AA568 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1264AC1621F0A583008AA568 /* MainInterface.storyboard */; };
+		1264AC1C21F0A583008AA568 /* MonitorFlow.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1264AC0F21F0A583008AA568 /* MonitorFlow.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1264AC2121F0A5B6008AA568 /* MonitorFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC0921F0A249008AA568 /* MonitorFlow.m */; };
 		3CA01A50093785FEA5777A91 /* Pods_KKProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93D1ECD53CB2105A2163ECA /* Pods_KKProject.framework */; };
 		9A3F381992FD31DD53BC24F0 /* Pods_KKProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677B7E1466ACA14B4BBCF537 /* Pods_KKProjectUITests.framework */; };
 		C4CF5CC82C25DC7731F6C56D /* Pods_KKProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5F3D8F2A4519E97EDD89CD /* Pods_KKProjectTests.framework */; };
+		EAC65F351A80A2E38064D271 /* Pods_KKProject_MonitorFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9023E92D6629C2F2846D36BC /* Pods_KKProject_MonitorFlow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +60,28 @@
 			remoteGlobalIDString = 0AFCAAC51F176FEB00D60FA4;
 			remoteInfo = KKProject;
 		};
+		1264AC1A21F0A583008AA568 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AFCAABE1F176FEA00D60FA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1264AC0E21F0A583008AA568;
+			remoteInfo = MonitorFlow;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1264AC2021F0A583008AA568 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1264AC1C21F0A583008AA568 /* MonitorFlow.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A0653F41F3416F600A9B17A /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -105,12 +133,25 @@
 		0AFCAB061F177BF000D60FA4 /* UIColor+KKHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KKHandler.m"; sourceTree = "<group>"; };
 		0AFCAB071F177BF000D60FA4 /* KKBackgroudConstantConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKBackgroudConstantConnect.h; sourceTree = "<group>"; };
 		0AFCAB081F177BF000D60FA4 /* KKBackgroudConstantConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKBackgroudConstantConnect.m; sourceTree = "<group>"; };
+		125501B421D5D2660057AE0A /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		125501B521D5D2660057AE0A /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		1264AC0821F0A249008AA568 /* MonitorFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonitorFlow.h; sourceTree = "<group>"; };
+		1264AC0921F0A249008AA568 /* MonitorFlow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonitorFlow.m; sourceTree = "<group>"; };
+		1264AC0F21F0A583008AA568 /* MonitorFlow.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MonitorFlow.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1264AC1021F0A583008AA568 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		1264AC1321F0A583008AA568 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		1264AC1421F0A583008AA568 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		1264AC1721F0A583008AA568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		1264AC1921F0A583008AA568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		455A40355481092452BC8126 /* Pods-KKProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectUITests/Pods-KKProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		473B8CBAD0C54311411F0DCF /* Pods-KKProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectTests/Pods-KKProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F5F3D8F2A4519E97EDD89CD /* Pods_KKProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		677B7E1466ACA14B4BBCF537 /* Pods_KKProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C0207214D753F99E33D26B /* Pods-KKProject-MonitorFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProject-MonitorFlow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KKProject-MonitorFlow/Pods-KKProject-MonitorFlow.debug.xcconfig"; sourceTree = "<group>"; };
 		808F01D4673F520342B18035 /* Pods-KKProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectTests/Pods-KKProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9023E92D6629C2F2846D36BC /* Pods_KKProject_MonitorFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKProject_MonitorFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB00E13D9075CD1504647F9C /* Pods-KKProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectUITests/Pods-KKProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BCCDF405873AE0A9337F4AA6 /* Pods-KKProject-MonitorFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProject-MonitorFlow.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKProject-MonitorFlow/Pods-KKProject-MonitorFlow.release.xcconfig"; sourceTree = "<group>"; };
 		D93D1ECD53CB2105A2163ECA /* Pods_KKProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD50190C4C913B289BA0C87F /* Pods-KKProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKProject/Pods-KKProject.release.xcconfig"; sourceTree = "<group>"; };
 		E8D1B7E25233A7B6B9264835 /* Pods-KKProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KKProject/Pods-KKProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +183,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1264AC0C21F0A583008AA568 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1264AC1121F0A583008AA568 /* NotificationCenter.framework in Frameworks */,
+				EAC65F351A80A2E38064D271 /* Pods_KKProject_MonitorFlow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -168,6 +218,7 @@
 				0AFCAAC81F176FEB00D60FA4 /* KKProject */,
 				0AFCAAE51F176FEC00D60FA4 /* KKProjectTests */,
 				0AFCAAF01F176FEC00D60FA4 /* KKProjectUITests */,
+				1264AC1221F0A583008AA568 /* MonitorFlow */,
 				0AFCAAC71F176FEB00D60FA4 /* Products */,
 				56AE82C2742FFAC53F2588F7 /* Pods */,
 				1522A7EF2FE3CA0330D5DA6E /* Frameworks */,
@@ -180,6 +231,7 @@
 				0AFCAAC61F176FEB00D60FA4 /* KKProject.app */,
 				0AFCAAE21F176FEC00D60FA4 /* KKProjectTests.xctest */,
 				0AFCAAED1F176FEC00D60FA4 /* KKProjectUITests.xctest */,
+				1264AC0F21F0A583008AA568 /* MonitorFlow.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,9 +254,11 @@
 				0A0653F51F3416F600A9B17A /* TestViewController.m */,
 				0A07389C208C46BA006900EE /* RACViewController.h */,
 				0A07389D208C46BA006900EE /* RACViewController.m */,
-				0AFCAAD21F176FEB00D60FA4 /* Main.storyboard */,
+				125501B421D5D2660057AE0A /* CollectionViewController.h */,
+				125501B521D5D2660057AE0A /* CollectionViewController.m */,
 				0A07389F208C4921006900EE /* ImageSet */,
 				0A0738A1208C8921006900EE /* PlistSet */,
+				0AFCAAD21F176FEB00D60FA4 /* Main.storyboard */,
 				0AFCAAD81F176FEB00D60FA4 /* Assets.xcassets */,
 				0AFCAADD1F176FEB00D60FA4 /* Info.plist */,
 				0AFCAAD51F176FEB00D60FA4 /* KKProject.xcdatamodeld */,
@@ -265,6 +319,19 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		1264AC1221F0A583008AA568 /* MonitorFlow */ = {
+			isa = PBXGroup;
+			children = (
+				1264AC1321F0A583008AA568 /* TodayViewController.h */,
+				1264AC1421F0A583008AA568 /* TodayViewController.m */,
+				1264AC0821F0A249008AA568 /* MonitorFlow.h */,
+				1264AC0921F0A249008AA568 /* MonitorFlow.m */,
+				1264AC1621F0A583008AA568 /* MainInterface.storyboard */,
+				1264AC1921F0A583008AA568 /* Info.plist */,
+			);
+			path = MonitorFlow;
+			sourceTree = "<group>";
+		};
 		1522A7EF2FE3CA0330D5DA6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +339,8 @@
 				D93D1ECD53CB2105A2163ECA /* Pods_KKProject.framework */,
 				4F5F3D8F2A4519E97EDD89CD /* Pods_KKProjectTests.framework */,
 				677B7E1466ACA14B4BBCF537 /* Pods_KKProjectUITests.framework */,
+				1264AC1021F0A583008AA568 /* NotificationCenter.framework */,
+				9023E92D6629C2F2846D36BC /* Pods_KKProject_MonitorFlow.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -285,6 +354,8 @@
 				473B8CBAD0C54311411F0DCF /* Pods-KKProjectTests.release.xcconfig */,
 				BB00E13D9075CD1504647F9C /* Pods-KKProjectUITests.debug.xcconfig */,
 				455A40355481092452BC8126 /* Pods-KKProjectUITests.release.xcconfig */,
+				67C0207214D753F99E33D26B /* Pods-KKProject-MonitorFlow.debug.xcconfig */,
+				BCCDF405873AE0A9337F4AA6 /* Pods-KKProject-MonitorFlow.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -301,11 +372,12 @@
 				0AFCAAC31F176FEB00D60FA4 /* Frameworks */,
 				0AFCAAC41F176FEB00D60FA4 /* Resources */,
 				56A107F2202BF86F91AAA12E /* [CP] Embed Pods Frameworks */,
-				F349E8397EC06A5EB6E764A6 /* [CP] Copy Pods Resources */,
+				1264AC2021F0A583008AA568 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1264AC1B21F0A583008AA568 /* PBXTargetDependency */,
 			);
 			name = KKProject;
 			productName = KKProject;
@@ -320,8 +392,6 @@
 				0AFCAADE1F176FEC00D60FA4 /* Sources */,
 				0AFCAADF1F176FEC00D60FA4 /* Frameworks */,
 				0AFCAAE01F176FEC00D60FA4 /* Resources */,
-				12C83D0E38346CA41F68BFAD /* [CP] Embed Pods Frameworks */,
-				890440B680876634E6A52ECE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,8 +411,6 @@
 				0AFCAAE91F176FEC00D60FA4 /* Sources */,
 				0AFCAAEA1F176FEC00D60FA4 /* Frameworks */,
 				0AFCAAEB1F176FEC00D60FA4 /* Resources */,
-				A3F978CE6D7FFC85A70C2EEE /* [CP] Embed Pods Frameworks */,
-				B403804BF5A00018B187CA31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -353,6 +421,24 @@
 			productName = KKProjectUITests;
 			productReference = 0AFCAAED1F176FEC00D60FA4 /* KKProjectUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1264AC0E21F0A583008AA568 /* MonitorFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1264AC1D21F0A583008AA568 /* Build configuration list for PBXNativeTarget "MonitorFlow" */;
+			buildPhases = (
+				BDD1892C9881466375C7B9F2 /* [CP] Check Pods Manifest.lock */,
+				1264AC0B21F0A583008AA568 /* Sources */,
+				1264AC0C21F0A583008AA568 /* Frameworks */,
+				1264AC0D21F0A583008AA568 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MonitorFlow;
+			productName = MonitorFlow;
+			productReference = 1264AC0F21F0A583008AA568 /* MonitorFlow.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -380,6 +466,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0AFCAAC51F176FEB00D60FA4;
 					};
+					1264AC0E21F0A583008AA568 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = FM6CWNE4AZ;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 0AFCAAC11F176FEA00D60FA4 /* Build configuration list for PBXProject "KKProject" */;
@@ -398,6 +489,7 @@
 				0AFCAAC51F176FEB00D60FA4 /* KKProject */,
 				0AFCAAE11F176FEC00D60FA4 /* KKProjectTests */,
 				0AFCAAEC1F176FEC00D60FA4 /* KKProjectUITests */,
+				1264AC0E21F0A583008AA568 /* MonitorFlow */,
 			);
 		};
 /* End PBXProject section */
@@ -429,24 +521,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1264AC0D21F0A583008AA568 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1264AC1821F0A583008AA568 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12C83D0E38346CA41F68BFAD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KKProjectTests/Pods-KKProjectTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1D41B6114E725E09C511D2FA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,36 +588,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KKProject/Pods-KKProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		890440B680876634E6A52ECE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KKProjectTests/Pods-KKProjectTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A3F978CE6D7FFC85A70C2EEE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KKProjectUITests/Pods-KKProjectUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AA3C36EEB2BB9A4C9FB6FD0A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -551,19 +606,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B403804BF5A00018B187CA31 /* [CP] Copy Pods Resources */ = {
+		BDD1892C9881466375C7B9F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KKProject-MonitorFlow-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KKProjectUITests/Pods-KKProjectUITests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D37EC9D99CD39A78BF156515 /* [CP] Check Pods Manifest.lock */ = {
@@ -582,21 +640,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F349E8397EC06A5EB6E764A6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KKProject/Pods-KKProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -621,6 +664,7 @@
 				0AEF051A204698F6003AECAF /* KKSymmetricEncryption.m in Sources */,
 				0A0653F61F3416F600A9B17A /* TestViewController.m in Sources */,
 				0A0BB6691FE3AD910062C55D /* KKNavigationController.m in Sources */,
+				125501B621D5D2660057AE0A /* CollectionViewController.m in Sources */,
 				0AFCAB091F177BF000D60FA4 /* KKUtilityClass.m in Sources */,
 				0AFCAAD71F176FEB00D60FA4 /* KKProject.xcdatamodeld in Sources */,
 				0A2823E0208D945E008234EB /* KKBaseViewController.m in Sources */,
@@ -643,6 +687,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1264AC0B21F0A583008AA568 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1264AC2121F0A5B6008AA568 /* MonitorFlow.m in Sources */,
+				1264AC1521F0A583008AA568 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -656,6 +709,11 @@
 			target = 0AFCAAC51F176FEB00D60FA4 /* KKProject */;
 			targetProxy = 0AFCAAEE1F176FEC00D60FA4 /* PBXContainerItemProxy */;
 		};
+		1264AC1B21F0A583008AA568 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1264AC0E21F0A583008AA568 /* MonitorFlow */;
+			targetProxy = 1264AC1A21F0A583008AA568 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -665,6 +723,14 @@
 				0AFCAAD31F176FEB00D60FA4 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1264AC1621F0A583008AA568 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1264AC1721F0A583008AA568 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -778,6 +844,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -785,7 +852,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = KKProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -816,13 +883,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = KKProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -901,6 +969,57 @@
 			};
 			name = Release;
 		};
+		1264AC1E21F0A583008AA568 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67C0207214D753F99E33D26B /* Pods-KKProject-MonitorFlow.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FM6CWNE4AZ;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MonitorFlow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fang.KKProject.MonitorFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1264AC1F21F0A583008AA568 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCCDF405873AE0A9337F4AA6 /* Pods-KKProject-MonitorFlow.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FM6CWNE4AZ;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MonitorFlow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fang.KKProject.MonitorFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -936,6 +1055,15 @@
 			buildConfigurations = (
 				0AFCAAFD1F176FEC00D60FA4 /* Debug */,
 				0AFCAAFE1F176FEC00D60FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1264AC1D21F0A583008AA568 /* Build configuration list for PBXNativeTarget "MonitorFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1264AC1E21F0A583008AA568 /* Debug */,
+				1264AC1F21F0A583008AA568 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

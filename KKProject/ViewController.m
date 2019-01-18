@@ -24,7 +24,7 @@
 
 
 - (void)pushAction {
-    Class class = NSClassFromString(@"LoadImageViewController");
+    Class class = NSClassFromString(@"CollectionViewController");
     UIViewController *vc = [[class alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -35,6 +35,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+    
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     [UtilityHandler showIvarPropertyMethodForClass:[UIButton class]];
@@ -77,6 +78,8 @@
         make.left.mas_equalTo(self.view.mas_left).offset(10);
         make.size.mas_equalTo(CGSizeMake(100, 100));
     }];
+    
+
     
     
 }

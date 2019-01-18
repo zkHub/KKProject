@@ -6,6 +6,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment the next line to define a global platform for your project
  platform :ios, '8.0'
 
+pod 'Reachability'
+
+
 target 'KKProject' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
    use_frameworks!
@@ -15,7 +18,6 @@ target 'KKProject' do
     pod 'AFNetworking'
     pod 'SDWebImage'
     pod 'OpenUDID'
-    pod 'Reachability'
     pod 'Masonry'
     pod 'MJExtension'
     pod 'MJRefresh'
@@ -26,6 +28,11 @@ target 'KKProject' do
 
     #私有库
 #    pod 'podLibTest'
+
+target 'MonitorFlow' do
+        
+end
+
 
   target 'KKProjectTests' do
     inherit! :search_paths
