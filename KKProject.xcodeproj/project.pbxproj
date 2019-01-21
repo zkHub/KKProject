@@ -39,6 +39,14 @@
 		1264AC1821F0A583008AA568 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1264AC1621F0A583008AA568 /* MainInterface.storyboard */; };
 		1264AC1C21F0A583008AA568 /* MonitorFlow.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1264AC0F21F0A583008AA568 /* MonitorFlow.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1264AC2121F0A5B6008AA568 /* MonitorFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC0921F0A249008AA568 /* MonitorFlow.m */; };
+		1264AC3021F5A670008AA568 /* JX_GCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2621F5A670008AA568 /* JX_GCDTimerManager.m */; };
+		1264AC3121F5A670008AA568 /* JX_GCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2621F5A670008AA568 /* JX_GCDTimerManager.m */; };
+		1264AC3221F5A670008AA568 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2921F5A670008AA568 /* YYFPSLabel.m */; };
+		1264AC3321F5A670008AA568 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2921F5A670008AA568 /* YYFPSLabel.m */; };
+		1264AC3421F5A670008AA568 /* LXDBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2C21F5A670008AA568 /* LXDBacktraceLogger.m */; };
+		1264AC3521F5A670008AA568 /* LXDBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2C21F5A670008AA568 /* LXDBacktraceLogger.m */; };
+		1264AC3621F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */; };
+		1264AC3721F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */; };
 		3CA01A50093785FEA5777A91 /* Pods_KKProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93D1ECD53CB2105A2163ECA /* Pods_KKProject.framework */; };
 		9A3F381992FD31DD53BC24F0 /* Pods_KKProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677B7E1466ACA14B4BBCF537 /* Pods_KKProjectUITests.framework */; };
 		C4CF5CC82C25DC7731F6C56D /* Pods_KKProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5F3D8F2A4519E97EDD89CD /* Pods_KKProjectTests.framework */; };
@@ -143,6 +151,14 @@
 		1264AC1421F0A583008AA568 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		1264AC1721F0A583008AA568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		1264AC1921F0A583008AA568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1264AC2521F5A670008AA568 /* JX_GCDTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JX_GCDTimerManager.h; sourceTree = "<group>"; };
+		1264AC2621F5A670008AA568 /* JX_GCDTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JX_GCDTimerManager.m; sourceTree = "<group>"; };
+		1264AC2821F5A670008AA568 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		1264AC2921F5A670008AA568 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		1264AC2C21F5A670008AA568 /* LXDBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDBacktraceLogger.m; sourceTree = "<group>"; };
+		1264AC2D21F5A670008AA568 /* LXDBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDBacktraceLogger.h; sourceTree = "<group>"; };
+		1264AC2E21F5A670008AA568 /* LXDAppFluecyMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDAppFluecyMonitor.h; sourceTree = "<group>"; };
+		1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDAppFluecyMonitor.m; sourceTree = "<group>"; };
 		455A40355481092452BC8126 /* Pods-KKProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectUITests/Pods-KKProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		473B8CBAD0C54311411F0DCF /* Pods-KKProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectTests/Pods-KKProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F5F3D8F2A4519E97EDD89CD /* Pods_KKProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +255,7 @@
 		0AFCAAC81F176FEB00D60FA4 /* KKProject */ = {
 			isa = PBXGroup;
 			children = (
+				1264AC2321F5A670008AA568 /* ThirdParty */,
 				0AFCAAFF1F17742900D60FA4 /* Tools */,
 				0AFCAACC1F176FEB00D60FA4 /* AppDelegate.h */,
 				0AFCAACD1F176FEB00D60FA4 /* AppDelegate.m */,
@@ -330,6 +347,45 @@
 				1264AC1921F0A583008AA568 /* Info.plist */,
 			);
 			path = MonitorFlow;
+			sourceTree = "<group>";
+		};
+		1264AC2321F5A670008AA568 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				1264AC2421F5A670008AA568 /* JX_GCDTimer */,
+				1264AC2721F5A670008AA568 /* YYFPSLabel */,
+				1264AC2A21F5A670008AA568 /* LXDAppFluecyMonitor */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		1264AC2421F5A670008AA568 /* JX_GCDTimer */ = {
+			isa = PBXGroup;
+			children = (
+				1264AC2521F5A670008AA568 /* JX_GCDTimerManager.h */,
+				1264AC2621F5A670008AA568 /* JX_GCDTimerManager.m */,
+			);
+			path = JX_GCDTimer;
+			sourceTree = "<group>";
+		};
+		1264AC2721F5A670008AA568 /* YYFPSLabel */ = {
+			isa = PBXGroup;
+			children = (
+				1264AC2821F5A670008AA568 /* YYFPSLabel.h */,
+				1264AC2921F5A670008AA568 /* YYFPSLabel.m */,
+			);
+			path = YYFPSLabel;
+			sourceTree = "<group>";
+		};
+		1264AC2A21F5A670008AA568 /* LXDAppFluecyMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				1264AC2E21F5A670008AA568 /* LXDAppFluecyMonitor.h */,
+				1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */,
+				1264AC2D21F5A670008AA568 /* LXDBacktraceLogger.h */,
+				1264AC2C21F5A670008AA568 /* LXDBacktraceLogger.m */,
+			);
+			path = LXDAppFluecyMonitor;
 			sourceTree = "<group>";
 		};
 		1522A7EF2FE3CA0330D5DA6E /* Frameworks */ = {
@@ -568,6 +624,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -582,6 +639,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -649,10 +707,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1264AC3221F5A670008AA568 /* YYFPSLabel.m in Sources */,
 				0AFCAAD11F176FEB00D60FA4 /* ViewController.m in Sources */,
 				0A07389E208C46BA006900EE /* RACViewController.m in Sources */,
 				0AFCAB0A1F177BF000D60FA4 /* NSString+KKHandler.m in Sources */,
 				0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandler.m in Sources */,
+				1264AC3621F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */,
+				1264AC3421F5A670008AA568 /* LXDBacktraceLogger.m in Sources */,
 				0A0BB6661FE3A72D0062C55D /* KKAdjustedButton.m in Sources */,
 				0ABC244B2088BDE600434692 /* DispatchViewController.m in Sources */,
 				0AFCAB0C1F177BF000D60FA4 /* KKBackgroudConstantConnect.m in Sources */,
@@ -667,6 +728,7 @@
 				125501B621D5D2660057AE0A /* CollectionViewController.m in Sources */,
 				0AFCAB091F177BF000D60FA4 /* KKUtilityClass.m in Sources */,
 				0AFCAAD71F176FEB00D60FA4 /* KKProject.xcdatamodeld in Sources */,
+				1264AC3021F5A670008AA568 /* JX_GCDTimerManager.m in Sources */,
 				0A2823E0208D945E008234EB /* KKBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,8 +753,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1264AC3521F5A670008AA568 /* LXDBacktraceLogger.m in Sources */,
+				1264AC3721F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */,
 				1264AC2121F0A5B6008AA568 /* MonitorFlow.m in Sources */,
 				1264AC1521F0A583008AA568 /* TodayViewController.m in Sources */,
+				1264AC3321F5A670008AA568 /* YYFPSLabel.m in Sources */,
+				1264AC3121F5A670008AA568 /* JX_GCDTimerManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

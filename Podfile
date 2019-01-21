@@ -14,7 +14,7 @@ target 'KKProject' do
    use_frameworks!
 
   # Pods for KKProject
-#    pod 'YYKit'
+    pod 'YYKit'
     pod 'AFNetworking'
     pod 'SDWebImage'
     pod 'OpenUDID'

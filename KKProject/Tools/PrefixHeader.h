@@ -17,11 +17,10 @@
 #import "KKNavigationController.h"
 
 
-//shceme为realese时define，而debug时ndef
-#ifndef __OPTIMIZE__
-#warning NSLogs will be shown
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
 #else
-#define NSLog(...) {}
+#define NSLog(...)
 #endif
 
 #define SFLog(fmt, ...) NSLog((@"%s, " "line:%d, \n" fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__); //带函数名和行数
@@ -70,6 +69,17 @@
 #pragma mark -- 一像素
 #define PixelOne 1 / [[UIScreen mainScreen] scale]
 
+
+#pragma mark --懒加载
+#ifndef LazyLoading
+#define LazyLoading(_type_, _ivar_) \
+- (_type_ *)_ivar_ { \
+if (! _##_ivar_) { \
+_##_ivar_ = [[_type_ alloc] init]; \
+} \
+return _##_ivar_; \
+}
+#endif
 
 
 #endif /* PrefixHeader_h */
