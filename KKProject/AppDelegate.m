@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -48,6 +49,27 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+
+
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    
+    if ([url.absoluteString hasPrefix:@"file:///private"]) {
+        NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+        path = [path stringByAppendingPathComponent:url.lastPathComponent];
+        NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+        [data writeToFile:path atomically:YES];
+        
+        WKWebViewController *webView = [[WKWebViewController alloc] init];
+        webView.urlStr = path;
+        [app.keyWindow.rootViewController presentViewController:webView animated:YES completion:nil];
+    }
+    
+    return YES;
+}
+
+
+
 
 
 #pragma mark - Core Data stack

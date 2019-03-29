@@ -14,7 +14,7 @@
 #import <Masonry/Masonry.h>
 
 
-@interface ViewController ()
+@interface ViewController ()<UIDocumentPickerDelegate>
 
 
 @end
@@ -23,10 +23,17 @@
 
 
 
-- (void)pushAction {
-    Class class = NSClassFromString(@"CollectionViewController");
-    UIViewController *vc = [[class alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+- (void)pushAction {    
+//    Class class = NSClassFromString(@"DocumentViewController");
+//    UIViewController *vc = [[class alloc]init];
+//    [self.navigationController pushViewController:vc animated:YES];
+
+    NSArray *documentArr = @[@"public.content",@"public.text",@"public.source-code",@"public.image",@"public.audiovisual-content",@"com.adobe.pdf",@"com.apple.keynote.key",@"com.microsoft.word.doc",@"com.microsoft.excel.xls",@"com.microsoft.powerpoint.ppt"];
+    UIDocumentPickerViewController *docPicker = [[UIDocumentPickerViewController alloc] initWithDocumentTypes:documentArr inMode:(UIDocumentPickerModeOpen)];
+    docPicker.delegate = self;
+    [self.navigationController presentViewController:docPicker animated:YES completion:nil];
+
+
 }
 
 

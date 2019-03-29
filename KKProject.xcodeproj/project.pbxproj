@@ -47,6 +47,7 @@
 		1264AC3521F5A670008AA568 /* LXDBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2C21F5A670008AA568 /* LXDBacktraceLogger.m */; };
 		1264AC3621F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */; };
 		1264AC3721F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */; };
+		12C1E365224DFC60002B28CD /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1E364224DFC60002B28CD /* WKWebViewController.swift */; };
 		3CA01A50093785FEA5777A91 /* Pods_KKProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93D1ECD53CB2105A2163ECA /* Pods_KKProject.framework */; };
 		9A3F381992FD31DD53BC24F0 /* Pods_KKProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677B7E1466ACA14B4BBCF537 /* Pods_KKProjectUITests.framework */; };
 		C4CF5CC82C25DC7731F6C56D /* Pods_KKProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5F3D8F2A4519E97EDD89CD /* Pods_KKProjectTests.framework */; };
@@ -141,6 +142,7 @@
 		0AFCAB061F177BF000D60FA4 /* UIColor+KKHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KKHandler.m"; sourceTree = "<group>"; };
 		0AFCAB071F177BF000D60FA4 /* KKBackgroudConstantConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKBackgroudConstantConnect.h; sourceTree = "<group>"; };
 		0AFCAB081F177BF000D60FA4 /* KKBackgroudConstantConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKBackgroudConstantConnect.m; sourceTree = "<group>"; };
+		1244419B224CB21200761BE6 /* KKProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		125501B421D5D2660057AE0A /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		125501B521D5D2660057AE0A /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		1264AC0821F0A249008AA568 /* MonitorFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonitorFlow.h; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		1264AC2D21F5A670008AA568 /* LXDBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDBacktraceLogger.h; sourceTree = "<group>"; };
 		1264AC2E21F5A670008AA568 /* LXDAppFluecyMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDAppFluecyMonitor.h; sourceTree = "<group>"; };
 		1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDAppFluecyMonitor.m; sourceTree = "<group>"; };
+		12C1E364224DFC60002B28CD /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		455A40355481092452BC8126 /* Pods-KKProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectUITests/Pods-KKProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		473B8CBAD0C54311411F0DCF /* Pods-KKProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectTests/Pods-KKProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F5F3D8F2A4519E97EDD89CD /* Pods_KKProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +266,7 @@
 				0A2823DF208D945E008234EB /* KKBaseViewController.m */,
 				0AFCAACF1F176FEB00D60FA4 /* ViewController.h */,
 				0AFCAAD01F176FEB00D60FA4 /* ViewController.m */,
+				12C1E364224DFC60002B28CD /* WKWebViewController.swift */,
 				0ABC24492088BDE600434692 /* DispatchViewController.h */,
 				0ABC244A2088BDE600434692 /* DispatchViewController.m */,
 				0ABC244C2088BE9E00434692 /* LoadImageViewController.h */,
@@ -280,6 +284,7 @@
 				0AFCAADD1F176FEB00D60FA4 /* Info.plist */,
 				0AFCAAD51F176FEB00D60FA4 /* KKProject.xcdatamodeld */,
 				0AFCAAC91F176FEB00D60FA4 /* Supporting Files */,
+				1244419B224CB21200761BE6 /* KKProject-Bridging-Header.h */,
 			);
 			path = KKProject;
 			sourceTree = "<group>";
@@ -508,6 +513,7 @@
 					0AFCAAC51F176FEB00D60FA4 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = FM6CWNE4AZ;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					0AFCAAE11F176FEC00D60FA4 = {
@@ -534,6 +540,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -710,6 +717,7 @@
 				1264AC3221F5A670008AA568 /* YYFPSLabel.m in Sources */,
 				0AFCAAD11F176FEB00D60FA4 /* ViewController.m in Sources */,
 				0A07389E208C46BA006900EE /* RACViewController.m in Sources */,
+				12C1E365224DFC60002B28CD /* WKWebViewController.swift in Sources */,
 				0AFCAB0A1F177BF000D60FA4 /* NSString+KKHandler.m in Sources */,
 				0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandler.m in Sources */,
 				1264AC3621F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */,
@@ -910,6 +918,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
@@ -939,6 +948,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fang.KKProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KKProject/KKProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -949,6 +961,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -977,6 +990,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fang.KKProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KKProject/KKProject-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -985,6 +1000,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 808F01D4673F520342B18035 /* Pods-KKProjectTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
 				INFOPLIST_FILE = KKProjectTests/Info.plist;
@@ -999,6 +1015,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 473B8CBAD0C54311411F0DCF /* Pods-KKProjectTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
 				INFOPLIST_FILE = KKProjectTests/Info.plist;
@@ -1013,6 +1030,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB00E13D9075CD1504647F9C /* Pods-KKProjectUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
 				INFOPLIST_FILE = KKProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1026,6 +1044,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 455A40355481092452BC8126 /* Pods-KKProjectUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
 				INFOPLIST_FILE = KKProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
