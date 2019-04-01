@@ -12,7 +12,7 @@
 #import <objc/runtime.h>
 #import "KKAdjustedButton.h"
 #import <Masonry/Masonry.h>
-
+#import <CoreBluetooth/CoreBluetooth.h>
 
 @interface ViewController ()<UIDocumentPickerDelegate>
 
@@ -23,16 +23,17 @@
 
 
 
-- (void)pushAction {    
-//    Class class = NSClassFromString(@"DocumentViewController");
+- (void)pushAction {
+    
+//    Class class = NSClassFromString(@"BLECentralViewController");
 //    UIViewController *vc = [[class alloc]init];
-//    [self.navigationController pushViewController:vc animated:YES];
+    BLECentralViewController *ble = [[BLECentralViewController alloc] init];
+    [self.navigationController pushViewController:ble animated:YES];
 
-    NSArray *documentArr = @[@"public.content",@"public.text",@"public.source-code",@"public.image",@"public.audiovisual-content",@"com.adobe.pdf",@"com.apple.keynote.key",@"com.microsoft.word.doc",@"com.microsoft.excel.xls",@"com.microsoft.powerpoint.ppt"];
-    UIDocumentPickerViewController *docPicker = [[UIDocumentPickerViewController alloc] initWithDocumentTypes:documentArr inMode:(UIDocumentPickerModeOpen)];
-    docPicker.delegate = self;
-    [self.navigationController presentViewController:docPicker animated:YES completion:nil];
-
+//    NSArray *documentArr = @[@"public.content",@"public.text",@"public.source-code",@"public.image",@"public.audiovisual-content",@"com.adobe.pdf",@"com.apple.keynote.key",@"com.microsoft.word.doc",@"com.microsoft.excel.xls",@"com.microsoft.powerpoint.ppt"];
+//    UIDocumentPickerViewController *docPicker = [[UIDocumentPickerViewController alloc] initWithDocumentTypes:documentArr inMode:(UIDocumentPickerModeOpen)];
+//    docPicker.delegate = self;
+//    [self.navigationController presentViewController:docPicker animated:YES completion:nil];
 
 }
 
