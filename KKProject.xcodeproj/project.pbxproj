@@ -47,6 +47,7 @@
 		1264AC3521F5A670008AA568 /* LXDBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2C21F5A670008AA568 /* LXDBacktraceLogger.m */; };
 		1264AC3621F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */; };
 		1264AC3721F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */; };
+		127F28D6225347C100BC70CA /* BLEPeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F28D5225347C100BC70CA /* BLEPeripheralViewController.swift */; };
 		12C1E365224DFC60002B28CD /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1E364224DFC60002B28CD /* WKWebViewController.swift */; };
 		12E83A732251FF7800D691ED /* BLECentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E83A722251FF7800D691ED /* BLECentralViewController.swift */; };
 		3CA01A50093785FEA5777A91 /* Pods_KKProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93D1ECD53CB2105A2163ECA /* Pods_KKProject.framework */; };
@@ -163,6 +164,7 @@
 		1264AC2D21F5A670008AA568 /* LXDBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDBacktraceLogger.h; sourceTree = "<group>"; };
 		1264AC2E21F5A670008AA568 /* LXDAppFluecyMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDAppFluecyMonitor.h; sourceTree = "<group>"; };
 		1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDAppFluecyMonitor.m; sourceTree = "<group>"; };
+		127F28D5225347C100BC70CA /* BLEPeripheralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPeripheralViewController.swift; sourceTree = "<group>"; };
 		12C1E364224DFC60002B28CD /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		12E83A722251FF7800D691ED /* BLECentralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralViewController.swift; sourceTree = "<group>"; };
 		455A40355481092452BC8126 /* Pods-KKProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectUITests/Pods-KKProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				0AFCAAD01F176FEB00D60FA4 /* ViewController.m */,
 				12C1E364224DFC60002B28CD /* WKWebViewController.swift */,
 				12E83A722251FF7800D691ED /* BLECentralViewController.swift */,
+				127F28D5225347C100BC70CA /* BLEPeripheralViewController.swift */,
 				0ABC24492088BDE600434692 /* DispatchViewController.h */,
 				0ABC244A2088BDE600434692 /* DispatchViewController.m */,
 				0ABC244C2088BE9E00434692 /* LoadImageViewController.h */,
@@ -736,6 +739,7 @@
 				0AFCAACB1F176FEB00D60FA4 /* main.m in Sources */,
 				0AEF051A204698F6003AECAF /* KKSymmetricEncryption.m in Sources */,
 				0A0653F61F3416F600A9B17A /* TestViewController.m in Sources */,
+				127F28D6225347C100BC70CA /* BLEPeripheralViewController.swift in Sources */,
 				0A0BB6691FE3AD910062C55D /* KKNavigationController.m in Sources */,
 				125501B621D5D2660057AE0A /* CollectionViewController.m in Sources */,
 				0AFCAB091F177BF000D60FA4 /* KKUtilityClass.m in Sources */,

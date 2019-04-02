@@ -9,46 +9,30 @@
 import UIKit
 import CoreBluetooth
 
-
-
-private let Service_UUID = "CDD1"
-private let Characteristic_UUID = "CDD2"
-
-
-
 class BLECentralViewController: KKBaseViewController {
 
-    private var characteristic: CBCharacteristic?
     
-    lazy private var peripheralManager: CBPeripheralManager = {
-        let pm = CBPeripheralManager.init(delegate: self, queue: .main)
-        return pm
-    }()
+    private let Service_UUID: String = "CDD1"
+    private let Characteristic_UUID: String = "CDD2"
+    
+    private var centralManager: CBCentralManager?
+    private var peripheral: CBPeripheral?
+    private var characteristic: CBCharacteristic?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "BLE-Peripheral"
+        title = "BLE-Central"
+        self.centralManager = CBCentralManager.init(delegate: self, queue: .main)
         
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
 
-
-extension BLECentralViewController: CBPeripheralManagerDelegate {
-    func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
-        switch peripheral.state {
+extension BLECentralViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        switch central.state {
         case .unknown:
             print("unknown")
         case .resetting:
@@ -61,47 +45,83 @@ extension BLECentralViewController: CBPeripheralManagerDelegate {
             print("poweredOff")
         case .poweredOn:
             print("poweredOn")
-            
+            central.scanForPeripherals(withServices: [CBUUID.init(string: Service_UUID)], options: nil)
         default:
             print("error")
         }
     }
     
-    /** 创建服务和特征
-     注意swift中枚举的按位运算 '|' 要用[.read, .write, .notify]这种形式
-     */
-    private func setupServiceAndCharacteristic() {
-        let serviceID = CBUUID.init(string: Service_UUID)
-        let service = CBMutableService.init(type: serviceID, primary: true)
-        let characteristicID = CBUUID.init(string: Characteristic_UUID)
-        let characteristic = CBMutableCharacteristic.init(type: characteristicID, properties: [.read, .write, .notify], value: nil, permissions: [.readable, .writeable])
-        service.characteristics = [characteristic]
-        self.peripheralManager.add(service)
-        self.characteristic = characteristic
+    
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        self.peripheral = peripheral
+        print("发现外设：\(peripheral.name ?? "BLE")")
+        central.connect(peripheral, options: nil)
     }
     
-    /** 中心设备读取数据的时候回调 */
-    func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveRead request: CBATTRequest) {
-        let str = "respond"
-        request.value = str.data(using: .utf8)
-        peripheral.respond(to: request, withResult: .success)
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        self.centralManager?.stopScan()
+        peripheral.delegate = self
+        peripheral.discoverServices([CBUUID.init(string: Service_UUID)])
+        print("连接成功")
     }
     
-    /** 中心设备写入数据 */
-    func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveWrite requests: [CBATTRequest]) {
-        let request = requests.last!
-//        let str = String.init(data: request.value!, encoding: .utf8)
-        print("\(String(describing: request.value))")
+    func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
+        print("连接失败")
     }
     
-    /** 订阅成功回调 */
-    func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
-        print("\(#function) 订阅成功回调")
+    func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+        print("断开连接")
+        // 重新连接
+        central.connect(peripheral, options: nil)
     }
     
-    /** 取消订阅回调 */
-    func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didUnsubscribeFrom characteristic: CBCharacteristic) {
-        print("\(#function) 取消订阅回调")
+    /** 发现服务 */
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
+        for service: CBService in peripheral.services! {
+            print("外设中的服务有：\(service)")
+            peripheral.discoverCharacteristics(nil, for: service)
+        }
     }
+    
+    /** 发现特征 */
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
+        for characteristic: CBCharacteristic in service.characteristics! {
+            print("外设中的特征有：\(characteristic)")
+        }
+        
+        self.characteristic = service.characteristics?.last
+        // 读取特征里的数据
+        peripheral.readValue(for: self.characteristic!)
+        // 订阅
+        peripheral.setNotifyValue(true, for: self.characteristic!)
+    }
+    
+    /** 订阅状态 */
+    func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
+        if let error = error {
+            print("订阅失败: \(error)")
+            return
+        }
+        if characteristic.isNotifying {
+            print("订阅成功")
+        } else {
+            print("取消订阅")
+        }
+    }
+    
+    /** 接收到数据 */
+    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
+        let data = characteristic.value
+        let str = String.init(data: data!, encoding: String.Encoding.utf8)
+        print("value-\(str!)")
+    }
+    
+    /** 写入数据 */
+    func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
+        print("写入数据")
+    }
+    
+    
     
 }
+
