@@ -11,21 +11,23 @@
 @implementation KKAdjustedButton
 
 
-- (CGRect)titleRectForContentRect:(CGRect)contentRect
-{
-    return _titleRect;
-}
-- (CGRect)imageRectForContentRect:(CGRect)contentRect
-{
-    return _imageRect;
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent*)event {
+    CGRect bounds = self.bounds;
+    if (!UIEdgeInsetsEqualToEdgeInsets(self.touchEdge, UIEdgeInsetsZero)) {
+        bounds = UIEdgeInsetsResetRect(bounds, self.touchEdge);
+    }
+    return CGRectContainsPoint(bounds, point);
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    if (!CGRectIsEmpty(_titleRect) && !CGRectIsNull(_titleRect)) {
+        self.titleLabel.frame = _titleRect;
+    }
+    if (!CGRectIsEmpty(_imageRect) && !CGRectIsNull(_imageRect)) {
+        self.imageView.frame = _imageRect;
+    }
 }
-*/
 
 @end

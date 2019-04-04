@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class WKWebViewController: KKBaseViewController {
+class WKWebViewController: BaseViewController {
     
     @objc var urlStr: String = ""
     

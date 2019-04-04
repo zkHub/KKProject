@@ -9,10 +9,10 @@
 import UIKit
 import CoreBluetooth
 
-class BLECentralViewController: KKBaseViewController {
+class BLECentralViewController: BaseViewController {
 
     
-    private let Service_UUID: String = "CDD1"
+    private let Service_UUID: String = "1910"
     private let Characteristic_UUID: String = "CDD2"
     
     private var centralManager: CBCentralManager?
@@ -63,6 +63,7 @@ extension BLECentralViewController: CBCentralManagerDelegate, CBPeripheralDelega
         peripheral.delegate = self
         peripheral.discoverServices([CBUUID.init(string: Service_UUID)])
         print("连接成功")
+        
     }
     
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
@@ -89,7 +90,7 @@ extension BLECentralViewController: CBCentralManagerDelegate, CBPeripheralDelega
             print("外设中的特征有：\(characteristic)")
         }
         
-        self.characteristic = service.characteristics?.last
+        self.characteristic = service.characteristics?.first
         // 读取特征里的数据
         peripheral.readValue(for: self.characteristic!)
         // 订阅
@@ -113,12 +114,20 @@ extension BLECentralViewController: CBCentralManagerDelegate, CBPeripheralDelega
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         let data = characteristic.value
         let str = String.init(data: data!, encoding: String.Encoding.utf8)
-        print("value-\(str!)")
+        print("value-\(str ?? "error")")
+        
+//        let string = "post"
+//        peripheral.writeValue(string.data(using: .utf8)!, for: characteristic, type: .withResponse)
+        
     }
     
     /** 写入数据 */
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        print("写入数据")
+        if error == nil {
+            print("写入数据成功")
+        } else {
+            print("error-\(String(describing: error))")
+        }
     }
     
     

@@ -14,7 +14,7 @@ private let Service_UUID = "CDD1"
 private let Characteristic_UUID = "CDD2"
 private let Descriptor_UUID = "CDD3"
 
-class BLEPeripheralViewController: KKBaseViewController {
+class BLEPeripheralViewController: BaseViewController {
 
     private var characteristic: CBCharacteristic?
     

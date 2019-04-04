@@ -66,7 +66,6 @@
         
     } else {
         [self refreshPlaceHoderFrame];
-        
     }
     
 }
