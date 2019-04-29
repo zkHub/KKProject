@@ -4,6 +4,31 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string></string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.content</string>
+				<string>public.image</string>
+				<string>public.audio</string>
+				<string>public.movie</string>
+				<string>public.text</string>
+				<string>public.data</string>
+				<string>public.item</string>
+				<string>public.archive</string>
+				<string>public.composite-content</string>
+				<string>public.adobe.pdf</string>
+				<string>com.microsoft.word.doc</string>
+				<string>com.microsoft.powerpoint.ppt</string>
+				<string>com.microsoft.excel.xls</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -46,30 +71,5 @@
 	</array>
 	<key>UISupportsDocumentBrowser</key>
 	<true/>
-	<key>CFBundleDocumentTypes</key>
-	<array>
-		<dict>
-			<key>LSItemContentTypes</key>
-			<array>
-				<string>public.content</string>
-                <string>public.image</string>
-                <string>public.audio</string>
-                <string>public.movie</string>
-                <string>public.text</string>
-                <string>public.data</string>
-                <string>public.item</string>
-                <string>public.archive</string>
-                <string>public.composite-content</string>
-                <string>public.adobe.pdf</string>
-                <string>com.microsoft.word.doc</string>
-                <string>com.microsoft.powerpoint.ppt</string>
-                <string>com.microsoft.excel.xls</string>
-			</array>
-			<key>CFBundleTypeName</key>
-			<string></string>
-			<key>LSHandlerRank</key>
-			<string>Default</string>
-		</dict>
-	</array>
 </dict>
 </plist>

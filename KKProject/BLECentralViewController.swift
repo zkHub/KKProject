@@ -12,25 +12,67 @@ import CoreBluetooth
 class BLECentralViewController: BaseViewController {
 
     
-    private let Service_UUID: String = "1910"
-    private let Characteristic_UUID: String = "CDD2"
+    private let cellReuseIdentifier = "cellReuseIdentifier"
+
+    lazy private var periArr = NSMutableArray.init()
     
     private var centralManager: CBCentralManager?
-    private var peripheral: CBPeripheral?
-    private var characteristic: CBCharacteristic?
 
+    lazy private var tableView: UITableView = {
+        let tableView = UITableView.init(frame: .zero, style: .plain)
+        tableView.delegate = self
+        tableView.dataSource = self
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        return tableView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "BLE-Central"
         self.centralManager = CBCentralManager.init(delegate: self, queue: .main)
-        
+        self.tableView.frame = self.view.frame
+        self.view.addSubview(self.tableView)
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        self.centralManager?.cancelPeripheralConnection(nil)
+    }
+    
 }
 
 
-extension BLECentralViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
+
+extension BLECentralViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.periArr.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier)
+        if cell == nil {
+            cell = UITableViewCell.init(style: .subtitle, reuseIdentifier: cellReuseIdentifier)
+        }
+        let peri: CBPeripheral = self.periArr[indexPath.row] as! CBPeripheral
+        cell?.textLabel?.text = peri.name ?? "BLE"
+        cell?.detailTextLabel?.text = peri.identifier.uuidString
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let peri: CBPeripheral = self.periArr[indexPath.row] as! CBPeripheral
+        self.centralManager?.connect(peri, options: nil)
+    }
+    
+}
+
+
+extension BLECentralViewController: CBCentralManagerDelegate {
+    
+    // MARK: -CBCentralManagerDelegate
+    
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .unknown:
@@ -45,7 +87,7 @@ extension BLECentralViewController: CBCentralManagerDelegate, CBPeripheralDelega
             print("poweredOff")
         case .poweredOn:
             print("poweredOn")
-            central.scanForPeripherals(withServices: [CBUUID.init(string: Service_UUID)], options: nil)
+            central.scanForPeripherals(withServices: nil, options: nil)
         default:
             print("error")
         }
@@ -53,17 +95,34 @@ extension BLECentralViewController: CBCentralManagerDelegate, CBPeripheralDelega
     
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        self.peripheral = peripheral
-        print("发现外设：\(peripheral.name ?? "BLE")")
-        central.connect(peripheral, options: nil)
+        print("发现外设：\(peripheral.identifier.uuidString)")
+        if self.periArr.count > 0 {
+            var isContains = false
+            for peri in self.periArr {
+                if peripheral.identifier == (peri as AnyObject).identifier {
+                    isContains = true
+                    break
+                }
+            }
+            if !isContains {
+                self.periArr.add(peripheral)
+                self.tableView.reloadData()
+            }
+        } else {
+            self.periArr.add(peripheral)
+            self.tableView.reloadData()
+        }
     }
     
+    
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        self.centralManager?.stopScan()
-        peripheral.delegate = self
-        peripheral.discoverServices([CBUUID.init(string: Service_UUID)])
         print("连接成功")
+        self.centralManager?.stopScan()
         
+        let connectPeriVC = BLEConnectPeripheralVC.init()
+        connectPeriVC.peripheral = peripheral
+        self.navigationController?.pushViewController(connectPeriVC, animated: true)
+       
     }
     
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
@@ -72,63 +131,9 @@ extension BLECentralViewController: CBCentralManagerDelegate, CBPeripheralDelega
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         print("断开连接")
-        // 重新连接
-        central.connect(peripheral, options: nil)
     }
     
-    /** 发现服务 */
-    func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        for service: CBService in peripheral.services! {
-            print("外设中的服务有：\(service)")
-            peripheral.discoverCharacteristics(nil, for: service)
-        }
-    }
     
-    /** 发现特征 */
-    func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-        for characteristic: CBCharacteristic in service.characteristics! {
-            print("外设中的特征有：\(characteristic)")
-        }
-        
-        self.characteristic = service.characteristics?.first
-        // 读取特征里的数据
-        peripheral.readValue(for: self.characteristic!)
-        // 订阅
-        peripheral.setNotifyValue(true, for: self.characteristic!)
-    }
-    
-    /** 订阅状态 */
-    func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
-        if let error = error {
-            print("订阅失败: \(error)")
-            return
-        }
-        if characteristic.isNotifying {
-            print("订阅成功")
-        } else {
-            print("取消订阅")
-        }
-    }
-    
-    /** 接收到数据 */
-    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        let data = characteristic.value
-        let str = String.init(data: data!, encoding: String.Encoding.utf8)
-        print("value-\(str ?? "error")")
-        
-//        let string = "post"
-//        peripheral.writeValue(string.data(using: .utf8)!, for: characteristic, type: .withResponse)
-        
-    }
-    
-    /** 写入数据 */
-    func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        if error == nil {
-            print("写入数据成功")
-        } else {
-            print("error-\(String(describing: error))")
-        }
-    }
     
     
     

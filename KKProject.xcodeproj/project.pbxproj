@@ -48,6 +48,8 @@
 		1264AC3621F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */; };
 		1264AC3721F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */; };
 		127F28D6225347C100BC70CA /* BLEPeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F28D5225347C100BC70CA /* BLEPeripheralViewController.swift */; };
+		1284C9E72276EA2400B8512A /* BLEConnectPeripheralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1284C9E52276EA2400B8512A /* BLEConnectPeripheralVC.swift */; };
+		1284C9E82276EA2400B8512A /* BLEConnectPeripheralVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1284C9E62276EA2400B8512A /* BLEConnectPeripheralVC.xib */; };
 		12C1E365224DFC60002B28CD /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1E364224DFC60002B28CD /* WKWebViewController.swift */; };
 		12E83A732251FF7800D691ED /* BLECentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E83A722251FF7800D691ED /* BLECentralViewController.swift */; };
 		12EE26E622549237003BE489 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EE26E522549237003BE489 /* BaseViewController.swift */; };
@@ -167,6 +169,8 @@
 		1264AC2E21F5A670008AA568 /* LXDAppFluecyMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDAppFluecyMonitor.h; sourceTree = "<group>"; };
 		1264AC2F21F5A670008AA568 /* LXDAppFluecyMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDAppFluecyMonitor.m; sourceTree = "<group>"; };
 		127F28D5225347C100BC70CA /* BLEPeripheralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPeripheralViewController.swift; sourceTree = "<group>"; };
+		1284C9E52276EA2400B8512A /* BLEConnectPeripheralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEConnectPeripheralVC.swift; sourceTree = "<group>"; };
+		1284C9E62276EA2400B8512A /* BLEConnectPeripheralVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BLEConnectPeripheralVC.xib; sourceTree = "<group>"; };
 		12C1E364224DFC60002B28CD /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		12E83A722251FF7800D691ED /* BLECentralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralViewController.swift; sourceTree = "<group>"; };
 		12EE26E522549237003BE489 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +283,8 @@
 				0AFCAAD01F176FEB00D60FA4 /* ViewController.m */,
 				12C1E364224DFC60002B28CD /* WKWebViewController.swift */,
 				12E83A722251FF7800D691ED /* BLECentralViewController.swift */,
+				1284C9E52276EA2400B8512A /* BLEConnectPeripheralVC.swift */,
+				1284C9E62276EA2400B8512A /* BLEConnectPeripheralVC.xib */,
 				127F28D5225347C100BC70CA /* BLEPeripheralViewController.swift */,
 				0ABC24492088BDE600434692 /* DispatchViewController.h */,
 				0ABC244A2088BDE600434692 /* DispatchViewController.m */,
@@ -580,6 +586,7 @@
 				0A0738A3208C8986006900EE /* ControllerList.plist in Resources */,
 				0AFCAAD41F176FEB00D60FA4 /* Main.storyboard in Resources */,
 				0A11B4C6207F694F00C744B4 /* mainpage_客户管理@3x.png in Resources */,
+				1284C9E82276EA2400B8512A /* BLEConnectPeripheralVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +758,7 @@
 				0A0BB6691FE3AD910062C55D /* KKNavigationController.m in Sources */,
 				125501B621D5D2660057AE0A /* CollectionViewController.m in Sources */,
 				0AFCAB091F177BF000D60FA4 /* KKUtilityClass.m in Sources */,
+				1284C9E72276EA2400B8512A /* BLEConnectPeripheralVC.swift in Sources */,
 				12E83A732251FF7800D691ED /* BLECentralViewController.swift in Sources */,
 				0AFCAAD71F176FEB00D60FA4 /* KKProject.xcdatamodeld in Sources */,
 				1264AC3021F5A670008AA568 /* JX_GCDTimerManager.m in Sources */,
