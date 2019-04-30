@@ -11,7 +11,7 @@ import CoreBluetooth
 
 class BLEConnectPeripheralVC: BaseViewController {
     
-    @IBOutlet weak var periTextView: UITextView!
+    @IBOutlet weak var infoTableView: UITableView!
     
     var peripheral: CBPeripheral?
     private var characteristic: CBCharacteristic?
@@ -19,9 +19,13 @@ class BLEConnectPeripheralVC: BaseViewController {
     var serviceCount = 0
     var peripheralInfo = ""
     
+    private let cellReuseIdentifier = "cellReuseIdentifier"
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.periTextView.text = self.peripheral?.description
+        self.title = "Peripheral"
+        
         self.peripheral?.delegate = self
         self.peripheral?.discoverServices(nil)
 
@@ -79,7 +83,7 @@ extension BLEConnectPeripheralVC: CBPeripheralDelegate {
                 }
                 
             }
-            self.periTextView.text = peripheralInfo
+            self.infoTableView.reloadData()
         }
         
 //        // 读取特征里的数据
@@ -122,5 +126,60 @@ extension BLEConnectPeripheralVC: CBPeripheralDelegate {
         }
     }
     
+    
+}
+
+
+extension BLEConnectPeripheralVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.peripheral?.services?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let service = self.peripheral?.services![section]
+        return service?.characteristics?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier)
+        if cell == nil {
+            cell = UITableViewCell.init(style: .default, reuseIdentifier: cellReuseIdentifier)
+        }
+        
+        let service = self.peripheral?.services![indexPath.section]
+        let character = service?.characteristics![indexPath.row]
+        cell?.textLabel?.text = "\t" + (character?.description ?? "")
+        cell?.textLabel?.numberOfLines = 0
+        return cell!
+    }
+    
+    
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        let service = self.peripheral?.services![section]
+//        return service?.description
+//    }
+//
+//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        let headerView = view as! UITableViewHeaderFooterView
+//        headerView.textLabel?.numberOfLines = 0
+//        let service = self.peripheral?.services![section]
+//        headerView.textLabel?.text = service?.description
+//
+//    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let textLbl = UILabel.init()
+        textLbl.numberOfLines = 0
+        textLbl.font = UIFont.systemFont(ofSize: 15)
+        let service = self.peripheral?.services![section]
+        textLbl.text = service?.description
+        return textLbl
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
     
 }

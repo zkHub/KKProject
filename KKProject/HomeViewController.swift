@@ -25,7 +25,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "HomePage"
-        
+
         self.tableView.frame = self.view.frame
         self.view.addSubview(self.tableView)
         

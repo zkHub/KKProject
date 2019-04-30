@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BLEConnectPeripheralVC" customModule="KKProject" customModuleProvider="target">
             <connections>
-                <outlet property="periTextView" destination="Y0G-j8-go8" id="YQV-yg-KvX"/>
+                <outlet property="infoTableView" destination="mwK-ae-wpT" id="r6m-QI-FYI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,19 +21,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Y0G-j8-go8">
-                    <rect key="frame" x="20" y="64" width="374" height="778"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="mwK-ae-wpT">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qnI-H0-gls"/>
+                        <outlet property="delegate" destination="-1" id="pcO-EL-TiV"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Y0G-j8-go8" secondAttribute="trailing" constant="20" id="H0g-Kp-q7e"/>
-                <constraint firstItem="Y0G-j8-go8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Q6L-0h-KCf"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Y0G-j8-go8" secondAttribute="bottom" constant="20" id="hjf-A6-c4L"/>
-                <constraint firstItem="Y0G-j8-go8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="sDk-Lh-ROL"/>
+                <constraint firstItem="mwK-ae-wpT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Cvt-FO-Wub"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mwK-ae-wpT" secondAttribute="trailing" id="Gs3-T8-aea"/>
+                <constraint firstItem="mwK-ae-wpT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZVV-Gs-yJa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mwK-ae-wpT" secondAttribute="bottom" id="nsi-xl-sjZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="66.666666666666671" y="73.660714285714278"/>
