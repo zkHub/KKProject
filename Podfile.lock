@@ -27,6 +27,7 @@ PODS:
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
+  - SnapKit (4.2.0)
   - SocketRocket (0.5.1)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - Reachability
   - ReactiveObjC
   - SDWebImage
+  - SnapKit
   - SocketRocket
   - YYKit
 
@@ -58,6 +60,7 @@ SPEC REPOS:
     - Reachability
     - ReactiveObjC
     - SDWebImage
+    - SnapKit
     - SocketRocket
     - YYKit
 
@@ -72,9 +75,10 @@ SPEC CHECKSUMS:
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: f6185799fafb253c341a5d363fa03ce7c2f72c6b
+PODFILE CHECKSUM: 3bf62525061b87bd253469ca94cf189a5de05be5
 
 COCOAPODS: 1.5.3

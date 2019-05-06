@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreBluetooth
+import SnapKit
 
 class BLEConnectPeripheralVC: BaseViewController {
     
@@ -17,7 +18,6 @@ class BLEConnectPeripheralVC: BaseViewController {
     private var characteristic: CBCharacteristic?
     
     var serviceCount = 0
-    var peripheralInfo = ""
     
     private let cellReuseIdentifier = "cellReuseIdentifier"
 
@@ -70,26 +70,10 @@ extension BLEConnectPeripheralVC: CBPeripheralDelegate {
         serviceCount -= 1
         
         if serviceCount == 0 {
-            peripheralInfo = self.peripheral!.description
-            for indexP in 0..<self.peripheral!.services!.count {
-                peripheralInfo += "\n\r"
-                let service = self.peripheral?.services?[indexP]
-                peripheralInfo += service!.description
-                
-                for indexS in 0..<service!.characteristics!.count {
-                    peripheralInfo += "\n\t"
-                    let chara = service?.characteristics?[indexS]
-                    peripheralInfo += chara!.description
-                }
-                
-            }
             self.infoTableView.reloadData()
         }
         
-//        // 读取特征里的数据
-//        peripheral.readValue(for: self.characteristic!)
-//        // 订阅
-//        peripheral.setNotifyValue(true, for: self.characteristic!)
+
         
     }
     
@@ -108,13 +92,13 @@ extension BLEConnectPeripheralVC: CBPeripheralDelegate {
     
     /** 接收到数据 */
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        let data = characteristic.value
-        let str = String.init(data: data!, encoding: String.Encoding.utf8)
-        print("value-\(str ?? "error")")
-        
-        //        let string = "post"
-        //        peripheral.writeValue(string.data(using: .utf8)!, for: characteristic, type: .withResponse)
-        
+        if let data = characteristic.value {
+            let str = String.init(data: data, encoding: String.Encoding.utf8)
+            print("value-\(str ?? error.debugDescription)")
+        } else {
+            print("error-\(error.debugDescription)")
+        }
+
     }
     
     /** 写入数据 */
@@ -144,13 +128,19 @@ extension BLEConnectPeripheralVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier)
         if cell == nil {
-            cell = UITableViewCell.init(style: .default, reuseIdentifier: cellReuseIdentifier)
+            cell = UITableViewCell.init(style: .subtitle, reuseIdentifier: cellReuseIdentifier)
         }
         
         let service = self.peripheral?.services![indexPath.section]
         let character = service?.characteristics![indexPath.row]
         cell?.textLabel?.text = "\t" + (character?.description ?? "")
         cell?.textLabel?.numberOfLines = 0
+        
+        var str = "null"
+        if let data = character!.value {
+            str = String.init(data: data, encoding: String.Encoding.utf8) ?? String(describing: data)
+        }
+        cell?.detailTextLabel?.text = str
         return cell!
     }
     
@@ -167,18 +157,36 @@ extension BLEConnectPeripheralVC: UITableViewDelegate, UITableViewDataSource {
 //        headerView.textLabel?.text = service?.description
 //
 //    }
+    
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerView = UIView.init()
+        
         let textLbl = UILabel.init()
         textLbl.numberOfLines = 0
         textLbl.font = UIFont.systemFont(ofSize: 15)
         let service = self.peripheral?.services![section]
         textLbl.text = service?.description
-        return textLbl
+        
+        headerView.addSubview(textLbl)
+        textLbl.snp.makeConstraints { (make) in
+            make.edges.equalTo(headerView).inset(UIEdgeInsets.init(top: 5, left: 15, bottom: 5, right: 15))
+        }
+        
+        return headerView
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let service = self.peripheral?.services![indexPath.section]
+        let character = service?.characteristics![indexPath.row]
+        
+        // 读取特征里的数据
+        self.peripheral!.readValue(for: character!)
+        // 订阅
+        self.peripheral!.setNotifyValue(true, for: character!)
         
     }
     
