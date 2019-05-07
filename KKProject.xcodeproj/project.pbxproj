@@ -33,6 +33,8 @@
 		0AFCAB0A1F177BF000D60FA4 /* NSString+KKHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB041F177BF000D60FA4 /* NSString+KKHandler.m */; };
 		0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB061F177BF000D60FA4 /* UIColor+KKHandler.m */; };
 		0AFCAB0C1F177BF000D60FA4 /* KKBackgroudConstantConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB081F177BF000D60FA4 /* KKBackgroudConstantConnect.m */; };
+		1249F99422812CE0008F1499 /* BLECentralInteractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1249F99222812CE0008F1499 /* BLECentralInteractVC.swift */; };
+		1249F99522812CE0008F1499 /* BLECentralInteractVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1249F99322812CE0008F1499 /* BLECentralInteractVC.xib */; };
 		125501B621D5D2660057AE0A /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 125501B521D5D2660057AE0A /* CollectionViewController.m */; };
 		1264AC1121F0A583008AA568 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1264AC1021F0A583008AA568 /* NotificationCenter.framework */; };
 		1264AC1521F0A583008AA568 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC1421F0A583008AA568 /* TodayViewController.m */; };
@@ -150,6 +152,8 @@
 		0AFCAB081F177BF000D60FA4 /* KKBackgroudConstantConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKBackgroudConstantConnect.m; sourceTree = "<group>"; };
 		1204D3C72252253500EED997 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1244419B224CB21200761BE6 /* KKProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		1249F99222812CE0008F1499 /* BLECentralInteractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralInteractVC.swift; sourceTree = "<group>"; };
+		1249F99322812CE0008F1499 /* BLECentralInteractVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BLECentralInteractVC.xib; sourceTree = "<group>"; };
 		125501B421D5D2660057AE0A /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		125501B521D5D2660057AE0A /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		1264AC0821F0A249008AA568 /* MonitorFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonitorFlow.h; sourceTree = "<group>"; };
@@ -285,6 +289,8 @@
 				12E83A722251FF7800D691ED /* BLECentralViewController.swift */,
 				1284C9E52276EA2400B8512A /* BLEConnectPeripheralVC.swift */,
 				1284C9E62276EA2400B8512A /* BLEConnectPeripheralVC.xib */,
+				1249F99222812CE0008F1499 /* BLECentralInteractVC.swift */,
+				1249F99322812CE0008F1499 /* BLECentralInteractVC.xib */,
 				127F28D5225347C100BC70CA /* BLEPeripheralViewController.swift */,
 				0ABC24492088BDE600434692 /* DispatchViewController.h */,
 				0ABC244A2088BDE600434692 /* DispatchViewController.m */,
@@ -535,6 +541,11 @@
 						DevelopmentTeam = FM6CWNE4AZ;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					0AFCAAE11F176FEC00D60FA4 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -584,6 +595,7 @@
 				0A11B4C5207F694F00C744B4 /* mainpage_客户管理@2x.png in Resources */,
 				0AFCAAD91F176FEB00D60FA4 /* Assets.xcassets in Resources */,
 				0A0738A3208C8986006900EE /* ControllerList.plist in Resources */,
+				1249F99522812CE0008F1499 /* BLECentralInteractVC.xib in Resources */,
 				0AFCAAD41F176FEB00D60FA4 /* Main.storyboard in Resources */,
 				0A11B4C6207F694F00C744B4 /* mainpage_客户管理@3x.png in Resources */,
 				1284C9E82276EA2400B8512A /* BLEConnectPeripheralVC.xib in Resources */,
@@ -752,6 +764,7 @@
 				0AFCAACE1F176FEB00D60FA4 /* AppDelegate.m in Sources */,
 				0A4AB69E1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m in Sources */,
 				0ABC244E2088BE9E00434692 /* LoadImageViewController.m in Sources */,
+				1249F99422812CE0008F1499 /* BLECentralInteractVC.swift in Sources */,
 				0AFCAACB1F176FEB00D60FA4 /* main.m in Sources */,
 				0AEF051A204698F6003AECAF /* KKSymmetricEncryption.m in Sources */,
 				0A0653F61F3416F600A9B17A /* TestViewController.m in Sources */,

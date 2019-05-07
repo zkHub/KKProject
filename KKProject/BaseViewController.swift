@@ -17,7 +17,15 @@ class BaseViewController: UIViewController {
         self.view.backgroundColor = .white
     }
     
-
+    func showAlert(title: String?, message: String?, preferredStyle: UIAlertController.Style) {
+        let alert = UIAlertController.init(title: title, message: message, preferredStyle: preferredStyle)
+        let action = UIAlertAction.init(title: "确定", style: .default) { (a) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

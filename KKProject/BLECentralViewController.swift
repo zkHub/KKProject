@@ -17,7 +17,8 @@ class BLECentralViewController: BaseViewController {
     lazy private var periArr = NSMutableArray.init()
     
     private var centralManager: CBCentralManager?
-
+    private var peripheral: CBPeripheral?
+    
     lazy private var tableView: UITableView = {
         let tableView = UITableView.init(frame: .zero, style: .plain)
         tableView.delegate = self
@@ -33,12 +34,7 @@ class BLECentralViewController: BaseViewController {
         self.tableView.frame = self.view.frame
         self.view.addSubview(self.tableView)
     }
-
-    
-    override func viewWillAppear(_ animated: Bool) {
-//        self.centralManager?.cancelPeripheralConnection(nil)
-    }
-    
+   
 }
 
 
@@ -54,7 +50,7 @@ extension BLECentralViewController: UITableViewDataSource, UITableViewDelegate {
         if cell == nil {
             cell = UITableViewCell.init(style: .subtitle, reuseIdentifier: cellReuseIdentifier)
         }
-        let peri: CBPeripheral = self.periArr[indexPath.row] as! CBPeripheral
+        let peri = self.periArr[indexPath.row] as! CBPeripheral
         cell?.textLabel?.text = peri.name ?? "BLE"
         cell?.detailTextLabel?.text = peri.identifier.uuidString
         return cell!
@@ -119,18 +115,21 @@ extension BLECentralViewController: CBCentralManagerDelegate {
         print("连接成功")
         self.centralManager?.stopScan()
         
+        self.peripheral = peripheral
+        
         let connectPeriVC = BLEConnectPeripheralVC.init()
+        connectPeriVC.centralManager = self.centralManager
         connectPeriVC.peripheral = peripheral
         self.navigationController?.pushViewController(connectPeriVC, animated: true)
        
     }
     
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
-        print("连接失败")
+        self.showAlert(title: nil, message: "连接失败", preferredStyle: .alert)
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        print("断开连接")
+        self.showAlert(title: nil, message: "断开连接", preferredStyle: .alert)
     }
     
     

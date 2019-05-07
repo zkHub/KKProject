@@ -26,7 +26,7 @@ target 'KKProject' do
     pod 'FMDB'
     pod 'SocketRocket'
 
-    pod ‘SnapKit’
+    pod 'SnapKit'
     
     #私有库
 #    pod 'podLibTest'

@@ -14,8 +14,9 @@ class BLEConnectPeripheralVC: BaseViewController {
     
     @IBOutlet weak var infoTableView: UITableView!
     
+    var centralManager: CBCentralManager?
     var peripheral: CBPeripheral?
-    private var characteristic: CBCharacteristic?
+//    private var characteristic: CBCharacteristic?
     
     var serviceCount = 0
     
@@ -24,7 +25,7 @@ class BLEConnectPeripheralVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Peripheral"
+        self.title = self.peripheral?.name ?? "Peripheral"
         
         self.peripheral?.delegate = self
         self.peripheral?.discoverServices(nil)
@@ -32,8 +33,10 @@ class BLEConnectPeripheralVC: BaseViewController {
         // Do any additional setup after loading the view.
     }
 
-
-    override func viewDidAppear(_ animated: Bool) {
+    deinit {
+        if self.peripheral != nil {
+            self.centralManager?.cancelPeripheralConnection(self.peripheral!)
+        }
     }
     
     /*
@@ -72,45 +75,9 @@ extension BLEConnectPeripheralVC: CBPeripheralDelegate {
         if serviceCount == 0 {
             self.infoTableView.reloadData()
         }
-        
-
-        
-    }
-    
-    /** 订阅状态 */
-    func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
-        if let error = error {
-            print("订阅失败: \(error)")
-            return
-        }
-        if characteristic.isNotifying {
-            print("订阅成功")
-        } else {
-            print("取消订阅")
-        }
-    }
-    
-    /** 接收到数据 */
-    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        if let data = characteristic.value {
-            let str = String.init(data: data, encoding: String.Encoding.utf8)
-            print("value-\(str ?? error.debugDescription)")
-        } else {
-            print("error-\(error.debugDescription)")
-        }
 
     }
-    
-    /** 写入数据 */
-    func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        if error == nil {
-            print("写入数据成功")
-        } else {
-            print("error-\(String(describing: error))")
-        }
-    }
-    
-    
+  
 }
 
 
@@ -140,7 +107,18 @@ extension BLEConnectPeripheralVC: UITableViewDelegate, UITableViewDataSource {
         if let data = character!.value {
             str = String.init(data: data, encoding: String.Encoding.utf8) ?? String(describing: data)
         }
+        str.append("\nProperty:")
+        if character!.properties.contains(.read) {
+            str.append("read ")
+        }
+        if character!.properties.contains(.write) {
+            str.append("write ")
+        }
+        if character!.properties.contains(.notify) {
+            str.append("notify ")
+        }
         cell?.detailTextLabel?.text = str
+        cell?.detailTextLabel?.numberOfLines = 0
         return cell!
     }
     
@@ -180,13 +158,18 @@ extension BLEConnectPeripheralVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let service = self.peripheral?.services![indexPath.section]
-        let character = service?.characteristics![indexPath.row]
+        if self.peripheral?.state == .connected {
+            let service = self.peripheral?.services?[indexPath.section]
+            let character = service?.characteristics?[indexPath.row]
+            
+            let interactVC = BLECentralInteractVC.init()
+            interactVC.peripheral = self.peripheral
+            interactVC.characteristic = character
+            self.navigationController?.pushViewController(interactVC, animated: true)
+        } else {
+            self.showAlert(title: nil, message: "设备未连接", preferredStyle: .alert)
+        }
         
-        // 读取特征里的数据
-        self.peripheral!.readValue(for: character!)
-        // 订阅
-        self.peripheral!.setNotifyValue(true, for: character!)
         
     }
     
