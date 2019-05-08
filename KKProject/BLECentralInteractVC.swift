@@ -28,39 +28,47 @@ class BLECentralInteractVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.peripheral?.delegate = self
-
+        self.setBorder(textView: self.writeTV)
+        self.setBorder(textView: self.readTV)
+        
         // Do any additional setup after loading the view.
     }
 
-
+    func setBorder(textView: UITextView) {
+        textView.layer.cornerRadius = 5.0
+        textView.layer.borderColor = UIColor.black.cgColor
+        textView.layer.borderWidth = 0.5
+        textView.layer.masksToBounds = true
+    }
+    
+    
     @IBAction func writeAction(_ sender: Any) {
         
-        if self.peripheral?.state == .connected {
+        if self.isConnected() {
             if self.characteristic!.properties.contains(.write) {
                 let data = self.writeTV.text.data(using: .utf8)
                 self.peripheral?.writeValue(data!, for: self.characteristic!, type: .withResponse)
+            } else if self.characteristic!.properties.contains(.writeWithoutResponse) {
+                let data = self.writeTV.text.data(using: .utf8)
+                self.peripheral?.writeValue(data!, for: self.characteristic!, type: .withoutResponse)
             } else {
                 self.showAlert(title: nil, message: "不支持写入", preferredStyle: .alert)
             }
-        } else {
-            self.showAlert(title: nil, message: "设备未连接", preferredStyle: .alert)
         }
         
     }
     
     
     @IBAction func readAction(_ sender: Any) {
-        if self.peripheral?.state == .connected {
+        if self.isConnected() {
             if self.characteristic!.properties.contains(.read) {
                 // 读取特征里的数据
                 self.peripheral?.readValue(for: self.characteristic!)
             } else {
                 self.showAlert(title: nil, message: "不支持读取", preferredStyle: .alert)
             }
-        } else {
-            self.showAlert(title: nil, message: "设备未连接", preferredStyle: .alert)
         }
-
+       
     }
     
 
@@ -68,19 +76,28 @@ class BLECentralInteractVC: BaseViewController {
     
     @IBAction func switchAction(_ sender: UISwitch) {
 
-        if self.peripheral?.state == .connected {
+        if self.isConnected() {
             if self.characteristic!.properties.contains(.notify) {
                 // 订阅
                 self.peripheral?.setNotifyValue(!self.characteristic!.isNotifying, for: self.characteristic!)
             } else {
+                self.notifySwitch.setOn(false, animated: true)
                 self.showAlert(title: nil, message: "不支持订阅", preferredStyle: .alert)
             }
-        } else {
-            self.showAlert(title: nil, message: "设备未连接", preferredStyle: .alert)
         }
         
         
     }
+    
+    func isConnected() -> Bool {
+        if self.peripheral?.state == .connected {
+            return true
+        } else {
+            self.showAlert(title: nil, message: "设备未连接", preferredStyle: .alert)
+            return false
+        }
+    }
+    
     
     /*
     // MARK: - Navigation
@@ -101,14 +118,14 @@ extension BLECentralInteractVC: CBPeripheralDelegate {
         var str = ""
         if let error = error {
             str = "订阅失败: \(error)"
-            self.notifySwitch.setOn(false, animated: false)
+            self.notifySwitch.setOn(false, animated: true)
         } else {
             if characteristic.isNotifying {
                 str = "订阅成功"
                 self.notifySwitch.setOn(true, animated: true)
             } else {
                 str = "取消订阅"
-                self.notifySwitch.setOn(false, animated: false)
+                self.notifySwitch.setOn(false, animated: true)
             }
         }
         self.showAlert(title: nil, message: str, preferredStyle: .alert)
@@ -118,8 +135,8 @@ extension BLECentralInteractVC: CBPeripheralDelegate {
     /** 接收到数据 */
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if let data = characteristic.value {
-            let str = String.init(data: data, encoding: String.Encoding.utf8)
-            self.readTV.text = "value-\(str ?? error.debugDescription)"
+            let str = String.init(data: data, encoding: .utf8)
+            self.readTV.text = str ?? error.debugDescription
         } else {
             self.readTV.text = "readError-\(String(describing: error))"
         }

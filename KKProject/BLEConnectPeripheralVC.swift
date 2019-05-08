@@ -114,6 +114,9 @@ extension BLEConnectPeripheralVC: UITableViewDelegate, UITableViewDataSource {
         if character!.properties.contains(.write) {
             str.append("write ")
         }
+        if character!.properties.contains(.writeWithoutResponse) {
+            str.append("writeWithoutResponse ")
+        }
         if character!.properties.contains(.notify) {
             str.append("notify ")
         }
