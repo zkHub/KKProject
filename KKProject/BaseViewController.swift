@@ -26,6 +26,12 @@ class BaseViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    deinit {
+        print("\(self)-deinit")
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
