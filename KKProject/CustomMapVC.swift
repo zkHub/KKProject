@@ -19,6 +19,8 @@ class CustomMapVC: BaseViewController {
         return manager
     }()
     
+    private let markReuseIdentifier = "markReuseIdentifier"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,27 @@ class CustomMapVC: BaseViewController {
         self.mapView.userTrackingMode = .followWithHeading
     }
 
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if touches.first?.view?.isKind(of: MKAnnotationView.self) ?? false {
+            print("MKAnnotationView-Click")
+            return
+        }
+        
+        
+        if let touchPoint = touches.first?.location(in: self.mapView) {
+            
+            let coordinate = self.mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
+            let annotation = MapAnnotation.init()
+            annotation.coordinate = coordinate
+            self.mapView.removeAnnotations(self.mapView.annotations)
+            self.mapView.addAnnotation(annotation)
+        }
+        
+    }
+    
+    
 
     /*
     // MARK: - Navigation
@@ -64,7 +87,7 @@ extension CustomMapVC: MKMapViewDelegate {
             let geocoder = CLGeocoder.init()
             geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
                 if error != nil {
-                    self.showAlert(title: nil, message: String(describing: error), preferredStyle: .alert)
+                    print(String(describing: error))
                 } else {
                     let placemark: CLPlacemark = placemarks![0]
                     userLocation.title = placemark.name
@@ -83,5 +106,26 @@ extension CustomMapVC: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didFailToLocateUserWithError error: Error) {
         print(String(describing: error))
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation.isKind(of: MKUserLocation.self) {
+            return nil
+        } else {
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: markReuseIdentifier)
+            if annotationView == nil {
+                annotationView = MKAnnotationView.init(annotation: annotation, reuseIdentifier: markReuseIdentifier)
+            }
+            annotationView?.image = UIImage.init(named: "icon_bull")
+//            annotationView?.canShowCallout = true
+            
+            return annotationView
+        }
+    }
+    
+    
+}
+
+
+extension CustomMapVC: CLLocationManagerDelegate {
     
 }

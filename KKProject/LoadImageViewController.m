@@ -18,20 +18,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
-    imageView.image = [UIImage imageNamed:@"mainpage_客户管理"];//30  会cache到 dirty 虚拟内存，系统不能操作
+    imageView.image = [UIImage imageNamed:@"icon_bull"];//30  会cache到 dirty 虚拟内存，系统不能操作
     
     UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(100, 300, 100, 100)];
-    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"mainpage_客户管理"];
+    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"icon_bull"];
     imageView2.image = [[UIImage alloc]initWithContentsOfFile:path];//3  这是只是加载到 clean 内存中，系统可以操作
     
     for (int i = 0; i < 10; i++) {
-        imageView.image = [UIImage imageNamed:@"mainpage_客户管理"];//2
+        imageView.image = [UIImage imageNamed:@"icon_bull"];//2
     }
     for (int i = 0; i < 10; i++) {
         imageView2.image = [[UIImage alloc]initWithContentsOfFile:path];//19
     }
     
-    [imageView sd_setImageWithURL:[NSURL URLWithString:@"https://upload-images.jianshu.io/upload_images/276769-02532b725b8bcc9f.jpg"] placeholderImage:[UIImage imageNamed:@"mainpage_客户管理"]];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:@"https://upload-images.jianshu.io/upload_images/276769-02532b725b8bcc9f.jpg"] placeholderImage:[UIImage imageNamed:@"icon_bull"]];
     
     [self.view addSubview:imageView];
     [self.view addSubview:imageView2];

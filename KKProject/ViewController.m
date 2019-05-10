@@ -52,7 +52,7 @@
     KKAdjustedButton *button = [KKAdjustedButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(90, 90, 200, 200);
     [button setTitle:@"123" forState:(UIControlStateNormal)];
-    [button setImage:[UIImage imageNamed:@"mainpage_客户管理"] forState:(UIControlStateNormal)];
+    [button setImage:[UIImage imageNamed:@"icon_bull"] forState:(UIControlStateNormal)];
     button.titleRect = CGRectMake(50, 50, 50, 50);
     button.imageRect = CGRectMake(150, 150, 50, 50);
     [button addTarget:self action:@selector(pushAction) forControlEvents:(UIControlEventTouchUpInside)];
