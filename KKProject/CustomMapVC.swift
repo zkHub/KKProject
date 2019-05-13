@@ -21,7 +21,7 @@ class CustomMapVC: BaseViewController {
     
     private let markReuseIdentifier = "markReuseIdentifier"
     
-    
+    // 加载地图大概是 75M 内存
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "map"
@@ -115,10 +115,20 @@ extension CustomMapVC: MKMapViewDelegate {
             if annotationView == nil {
                 annotationView = MKAnnotationView.init(annotation: annotation, reuseIdentifier: markReuseIdentifier)
             }
-            annotationView?.image = UIImage.init(named: "icon_bull")
-//            annotationView?.canShowCallout = true
-            
+            annotationView?.image = UIImage.init(named: "like")
+
             return annotationView
+        }
+    }
+    
+
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        UIView.animate(withDuration: 1, delay: 0, options: .repeat, animations: {
+            view.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        }) { (b) in
+            
         }
     }
     

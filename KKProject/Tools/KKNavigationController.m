@@ -58,7 +58,7 @@
     //设置统一的返回按钮
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     backButton.bounds = CGRectMake(0, 0, 24, 24);
-    [backButton setImage:[UIImage imageNamed:@"backBarButtonItem"] forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
     [backButton addTarget:self action:@selector(popAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     viewController.navigationItem.leftBarButtonItem = backBarButtonItem;

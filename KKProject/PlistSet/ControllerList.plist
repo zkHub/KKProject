@@ -14,6 +14,7 @@
 		<string>BLECentralViewController</string>
 		<string>BLEPeripheralViewController</string>
 		<string>CustomMapVC</string>
+		<string>AnimationVC</string>
 	</array>
 </dict>
 </plist>

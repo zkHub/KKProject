@@ -33,6 +33,7 @@
 		0AFCAB0C1F177BF000D60FA4 /* KKBackgroudConstantConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAB081F177BF000D60FA4 /* KKBackgroudConstantConnect.m */; };
 		12124C7222840DCE003E44A7 /* CustomMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12124C7022840DCE003E44A7 /* CustomMapVC.swift */; };
 		12124C7322840DCE003E44A7 /* CustomMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12124C7122840DCE003E44A7 /* CustomMapVC.xib */; };
+		1213F9AA228952DA008D224A /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1213F9A9228952DA008D224A /* AnimationVC.swift */; };
 		12385B0422855A7600D5645C /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12385B0322855A7600D5645C /* MapAnnotation.swift */; };
 		12385B0A22856EC000D5645C /* ImageSet.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12385B0922856EC000D5645C /* ImageSet.xcassets */; };
 		1249F99422812CE0008F1499 /* BLECentralInteractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1249F99222812CE0008F1499 /* BLECentralInteractVC.swift */; };
@@ -153,6 +154,7 @@
 		1204D3C72252253500EED997 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		12124C7022840DCE003E44A7 /* CustomMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapVC.swift; sourceTree = "<group>"; };
 		12124C7122840DCE003E44A7 /* CustomMapVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMapVC.xib; sourceTree = "<group>"; };
+		1213F9A9228952DA008D224A /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		12385B0322855A7600D5645C /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 		12385B0922856EC000D5645C /* ImageSet.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageSet.xcassets; sourceTree = "<group>"; };
 		1244419B224CB21200761BE6 /* KKProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKProject-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				12124C7022840DCE003E44A7 /* CustomMapVC.swift */,
 				12124C7122840DCE003E44A7 /* CustomMapVC.xib */,
 				12385B0322855A7600D5645C /* MapAnnotation.swift */,
+				1213F9A9228952DA008D224A /* AnimationVC.swift */,
 				0ABC24492088BDE600434692 /* DispatchViewController.h */,
 				0ABC244A2088BDE600434692 /* DispatchViewController.m */,
 				0ABC244C2088BE9E00434692 /* LoadImageViewController.h */,
@@ -778,6 +781,7 @@
 				0A0653F61F3416F600A9B17A /* TestViewController.m in Sources */,
 				12EE26E8225492A2003BE489 /* HomeViewController.swift in Sources */,
 				127F28D6225347C100BC70CA /* BLEPeripheralViewController.swift in Sources */,
+				1213F9AA228952DA008D224A /* AnimationVC.swift in Sources */,
 				0A0BB6691FE3AD910062C55D /* KKNavigationController.m in Sources */,
 				125501B621D5D2660057AE0A /* CollectionViewController.m in Sources */,
 				0AFCAB091F177BF000D60FA4 /* KKUtilityClass.m in Sources */,
