@@ -34,10 +34,17 @@
 		12124C7222840DCE003E44A7 /* CustomMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12124C7022840DCE003E44A7 /* CustomMapVC.swift */; };
 		12124C7322840DCE003E44A7 /* CustomMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12124C7122840DCE003E44A7 /* CustomMapVC.xib */; };
 		1213F9AA228952DA008D224A /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1213F9A9228952DA008D224A /* AnimationVC.swift */; };
+		12211FD922954866004D53C5 /* CustomCIFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12211FD722954866004D53C5 /* CustomCIFilterVC.swift */; };
+		12211FDA22954866004D53C5 /* CustomCIFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12211FD822954866004D53C5 /* CustomCIFilterVC.xib */; };
 		12385B0422855A7600D5645C /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12385B0322855A7600D5645C /* MapAnnotation.swift */; };
 		12385B0A22856EC000D5645C /* ImageSet.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12385B0922856EC000D5645C /* ImageSet.xcassets */; };
 		1249F99422812CE0008F1499 /* BLECentralInteractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1249F99222812CE0008F1499 /* BLECentralInteractVC.swift */; };
 		1249F99522812CE0008F1499 /* BLECentralInteractVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1249F99322812CE0008F1499 /* BLECentralInteractVC.xib */; };
+		124C5512228D3C7900B82C94 /* DragAndDropVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C5510228D3C7900B82C94 /* DragAndDropVC.swift */; };
+		124C5513228D3C7900B82C94 /* DragAndDropVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 124C5511228D3C7900B82C94 /* DragAndDropVC.xib */; };
+		124C5515228D4E7D00B82C94 /* snow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 124C5514228D4E7D00B82C94 /* snow.jpg */; };
+		124C5517228D4E8500B82C94 /* snow1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 124C5516228D4E8500B82C94 /* snow1.jpg */; };
+		124C5519228D4E9600B82C94 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 124C5518228D4E9500B82C94 /* avatar.jpg */; };
 		125501B621D5D2660057AE0A /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 125501B521D5D2660057AE0A /* CollectionViewController.m */; };
 		1264AC1121F0A583008AA568 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1264AC1021F0A583008AA568 /* NotificationCenter.framework */; };
 		1264AC1521F0A583008AA568 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1264AC1421F0A583008AA568 /* TodayViewController.m */; };
@@ -155,11 +162,18 @@
 		12124C7022840DCE003E44A7 /* CustomMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapVC.swift; sourceTree = "<group>"; };
 		12124C7122840DCE003E44A7 /* CustomMapVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMapVC.xib; sourceTree = "<group>"; };
 		1213F9A9228952DA008D224A /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
+		12211FD722954866004D53C5 /* CustomCIFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCIFilterVC.swift; sourceTree = "<group>"; };
+		12211FD822954866004D53C5 /* CustomCIFilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCIFilterVC.xib; sourceTree = "<group>"; };
 		12385B0322855A7600D5645C /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 		12385B0922856EC000D5645C /* ImageSet.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageSet.xcassets; sourceTree = "<group>"; };
 		1244419B224CB21200761BE6 /* KKProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		1249F99222812CE0008F1499 /* BLECentralInteractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralInteractVC.swift; sourceTree = "<group>"; };
 		1249F99322812CE0008F1499 /* BLECentralInteractVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BLECentralInteractVC.xib; sourceTree = "<group>"; };
+		124C5510228D3C7900B82C94 /* DragAndDropVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropVC.swift; sourceTree = "<group>"; };
+		124C5511228D3C7900B82C94 /* DragAndDropVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DragAndDropVC.xib; sourceTree = "<group>"; };
+		124C5514228D4E7D00B82C94 /* snow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snow.jpg; sourceTree = "<group>"; };
+		124C5516228D4E8500B82C94 /* snow1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snow1.jpg; sourceTree = "<group>"; };
+		124C5518228D4E9500B82C94 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
 		125501B421D5D2660057AE0A /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		125501B521D5D2660057AE0A /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		1264AC0821F0A249008AA568 /* MonitorFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonitorFlow.h; sourceTree = "<group>"; };
@@ -240,6 +254,9 @@
 		0A07389F208C4921006900EE /* ImageSet */ = {
 			isa = PBXGroup;
 			children = (
+				124C5514228D4E7D00B82C94 /* snow.jpg */,
+				124C5516228D4E8500B82C94 /* snow1.jpg */,
+				124C5518228D4E9500B82C94 /* avatar.jpg */,
 				12385B0922856EC000D5645C /* ImageSet.xcassets */,
 			);
 			path = ImageSet;
@@ -301,6 +318,10 @@
 				12124C7122840DCE003E44A7 /* CustomMapVC.xib */,
 				12385B0322855A7600D5645C /* MapAnnotation.swift */,
 				1213F9A9228952DA008D224A /* AnimationVC.swift */,
+				124C5510228D3C7900B82C94 /* DragAndDropVC.swift */,
+				124C5511228D3C7900B82C94 /* DragAndDropVC.xib */,
+				12211FD722954866004D53C5 /* CustomCIFilterVC.swift */,
+				12211FD822954866004D53C5 /* CustomCIFilterVC.xib */,
 				0ABC24492088BDE600434692 /* DispatchViewController.h */,
 				0ABC244A2088BDE600434692 /* DispatchViewController.m */,
 				0ABC244C2088BE9E00434692 /* LoadImageViewController.h */,
@@ -602,12 +623,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				12385B0A22856EC000D5645C /* ImageSet.xcassets in Resources */,
+				124C5517228D4E8500B82C94 /* snow1.jpg in Resources */,
+				124C5513228D3C7900B82C94 /* DragAndDropVC.xib in Resources */,
 				0AFCAAD91F176FEB00D60FA4 /* Assets.xcassets in Resources */,
 				12124C7322840DCE003E44A7 /* CustomMapVC.xib in Resources */,
+				124C5515228D4E7D00B82C94 /* snow.jpg in Resources */,
 				0A0738A3208C8986006900EE /* ControllerList.plist in Resources */,
+				12211FDA22954866004D53C5 /* CustomCIFilterVC.xib in Resources */,
 				1249F99522812CE0008F1499 /* BLECentralInteractVC.xib in Resources */,
 				0AFCAAD41F176FEB00D60FA4 /* Main.storyboard in Resources */,
 				1284C9E82276EA2400B8512A /* BLEConnectPeripheralVC.xib in Resources */,
+				124C5519228D4E9600B82C94 /* avatar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,6 +791,7 @@
 				12EE26E622549237003BE489 /* BaseViewController.swift in Sources */,
 				12124C7222840DCE003E44A7 /* CustomMapVC.swift in Sources */,
 				12385B0422855A7600D5645C /* MapAnnotation.swift in Sources */,
+				12211FD922954866004D53C5 /* CustomCIFilterVC.swift in Sources */,
 				0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandler.m in Sources */,
 				1264AC3621F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */,
 				1264AC3421F5A670008AA568 /* LXDBacktraceLogger.m in Sources */,
@@ -778,6 +805,7 @@
 				1249F99422812CE0008F1499 /* BLECentralInteractVC.swift in Sources */,
 				0AFCAACB1F176FEB00D60FA4 /* main.m in Sources */,
 				0AEF051A204698F6003AECAF /* KKSymmetricEncryption.m in Sources */,
+				124C5512228D3C7900B82C94 /* DragAndDropVC.swift in Sources */,
 				0A0653F61F3416F600A9B17A /* TestViewController.m in Sources */,
 				12EE26E8225492A2003BE489 /* HomeViewController.swift in Sources */,
 				127F28D6225347C100BC70CA /* BLEPeripheralViewController.swift in Sources */,
