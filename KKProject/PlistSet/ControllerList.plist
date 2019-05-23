@@ -6,8 +6,8 @@
 	<array>
 		<string>DispatchViewController</string>
 		<string>LoadImageViewController</string>
-		<string>RACViewController</string>
 		<string>TestViewController</string>
+		<string>CollectionViewController</string>
 	</array>
 	<key>Swift</key>
 	<array>

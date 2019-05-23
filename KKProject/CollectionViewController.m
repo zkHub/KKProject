@@ -61,7 +61,7 @@
         _collectionView.dataSource = self;
 
         _collectionView.scrollEnabled = NO;
-        
+        _collectionView.backgroundColor = [UIColor whiteColor];
         [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([UICollectionViewCell class])];
         
         // 长按手势触发 处理 cell 拖动

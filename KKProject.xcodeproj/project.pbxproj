@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A0653F61F3416F600A9B17A /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0653F51F3416F600A9B17A /* TestViewController.m */; };
 		0A07389E208C46BA006900EE /* RACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A07389D208C46BA006900EE /* RACViewController.m */; };
 		0A0738A3208C8986006900EE /* ControllerList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A0738A2208C8986006900EE /* ControllerList.plist */; };
 		0A0BB6661FE3A72D0062C55D /* KKAdjustedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BB6651FE3A72D0062C55D /* KKAdjustedButton.m */; };
@@ -111,8 +110,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0A0653F41F3416F600A9B17A /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		0A0653F51F3416F600A9B17A /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		0A07389C208C46BA006900EE /* RACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACViewController.h; sourceTree = "<group>"; };
 		0A07389D208C46BA006900EE /* RACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACViewController.m; sourceTree = "<group>"; };
 		0A0738A2208C8986006900EE /* ControllerList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ControllerList.plist; sourceTree = "<group>"; };
@@ -326,8 +323,6 @@
 				0ABC244A2088BDE600434692 /* DispatchViewController.m */,
 				0ABC244C2088BE9E00434692 /* LoadImageViewController.h */,
 				0ABC244D2088BE9E00434692 /* LoadImageViewController.m */,
-				0A0653F41F3416F600A9B17A /* TestViewController.h */,
-				0A0653F51F3416F600A9B17A /* TestViewController.m */,
 				0A07389C208C46BA006900EE /* RACViewController.h */,
 				0A07389D208C46BA006900EE /* RACViewController.m */,
 				125501B421D5D2660057AE0A /* CollectionViewController.h */,
@@ -806,7 +801,6 @@
 				0AFCAACB1F176FEB00D60FA4 /* main.m in Sources */,
 				0AEF051A204698F6003AECAF /* KKSymmetricEncryption.m in Sources */,
 				124C5512228D3C7900B82C94 /* DragAndDropVC.swift in Sources */,
-				0A0653F61F3416F600A9B17A /* TestViewController.m in Sources */,
 				12EE26E8225492A2003BE489 /* HomeViewController.swift in Sources */,
 				127F28D6225347C100BC70CA /* BLEPeripheralViewController.swift in Sources */,
 				1213F9AA228952DA008D224A /* AnimationVC.swift in Sources */,

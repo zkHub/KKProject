@@ -74,15 +74,21 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         print("\(str)")
         
         let dataKey = self.dataDict?.allKeys[indexPath.section] as! String
-        let selectClass: UIViewController.Type
+        let selectClass: UIViewController.Type?
         if dataKey == "OC" {
-            selectClass = NSClassFromString(str) as! UIViewController.Type
+            selectClass = NSClassFromString(str) as? UIViewController.Type
         } else {
             // swift由字符串转为类型的时候,如果类型是自定义的,需要在类型字符串前边加上你的项目的名字
-            selectClass = NSClassFromString("KKProject."+str) as! UIViewController.Type
+            let productName = Bundle.main.infoDictionary!["CFBundleName"] as! String
+            selectClass = NSClassFromString("\(productName)."+str) as? UIViewController.Type
         }
-        let vc = selectClass.init()
-        self.navigationController?.pushViewController(vc, animated: true)
+        if selectClass != nil {
+            let vc = selectClass!.init()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            self.showAlert(title: "提示", message: "未发现相关控制器", preferredStyle: .alert)
+        }
+        
     }
     
     
@@ -92,5 +98,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let itemStr = tempArr[indexPath.row] as! String
         return itemStr
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let dataKey = self.dataDict?.allKeys[section] as! String
+        return dataKey
+    }
+    
     
 }
