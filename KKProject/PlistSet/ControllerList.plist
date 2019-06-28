@@ -8,6 +8,7 @@
 		<string>LoadImageViewController</string>
 		<string>TestViewController</string>
 		<string>CollectionViewController</string>
+		<string>ProducerConsumerVC</string>
 	</array>
 	<key>Swift</key>
 	<array>

@@ -23,9 +23,27 @@
     
 //    [self barrier];
 //    [self dispatchGroup];
-    [self dispatchSemaphore];
+//    [self dispatchSemaphore];
+    [self test];
     
 }
+
+- (void)test {
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 50, 100, 100)];
+    label.text = @"123";
+    [self.view addSubview:label];
+    
+    NSOperationQueue *opQueue = [[NSOperationQueue alloc] init];
+    [opQueue addOperationWithBlock:^{
+        [NSThread sleepUntilDate:[NSDate dateWithTimeIntervalSinceNow:4]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            label.text = @"456";
+        });
+    }];
+    
+}
+
+
 
 #pragma mark --信号量实现任务依赖
 - (void)dispatchSemaphore {

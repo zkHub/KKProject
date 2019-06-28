@@ -15,6 +15,8 @@
 		0A4AB69E1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4AB69D1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m */; };
 		0A52741C1F5E9F0400D74D9C /* KKPHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A52741B1F5E9F0400D74D9C /* KKPHTextView.m */; };
 		0A7FC6351F8CB4F4004E4B17 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7FC6341F8CB4F4004E4B17 /* AVFoundation.framework */; };
+		0AB1EBBF22C1C67F005EF041 /* ProducerConsumerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB1EBBE22C1C67F005EF041 /* ProducerConsumerVC.m */; };
+		0AB1EBC322C60B58005EF041 /* StringConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB1EBC222C60B58005EF041 /* StringConst.m */; };
 		0ABC244B2088BDE600434692 /* DispatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC244A2088BDE600434692 /* DispatchViewController.m */; };
 		0ABC244E2088BE9E00434692 /* LoadImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC244D2088BE9E00434692 /* LoadImageViewController.m */; };
 		0AEF051A204698F6003AECAF /* KKSymmetricEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF0519204698F6003AECAF /* KKSymmetricEncryption.m */; };
@@ -124,6 +126,10 @@
 		0A52741A1F5E9F0400D74D9C /* KKPHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKPHTextView.h; sourceTree = "<group>"; };
 		0A52741B1F5E9F0400D74D9C /* KKPHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKPHTextView.m; sourceTree = "<group>"; };
 		0A7FC6341F8CB4F4004E4B17 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0AB1EBBD22C1C67F005EF041 /* ProducerConsumerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProducerConsumerVC.h; sourceTree = "<group>"; };
+		0AB1EBBE22C1C67F005EF041 /* ProducerConsumerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProducerConsumerVC.m; sourceTree = "<group>"; };
+		0AB1EBC122C60B58005EF041 /* StringConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringConst.h; sourceTree = "<group>"; };
+		0AB1EBC222C60B58005EF041 /* StringConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringConst.m; sourceTree = "<group>"; };
 		0ABC24492088BDE600434692 /* DispatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchViewController.h; sourceTree = "<group>"; };
 		0ABC244A2088BDE600434692 /* DispatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchViewController.m; sourceTree = "<group>"; };
 		0ABC244C2088BE9E00434692 /* LoadImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadImageViewController.h; sourceTree = "<group>"; };
@@ -327,6 +333,8 @@
 				0A07389D208C46BA006900EE /* RACViewController.m */,
 				125501B421D5D2660057AE0A /* CollectionViewController.h */,
 				125501B521D5D2660057AE0A /* CollectionViewController.m */,
+				0AB1EBBD22C1C67F005EF041 /* ProducerConsumerVC.h */,
+				0AB1EBBE22C1C67F005EF041 /* ProducerConsumerVC.m */,
 				0A07389F208C4921006900EE /* ImageSet */,
 				0A0738A1208C8921006900EE /* PlistSet */,
 				0AFCAAD21F176FEB00D60FA4 /* Main.storyboard */,
@@ -388,6 +396,8 @@
 				0A0BB6681FE3AD910062C55D /* KKNavigationController.m */,
 				0AEF0518204698F6003AECAF /* KKSymmetricEncryption.h */,
 				0AEF0519204698F6003AECAF /* KKSymmetricEncryption.m */,
+				0AB1EBC122C60B58005EF041 /* StringConst.h */,
+				0AB1EBC222C60B58005EF041 /* StringConst.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -798,6 +808,7 @@
 				0A4AB69E1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m in Sources */,
 				0ABC244E2088BE9E00434692 /* LoadImageViewController.m in Sources */,
 				1249F99422812CE0008F1499 /* BLECentralInteractVC.swift in Sources */,
+				0AB1EBBF22C1C67F005EF041 /* ProducerConsumerVC.m in Sources */,
 				0AFCAACB1F176FEB00D60FA4 /* main.m in Sources */,
 				0AEF051A204698F6003AECAF /* KKSymmetricEncryption.m in Sources */,
 				124C5512228D3C7900B82C94 /* DragAndDropVC.swift in Sources */,
@@ -811,6 +822,7 @@
 				12E83A732251FF7800D691ED /* BLECentralViewController.swift in Sources */,
 				0AFCAAD71F176FEB00D60FA4 /* KKProject.xcdatamodeld in Sources */,
 				1264AC3021F5A670008AA568 /* JX_GCDTimerManager.m in Sources */,
+				0AB1EBC322C60B58005EF041 /* StringConst.m in Sources */,
 				0A2823E0208D945E008234EB /* KKBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
