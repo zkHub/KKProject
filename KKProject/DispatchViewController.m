@@ -11,9 +11,16 @@
 
 @interface DispatchViewController ()
 
+@property (nonatomic, copy) NSString *str;
+
 @end
 
+
+
+
+
 @implementation DispatchViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,12 +28,86 @@
     
     
     
+
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
 //    [self barrier];
 //    [self dispatchGroup];
 //    [self dispatchSemaphore];
-    [self test];
+//    [self test];
+//    [self testQueue];
+    [self testSemaphore];
     
 }
+
+- (void)testSemaphore {
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
+    for (int i = 0; i < 10; i++) {
+        dispatch_async(queue, ^{
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);//如果先wait则初始化时为最大并发数。
+            NSLog(@"begin-%d-%@",i,[NSThread currentThread]);
+            [NSThread sleepForTimeInterval:5];
+            dispatch_semaphore_signal(semaphore);
+            NSLog(@"end-%d-%@",i,[NSThread currentThread]);
+        });
+//        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);//如果后wait则初始化时为最大并发数-1。
+    }
+    
+  
+    
+}
+
+
+
+- (void)testQueue {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    NSLog(@"1--%@",[NSThread currentThread]);
+    dispatch_async(queue, ^{
+//        [NSThread sleepForTimeInterval:2];
+        NSLog(@"2--%@",[NSThread currentThread]);
+        //dispatch_sync 会等34打印才会打印5,dispatch_async则不会等待，而且是queue的话也适用
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            NSLog(@"3--%@",[NSThread currentThread]);
+//            [NSThread sleepForTimeInterval:2];
+            NSLog(@"4--%@",[NSThread currentThread]);
+        });
+        NSLog(@"5--%@",[NSThread currentThread]);
+    });
+//    [NSThread sleepForTimeInterval:2];
+    NSLog(@"6--%@",[NSThread currentThread]);
+    
+    
+}
+
+
+- (void)queue {
+    
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    [user setObject:@"1" forKey:@"1"];
+    [user synchronize];
+    
+    
+    dispatch_queue_t queue = dispatch_queue_create("queue", DISPATCH_QUEUE_CONCURRENT);
+    
+    NSLog(@"%@--1",[NSThread currentThread]);
+    dispatch_async(queue, ^{
+        NSLog(@"%@--2",[NSThread currentThread]);
+        dispatch_sync(queue, ^{//如果是 serial 是串行执行会造成死锁，而 concurrent 允许并发执行。
+            NSLog(@"%@--3",[NSThread currentThread]);
+        });
+    });
+    NSLog(@"%@--4",[NSThread currentThread]);
+
+    
+}
+
 
 - (void)test {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 50, 100, 100)];
@@ -158,6 +239,8 @@
         NSLog(@"4---%@",[NSThread currentThread]);      // 打印当前线程
         
     });
+    
+    
 }
 
 

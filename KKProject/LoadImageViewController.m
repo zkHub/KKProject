@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     imageView.image = [UIImage imageNamed:@"icon_bull"];//30  会cache到 dirty 虚拟内存，系统不能操作
-    
+
     UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(100, 300, 100, 100)];
     NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"icon_bull"];
     imageView2.image = [[UIImage alloc]initWithContentsOfFile:path];//3  这是只是加载到 clean 内存中，系统可以操作

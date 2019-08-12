@@ -18,6 +18,7 @@
 		<string>AnimationVC</string>
 		<string>DragAndDropVC</string>
 		<string>CustomCIFilterVC</string>
+		<string>ScrollViewVC</string>
 	</array>
 </dict>
 </plist>

@@ -15,6 +15,9 @@
 		0A4AB69E1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4AB69D1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m */; };
 		0A52741C1F5E9F0400D74D9C /* KKPHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A52741B1F5E9F0400D74D9C /* KKPHTextView.m */; };
 		0A7FC6351F8CB4F4004E4B17 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7FC6341F8CB4F4004E4B17 /* AVFoundation.framework */; };
+		0A91115022D57CA100D58E44 /* UINavigationController+CheckLeaks.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A91114F22D57CA100D58E44 /* UINavigationController+CheckLeaks.m */; };
+		0A91115222D720D300D58E44 /* ScrollViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A91115122D720D300D58E44 /* ScrollViewVC.swift */; };
+		0A91115522D741BE00D58E44 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A91115422D741BE00D58E44 /* ViewController.m */; };
 		0AB1EBBF22C1C67F005EF041 /* ProducerConsumerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB1EBBE22C1C67F005EF041 /* ProducerConsumerVC.m */; };
 		0AB1EBC322C60B58005EF041 /* StringConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB1EBC222C60B58005EF041 /* StringConst.m */; };
 		0ABC244B2088BDE600434692 /* DispatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC244A2088BDE600434692 /* DispatchViewController.m */; };
@@ -22,7 +25,6 @@
 		0AEF051A204698F6003AECAF /* KKSymmetricEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF0519204698F6003AECAF /* KKSymmetricEncryption.m */; };
 		0AFCAACB1F176FEB00D60FA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAACA1F176FEB00D60FA4 /* main.m */; };
 		0AFCAACE1F176FEB00D60FA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAACD1F176FEB00D60FA4 /* AppDelegate.m */; };
-		0AFCAAD11F176FEB00D60FA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAAD01F176FEB00D60FA4 /* ViewController.m */; };
 		0AFCAAD41F176FEB00D60FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFCAAD21F176FEB00D60FA4 /* Main.storyboard */; };
 		0AFCAAD71F176FEB00D60FA4 /* KKProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCAAD51F176FEB00D60FA4 /* KKProject.xcdatamodeld */; };
 		0AFCAAD91F176FEB00D60FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AFCAAD81F176FEB00D60FA4 /* Assets.xcassets */; };
@@ -126,6 +128,11 @@
 		0A52741A1F5E9F0400D74D9C /* KKPHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKPHTextView.h; sourceTree = "<group>"; };
 		0A52741B1F5E9F0400D74D9C /* KKPHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKPHTextView.m; sourceTree = "<group>"; };
 		0A7FC6341F8CB4F4004E4B17 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0A91114E22D57CA100D58E44 /* UINavigationController+CheckLeaks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+CheckLeaks.h"; sourceTree = "<group>"; };
+		0A91114F22D57CA100D58E44 /* UINavigationController+CheckLeaks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+CheckLeaks.m"; sourceTree = "<group>"; };
+		0A91115122D720D300D58E44 /* ScrollViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewVC.swift; sourceTree = "<group>"; };
+		0A91115322D741BE00D58E44 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0A91115422D741BE00D58E44 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0AB1EBBD22C1C67F005EF041 /* ProducerConsumerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProducerConsumerVC.h; sourceTree = "<group>"; };
 		0AB1EBBE22C1C67F005EF041 /* ProducerConsumerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProducerConsumerVC.m; sourceTree = "<group>"; };
 		0AB1EBC122C60B58005EF041 /* StringConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringConst.h; sourceTree = "<group>"; };
@@ -140,8 +147,6 @@
 		0AFCAACA1F176FEB00D60FA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AFCAACC1F176FEB00D60FA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0AFCAACD1F176FEB00D60FA4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0AFCAACF1F176FEB00D60FA4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0AFCAAD01F176FEB00D60FA4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0AFCAAD31F176FEB00D60FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AFCAAD61F176FEB00D60FA4 /* KKProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KKProject.xcdatamodel; sourceTree = "<group>"; };
 		0AFCAAD81F176FEB00D60FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -306,10 +311,13 @@
 				0AFCAACD1F176FEB00D60FA4 /* AppDelegate.m */,
 				0A2823DE208D945E008234EB /* KKBaseViewController.h */,
 				0A2823DF208D945E008234EB /* KKBaseViewController.m */,
+				0A91114E22D57CA100D58E44 /* UINavigationController+CheckLeaks.h */,
+				0A91114F22D57CA100D58E44 /* UINavigationController+CheckLeaks.m */,
+				0A91115322D741BE00D58E44 /* ViewController.h */,
+				0A91115422D741BE00D58E44 /* ViewController.m */,
 				12EE26E522549237003BE489 /* BaseViewController.swift */,
 				12EE26E7225492A2003BE489 /* HomeViewController.swift */,
-				0AFCAACF1F176FEB00D60FA4 /* ViewController.h */,
-				0AFCAAD01F176FEB00D60FA4 /* ViewController.m */,
+				0A91115122D720D300D58E44 /* ScrollViewVC.swift */,
 				12C1E364224DFC60002B28CD /* WKWebViewController.swift */,
 				12E83A722251FF7800D691ED /* BLECentralViewController.swift */,
 				1284C9E52276EA2400B8512A /* BLEConnectPeripheralVC.swift */,
@@ -568,6 +576,7 @@
 		0AFCAABE1F176FEA00D60FA4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = zhangke;
 				TargetAttributes = {
@@ -789,7 +798,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1264AC3221F5A670008AA568 /* YYFPSLabel.m in Sources */,
-				0AFCAAD11F176FEB00D60FA4 /* ViewController.m in Sources */,
 				0A07389E208C46BA006900EE /* RACViewController.m in Sources */,
 				12C1E365224DFC60002B28CD /* WKWebViewController.swift in Sources */,
 				0AFCAB0A1F177BF000D60FA4 /* NSString+KKHandler.m in Sources */,
@@ -797,6 +805,7 @@
 				12124C7222840DCE003E44A7 /* CustomMapVC.swift in Sources */,
 				12385B0422855A7600D5645C /* MapAnnotation.swift in Sources */,
 				12211FD922954866004D53C5 /* CustomCIFilterVC.swift in Sources */,
+				0A91115522D741BE00D58E44 /* ViewController.m in Sources */,
 				0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandler.m in Sources */,
 				1264AC3621F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */,
 				1264AC3421F5A670008AA568 /* LXDBacktraceLogger.m in Sources */,
@@ -804,7 +813,9 @@
 				0ABC244B2088BDE600434692 /* DispatchViewController.m in Sources */,
 				0AFCAB0C1F177BF000D60FA4 /* KKBackgroudConstantConnect.m in Sources */,
 				0A52741C1F5E9F0400D74D9C /* KKPHTextView.m in Sources */,
+				0A91115022D57CA100D58E44 /* UINavigationController+CheckLeaks.m in Sources */,
 				0AFCAACE1F176FEB00D60FA4 /* AppDelegate.m in Sources */,
+				0A91115222D720D300D58E44 /* ScrollViewVC.swift in Sources */,
 				0A4AB69E1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m in Sources */,
 				0ABC244E2088BE9E00434692 /* LoadImageViewController.m in Sources */,
 				1249F99422812CE0008F1499 /* BLECentralInteractVC.swift in Sources */,
@@ -1009,6 +1020,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8D1B7E25233A7B6B9264835 /* Pods-KKProject.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -1055,6 +1067,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DD50190C4C913B289BA0C87F /* Pods-KKProject.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;

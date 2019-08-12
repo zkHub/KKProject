@@ -18,6 +18,7 @@ class HomeViewController: BaseViewController {
         let tableView = UITableView.init(frame: .zero, style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
+//        tableView.estimatedRowHeight = 0
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         return tableView
     }()
@@ -52,12 +53,14 @@ class HomeViewController: BaseViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        print("numberOfSections")
         return (self.dataDict?.allKeys.count)!;
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let dataKey = self.dataDict?.allKeys[section]
         let tempArr = self.dataDict![dataKey!] as! NSArray
+        print("numberOfRowsInSection" + "\(section)")
         return tempArr.count
     }
     
@@ -65,6 +68,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView .dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
         let str = self.getItem(indexPath)
         cell.textLabel?.text = "\(str)"
+        print("cellForRowAt" + "\(indexPath)")
         return cell
     }
     
@@ -104,5 +108,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return dataKey
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print("heightForRowAt" + "\(indexPath)")
+        return 50
+    }
     
 }
