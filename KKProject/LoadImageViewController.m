@@ -8,6 +8,9 @@
 
 #import "LoadImageViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+
+#import "Run.h"
+
 @interface LoadImageViewController ()
 
 @end
@@ -16,6 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [Run run];
+    
     // Do any additional setup after loading the view.
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     imageView.image = [UIImage imageNamed:@"icon_bull"];//30  会cache到 dirty 虚拟内存，系统不能操作
