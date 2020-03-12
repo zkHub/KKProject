@@ -14,6 +14,7 @@
 		0A2823E0208D945E008234EB /* KKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2823DF208D945E008234EB /* KKBaseViewController.m */; };
 		0A4AB69E1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4AB69D1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m */; };
 		0A52741C1F5E9F0400D74D9C /* KKPHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A52741B1F5E9F0400D74D9C /* KKPHTextView.m */; };
+		0A71680B241A3BD100110655 /* PropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A716809241A3BD100110655 /* PropertyViewController.m */; };
 		0A7FC6351F8CB4F4004E4B17 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7FC6341F8CB4F4004E4B17 /* AVFoundation.framework */; };
 		0A825F7A2303FF9600D5005A /* NSObject+Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A825F792303FF9600D5005A /* NSObject+Run.m */; };
 		0A825F7D2303FFA800D5005A /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A825F7C2303FFA800D5005A /* Run.m */; };
@@ -129,6 +130,8 @@
 		0A4AB69D1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+KKSetSafeObject.m"; sourceTree = "<group>"; };
 		0A52741A1F5E9F0400D74D9C /* KKPHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKPHTextView.h; sourceTree = "<group>"; };
 		0A52741B1F5E9F0400D74D9C /* KKPHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKPHTextView.m; sourceTree = "<group>"; };
+		0A716809241A3BD100110655 /* PropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyViewController.m; sourceTree = "<group>"; };
+		0A71680A241A3BD100110655 /* PropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyViewController.h; sourceTree = "<group>"; };
 		0A7FC6341F8CB4F4004E4B17 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0A825F782303FF9600D5005A /* NSObject+Run.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Run.h"; sourceTree = "<group>"; };
 		0A825F792303FF9600D5005A /* NSObject+Run.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Run.m"; sourceTree = "<group>"; };
@@ -315,6 +318,8 @@
 				0AFCAAFF1F17742900D60FA4 /* Tools */,
 				0AFCAACC1F176FEB00D60FA4 /* AppDelegate.h */,
 				0AFCAACD1F176FEB00D60FA4 /* AppDelegate.m */,
+				0A71680A241A3BD100110655 /* PropertyViewController.h */,
+				0A716809241A3BD100110655 /* PropertyViewController.m */,
 				0A2823DE208D945E008234EB /* KKBaseViewController.h */,
 				0A2823DF208D945E008234EB /* KKBaseViewController.m */,
 				0A91114E22D57CA100D58E44 /* UINavigationController+CheckLeaks.h */,
@@ -814,6 +819,7 @@
 				12EE26E622549237003BE489 /* BaseViewController.swift in Sources */,
 				12124C7222840DCE003E44A7 /* CustomMapVC.swift in Sources */,
 				12385B0422855A7600D5645C /* MapAnnotation.swift in Sources */,
+				0A71680B241A3BD100110655 /* PropertyViewController.m in Sources */,
 				12211FD922954866004D53C5 /* CustomCIFilterVC.swift in Sources */,
 				0A91115522D741BE00D58E44 /* ViewController.m in Sources */,
 				0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandler.m in Sources */,
