@@ -16,6 +16,7 @@ class AnimationVC: BaseViewController {
 
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction))
+        tap.numberOfTapsRequired = 2
         self.view.addGestureRecognizer(tap)
         
         

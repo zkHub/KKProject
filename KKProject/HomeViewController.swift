@@ -35,7 +35,11 @@ class HomeViewController: BaseViewController {
         self.tableView.reloadData()
         // Do any additional setup after loading the view.
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
 
     /*
     // MARK: - Navigation
@@ -111,6 +115,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         print("heightForRowAt" + "\(indexPath)")
         return 50
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        for (num, cell) in self.tableView.visibleCells.enumerated() {
+            if num == 0 {
+                cell.backgroundColor = .red
+            } else {
+                cell.backgroundColor = .white
+            }
+        }
     }
     
 }
