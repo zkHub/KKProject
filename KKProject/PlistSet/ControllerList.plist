@@ -9,6 +9,7 @@
 		<string>TestViewController</string>
 		<string>CollectionViewController</string>
 		<string>ProducerConsumerVC</string>
+		<string>ShadowViewController</string>
 	</array>
 	<key>Swift</key>
 	<array>

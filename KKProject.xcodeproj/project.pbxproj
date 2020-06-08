@@ -12,6 +12,7 @@
 		0A0BB6661FE3A72D0062C55D /* KKAdjustedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BB6651FE3A72D0062C55D /* KKAdjustedButton.m */; };
 		0A0BB6691FE3AD910062C55D /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BB6681FE3AD910062C55D /* KKNavigationController.m */; };
 		0A2823E0208D945E008234EB /* KKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2823DF208D945E008234EB /* KKBaseViewController.m */; };
+		0A28DDB5248DEE4200E372BF /* ShadowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A28DDB4248DEE4200E372BF /* ShadowViewController.m */; };
 		0A4AB69E1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4AB69D1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m */; };
 		0A52741C1F5E9F0400D74D9C /* KKPHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A52741B1F5E9F0400D74D9C /* KKPHTextView.m */; };
 		0A71680B241A3BD100110655 /* PropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A716809241A3BD100110655 /* PropertyViewController.m */; };
@@ -126,6 +127,8 @@
 		0A0BB6681FE3AD910062C55D /* KKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNavigationController.m; sourceTree = "<group>"; };
 		0A2823DE208D945E008234EB /* KKBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBaseViewController.h; sourceTree = "<group>"; };
 		0A2823DF208D945E008234EB /* KKBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBaseViewController.m; sourceTree = "<group>"; };
+		0A28DDB3248DEE4200E372BF /* ShadowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShadowViewController.h; sourceTree = "<group>"; };
+		0A28DDB4248DEE4200E372BF /* ShadowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShadowViewController.m; sourceTree = "<group>"; };
 		0A4AB69C1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+KKSetSafeObject.h"; sourceTree = "<group>"; };
 		0A4AB69D1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+KKSetSafeObject.m"; sourceTree = "<group>"; };
 		0A52741A1F5E9F0400D74D9C /* KKPHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKPHTextView.h; sourceTree = "<group>"; };
@@ -354,6 +357,8 @@
 				0AB1EBBE22C1C67F005EF041 /* ProducerConsumerVC.m */,
 				0ABC244C2088BE9E00434692 /* LoadImageViewController.h */,
 				0ABC244D2088BE9E00434692 /* LoadImageViewController.m */,
+				0A28DDB3248DEE4200E372BF /* ShadowViewController.h */,
+				0A28DDB4248DEE4200E372BF /* ShadowViewController.m */,
 				0A825F782303FF9600D5005A /* NSObject+Run.h */,
 				0A825F792303FF9600D5005A /* NSObject+Run.m */,
 				0A825F7B2303FFA800D5005A /* Run.h */,
@@ -824,6 +829,7 @@
 				0A91115522D741BE00D58E44 /* ViewController.m in Sources */,
 				0AFCAB0B1F177BF000D60FA4 /* UIColor+KKHandler.m in Sources */,
 				1264AC3621F5A670008AA568 /* LXDAppFluecyMonitor.m in Sources */,
+				0A28DDB5248DEE4200E372BF /* ShadowViewController.m in Sources */,
 				1264AC3421F5A670008AA568 /* LXDBacktraceLogger.m in Sources */,
 				0A0BB6661FE3A72D0062C55D /* KKAdjustedButton.m in Sources */,
 				0ABC244B2088BDE600434692 /* DispatchViewController.m in Sources */,
