@@ -5,6 +5,8 @@
 	<key>OC</key>
 	<array>
 		<string>DispatchViewController</string>
+		<string>DanmakuViewController</string>
+		<string>DragViewController</string>
 		<string>LoadImageViewController</string>
 		<string>ViewController</string>
 		<string>CollectionViewController</string>

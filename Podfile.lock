@@ -17,6 +17,7 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - HJDanmaku (1.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MJExtension (3.2.1)
@@ -36,6 +37,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - FMDB
+  - "HJDanmaku (from `git@git.100tal.com:wangxiao_xueyanios_3rdcomponents/HJDanmaku.git`, branch `dev`)"
   - Masonry
   - MBProgressHUD
   - MJExtension
@@ -64,9 +66,20 @@ SPEC REPOS:
     - SocketRocket
     - YYKit
 
+EXTERNAL SOURCES:
+  HJDanmaku:
+    :branch: dev
+    :git: "git@git.100tal.com:wangxiao_xueyanios_3rdcomponents/HJDanmaku.git"
+
+CHECKOUT OPTIONS:
+  HJDanmaku:
+    :commit: 285bf48ed26446536e760892974c8cd936cda3b0
+    :git: "git@git.100tal.com:wangxiao_xueyanios_3rdcomponents/HJDanmaku.git"
+
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  HJDanmaku: bc32d0437a80bcbcccee34cd39bbc6a1a067cdb2
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
@@ -79,6 +92,7 @@ SPEC CHECKSUMS:
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: e049d404bb12166fc337425170eb2941775a7952
+
+PODFILE CHECKSUM: 9701130d9fc3c425a69e89a2695e2acaa525a302
 
 COCOAPODS: 1.8.4

@@ -27,7 +27,8 @@ target 'KKProject' do
     pod 'SocketRocket'
 
     pod 'SnapKit'
-    
+    pod "HJDanmaku",:git => "git@git.100tal.com:wangxiao_xueyanios_3rdcomponents/HJDanmaku.git",:branch => "dev"
+
     #私有库
 #    pod 'podLibTest'
 
