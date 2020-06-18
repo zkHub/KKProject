@@ -12,6 +12,7 @@
 #import "KKAdjustedButton.h"
 #import <Masonry/Masonry.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()<UIDocumentPickerDelegate>
 
@@ -43,7 +44,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    
+    [UtilityHandler showIvarPropertyMethodForClass:[AVAudioSession class]];
+
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     [UtilityHandler showIvarPropertyMethodForClass:[UIButton class]];

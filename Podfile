@@ -1,7 +1,7 @@
 #添加使用库的地址
-source 'https://gitee.com/zkHub/MySpecs.git'
+#source 'https://gitee.com/zkHub/MySpecs.git'
 source 'https://github.com/CocoaPods/Specs.git'
-
+#source 'https://cdn.cocoapods.org/'
 
 # Uncomment the next line to define a global platform for your project
  platform :ios, '8.0'

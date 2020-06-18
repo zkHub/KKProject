@@ -1,36 +1,41 @@
 //
-//  KKBaseViewController.m
+//  MallPresentViewController.m
 //  KKProject
 //
-//  Created by 张柯 on 2018/4/23.
-//  Copyright © 2018年 zhangke. All rights reserved.
+//  Created by zk on 2020/5/9.
+//  Copyright © 2020 zhangke. All rights reserved.
 //
 
-#import "KKBaseViewController.h"
-#import "PrefixHeader.h"
+#import "MallPresentViewController.h"
+#import "MallCouponUsingPopoverView.h"
 
-@interface KKBaseViewController ()
+
+
+
+@interface MallPresentViewController ()
+
+
 
 @end
 
-@implementation KKBaseViewController
+@implementation MallPresentViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
-- (void)dealloc {
-    NSLog(@"%@-dealloc",self);
-}
 
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [MallCouponUsingPopoverView popCouponUsingView];
+
+}
 
 
 

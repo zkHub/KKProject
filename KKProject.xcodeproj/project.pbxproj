@@ -74,6 +74,14 @@
 		12EE26E622549237003BE489 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EE26E522549237003BE489 /* BaseViewController.swift */; };
 		12EE26E8225492A2003BE489 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EE26E7225492A2003BE489 /* HomeViewController.swift */; };
 		3CA01A50093785FEA5777A91 /* Pods_KKProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93D1ECD53CB2105A2163ECA /* Pods_KKProject.framework */; };
+		58DD5FB32466B40D00207FCE /* MallPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DD5FB22466B40D00207FCE /* MallPresentViewController.m */; };
+		58DD5FB62466B9FD00207FCE /* UIScreen+WXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DD5FB42466B9FD00207FCE /* UIScreen+WXUtility.m */; };
+		58DD5FBA24692A8900207FCE /* MallOverallCouponView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DD5FB924692A8900207FCE /* MallOverallCouponView.m */; };
+		58DD5FBD246932C500207FCE /* MallCouponHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DD5FBC246932C500207FCE /* MallCouponHeaderView.m */; };
+		58DD5FC02469338D00207FCE /* MallOverallCouponCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DD5FBF2469338D00207FCE /* MallOverallCouponCell.m */; };
+		58EBBB3A246BD150000299B6 /* WXTermLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EBBB39246BD14F000299B6 /* WXTermLabel.m */; };
+		58EBBB3D246BD287000299B6 /* NSDictionary+WXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EBBB3B246BD287000299B6 /* NSDictionary+WXUtility.m */; };
+		58EBBB40246BED3F000299B6 /* MallCouponUsingPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EBBB3F246BED3F000299B6 /* MallCouponUsingPopoverView.m */; };
 		9A3F381992FD31DD53BC24F0 /* Pods_KKProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677B7E1466ACA14B4BBCF537 /* Pods_KKProjectUITests.framework */; };
 		C4CF5CC82C25DC7731F6C56D /* Pods_KKProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5F3D8F2A4519E97EDD89CD /* Pods_KKProjectTests.framework */; };
 		EAC65F351A80A2E38064D271 /* Pods_KKProject_MonitorFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9023E92D6629C2F2846D36BC /* Pods_KKProject_MonitorFlow.framework */; };
@@ -222,6 +230,22 @@
 		455A40355481092452BC8126 /* Pods-KKProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectUITests/Pods-KKProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		473B8CBAD0C54311411F0DCF /* Pods-KKProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectTests/Pods-KKProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F5F3D8F2A4519E97EDD89CD /* Pods_KKProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58DD5FB12466B40D00207FCE /* MallPresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MallPresentViewController.h; sourceTree = "<group>"; };
+		58DD5FB22466B40D00207FCE /* MallPresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MallPresentViewController.m; sourceTree = "<group>"; };
+		58DD5FB42466B9FD00207FCE /* UIScreen+WXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+WXUtility.m"; sourceTree = "<group>"; };
+		58DD5FB52466B9FD00207FCE /* UIScreen+WXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+WXUtility.h"; sourceTree = "<group>"; };
+		58DD5FB824692A8900207FCE /* MallOverallCouponView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MallOverallCouponView.h; sourceTree = "<group>"; };
+		58DD5FB924692A8900207FCE /* MallOverallCouponView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MallOverallCouponView.m; sourceTree = "<group>"; };
+		58DD5FBB246932C500207FCE /* MallCouponHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MallCouponHeaderView.h; sourceTree = "<group>"; };
+		58DD5FBC246932C500207FCE /* MallCouponHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MallCouponHeaderView.m; sourceTree = "<group>"; };
+		58DD5FBE2469338D00207FCE /* MallOverallCouponCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MallOverallCouponCell.h; sourceTree = "<group>"; };
+		58DD5FBF2469338D00207FCE /* MallOverallCouponCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MallOverallCouponCell.m; sourceTree = "<group>"; };
+		58EBBB38246BD14F000299B6 /* WXTermLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXTermLabel.h; sourceTree = "<group>"; };
+		58EBBB39246BD14F000299B6 /* WXTermLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXTermLabel.m; sourceTree = "<group>"; };
+		58EBBB3B246BD287000299B6 /* NSDictionary+WXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WXUtility.m"; sourceTree = "<group>"; };
+		58EBBB3C246BD287000299B6 /* NSDictionary+WXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WXUtility.h"; sourceTree = "<group>"; };
+		58EBBB3E246BED3F000299B6 /* MallCouponUsingPopoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MallCouponUsingPopoverView.h; sourceTree = "<group>"; };
+		58EBBB3F246BED3F000299B6 /* MallCouponUsingPopoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MallCouponUsingPopoverView.m; sourceTree = "<group>"; };
 		677B7E1466ACA14B4BBCF537 /* Pods_KKProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C0207214D753F99E33D26B /* Pods-KKProject-MonitorFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProject-MonitorFlow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KKProject-MonitorFlow/Pods-KKProject-MonitorFlow.debug.xcconfig"; sourceTree = "<group>"; };
 		808F01D4673F520342B18035 /* Pods-KKProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KKProjectTests/Pods-KKProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -363,6 +387,7 @@
 				0A825F792303FF9600D5005A /* NSObject+Run.m */,
 				0A825F7B2303FFA800D5005A /* Run.h */,
 				0A825F7C2303FFA800D5005A /* Run.m */,
+				58DD5FB7246926B000207FCE /* Mall */,
 				0A07389F208C4921006900EE /* ImageSet */,
 				0A0738A1208C8921006900EE /* PlistSet */,
 				0AFCAAD21F176FEB00D60FA4 /* Main.storyboard */,
@@ -406,6 +431,8 @@
 		0AFCAAFF1F17742900D60FA4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				58DD5FB52466B9FD00207FCE /* UIScreen+WXUtility.h */,
+				58DD5FB42466B9FD00207FCE /* UIScreen+WXUtility.m */,
 				0AFCAB011F177BF000D60FA4 /* KKUtilityClass.h */,
 				0AFCAB021F177BF000D60FA4 /* KKUtilityClass.m */,
 				0AFCAB031F177BF000D60FA4 /* NSString+KKHandler.h */,
@@ -426,6 +453,8 @@
 				0AEF0519204698F6003AECAF /* KKSymmetricEncryption.m */,
 				0AB1EBC122C60B58005EF041 /* StringConst.h */,
 				0AB1EBC222C60B58005EF041 /* StringConst.m */,
+				58EBBB3C246BD287000299B6 /* NSDictionary+WXUtility.h */,
+				58EBBB3B246BD287000299B6 /* NSDictionary+WXUtility.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -508,6 +537,25 @@
 				BCCDF405873AE0A9337F4AA6 /* Pods-KKProject-MonitorFlow.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		58DD5FB7246926B000207FCE /* Mall */ = {
+			isa = PBXGroup;
+			children = (
+				58DD5FB12466B40D00207FCE /* MallPresentViewController.h */,
+				58DD5FB22466B40D00207FCE /* MallPresentViewController.m */,
+				58EBBB3E246BED3F000299B6 /* MallCouponUsingPopoverView.h */,
+				58EBBB3F246BED3F000299B6 /* MallCouponUsingPopoverView.m */,
+				58DD5FB824692A8900207FCE /* MallOverallCouponView.h */,
+				58DD5FB924692A8900207FCE /* MallOverallCouponView.m */,
+				58DD5FBB246932C500207FCE /* MallCouponHeaderView.h */,
+				58DD5FBC246932C500207FCE /* MallCouponHeaderView.m */,
+				58DD5FBE2469338D00207FCE /* MallOverallCouponCell.h */,
+				58DD5FBF2469338D00207FCE /* MallOverallCouponCell.m */,
+				58EBBB38246BD14F000299B6 /* WXTermLabel.h */,
+				58EBBB39246BD14F000299B6 /* WXTermLabel.m */,
+			);
+			path = Mall;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -720,7 +768,8 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-KKProject/Pods-KKProject-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-KKProject/Pods-KKProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Reachability-framework/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -728,7 +777,6 @@
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/OpenUDID/OpenUDID.framework",
-				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -737,6 +785,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
@@ -744,7 +793,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenUDID.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -753,7 +801,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KKProject/Pods-KKProject-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KKProject/Pods-KKProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AA3C36EEB2BB9A4C9FB6FD0A /* [CP] Check Pods Manifest.lock */ = {
@@ -819,6 +867,7 @@
 			files = (
 				1264AC3221F5A670008AA568 /* YYFPSLabel.m in Sources */,
 				0A07389E208C46BA006900EE /* RACViewController.m in Sources */,
+				58DD5FBD246932C500207FCE /* MallCouponHeaderView.m in Sources */,
 				12C1E365224DFC60002B28CD /* WKWebViewController.swift in Sources */,
 				0AFCAB0A1F177BF000D60FA4 /* NSString+KKHandler.m in Sources */,
 				12EE26E622549237003BE489 /* BaseViewController.swift in Sources */,
@@ -836,9 +885,11 @@
 				0AFCAB0C1F177BF000D60FA4 /* KKBackgroudConstantConnect.m in Sources */,
 				0A52741C1F5E9F0400D74D9C /* KKPHTextView.m in Sources */,
 				0A91115022D57CA100D58E44 /* UINavigationController+CheckLeaks.m in Sources */,
+				58EBBB40246BED3F000299B6 /* MallCouponUsingPopoverView.m in Sources */,
 				0AFCAACE1F176FEB00D60FA4 /* AppDelegate.m in Sources */,
 				0A91115222D720D300D58E44 /* ScrollViewVC.swift in Sources */,
 				0A4AB69E1FDFBC7100C6E0B9 /* NSMutableDictionary+KKSetSafeObject.m in Sources */,
+				58DD5FBA24692A8900207FCE /* MallOverallCouponView.m in Sources */,
 				0ABC244E2088BE9E00434692 /* LoadImageViewController.m in Sources */,
 				1249F99422812CE0008F1499 /* BLECentralInteractVC.swift in Sources */,
 				0AB1EBBF22C1C67F005EF041 /* ProducerConsumerVC.m in Sources */,
@@ -850,8 +901,12 @@
 				127F28D6225347C100BC70CA /* BLEPeripheralViewController.swift in Sources */,
 				1213F9AA228952DA008D224A /* AnimationVC.swift in Sources */,
 				0A0BB6691FE3AD910062C55D /* KKNavigationController.m in Sources */,
+				58EBBB3A246BD150000299B6 /* WXTermLabel.m in Sources */,
+				58DD5FC02469338D00207FCE /* MallOverallCouponCell.m in Sources */,
 				125501B621D5D2660057AE0A /* CollectionViewController.m in Sources */,
 				0AFCAB091F177BF000D60FA4 /* KKUtilityClass.m in Sources */,
+				58DD5FB62466B9FD00207FCE /* UIScreen+WXUtility.m in Sources */,
+				58EBBB3D246BD287000299B6 /* NSDictionary+WXUtility.m in Sources */,
 				1284C9E72276EA2400B8512A /* BLEConnectPeripheralVC.swift in Sources */,
 				12E83A732251FF7800D691ED /* BLECentralViewController.swift in Sources */,
 				0AFCAAD71F176FEB00D60FA4 /* KKProject.xcdatamodeld in Sources */,
@@ -859,6 +914,7 @@
 				0A825F7D2303FFA800D5005A /* Run.m in Sources */,
 				0AB1EBC322C60B58005EF041 /* StringConst.m in Sources */,
 				0A2823E0208D945E008234EB /* KKBaseViewController.m in Sources */,
+				58DD5FB32466B40D00207FCE /* MallPresentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1044,12 +1100,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8D1B7E25233A7B6B9264835 /* Pods-KKProject.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = FM6CWNE4AZ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1091,7 +1147,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DD50190C4C913B289BA0C87F /* Pods-KKProject.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;

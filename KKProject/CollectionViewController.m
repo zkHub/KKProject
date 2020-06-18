@@ -10,6 +10,11 @@
 #import "Masonry/Masonry.h"
 
 @interface CollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+{
+    UIView *_playerView;
+
+}
+@property (nonatomic, strong) UIView *playerView;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -19,6 +24,13 @@
 @end
 
 @implementation CollectionViewController
+
+
++ (CollectionViewController *)colletionViewTest {
+    CollectionViewController *c = [[CollectionViewController alloc] init];
+    c.playerView = [UIView new];
+    return c;
+}
 
 
 - (NSMutableArray *)dataArray {
@@ -35,9 +47,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    CollectionViewController *c = [CollectionViewController colletionViewTest];
+    NSLog(@"%@--%@",c.playerView,c->_playerView);
+    
     [self.view addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.view);
+//        make.edges.mas_equalTo(self.view);
+        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop);
+        make.left.right.mas_equalTo(self.view);
+        make.height.mas_equalTo(120);
     }];
     
 }
@@ -55,12 +73,13 @@
         flowLayout.minimumLineSpacing = 10;
         flowLayout.minimumInteritemSpacing = 10;
         flowLayout.itemSize = CGSizeMake(50, 50);
-
+        flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
 
-        _collectionView.scrollEnabled = NO;
+//        _collectionView.scrollEnabled = NO;
         _collectionView.backgroundColor = [UIColor whiteColor];
         [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([UICollectionViewCell class])];
         

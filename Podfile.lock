@@ -18,15 +18,15 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - Masonry (1.1.0)
-  - MBProgressHUD (1.1.0)
-  - MJExtension (3.1.0)
-  - MJRefresh (3.2.0)
+  - MBProgressHUD (1.2.0)
+  - MJExtension (3.2.1)
+  - MJRefresh (3.3.1)
   - OpenUDID (1.0.0)
   - Reachability (3.2)
   - ReactiveObjC (3.1.1)
-  - SDWebImage (5.0.6):
-    - SDWebImage/Core (= 5.0.6)
-  - SDWebImage/Core (5.0.6)
+  - SDWebImage (5.6.1):
+    - SDWebImage/Core (= 5.6.1)
+  - SDWebImage/Core (5.6.1)
   - SnapKit (4.2.0)
   - SocketRocket (0.5.1)
   - YYKit (1.0.9):
@@ -49,7 +49,7 @@ DEPENDENCIES:
   - YYKit
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - FMDB
     - Masonry
@@ -68,17 +68,17 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
-  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
+  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+  SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: b8f2c21b8196781d9370fd4da8455220d7e96896
+PODFILE CHECKSUM: e049d404bb12166fc337425170eb2941775a7952
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.8.4

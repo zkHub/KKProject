@@ -6,10 +6,11 @@
 	<array>
 		<string>DispatchViewController</string>
 		<string>LoadImageViewController</string>
-		<string>TestViewController</string>
+		<string>ViewController</string>
 		<string>CollectionViewController</string>
 		<string>ProducerConsumerVC</string>
 		<string>ShadowViewController</string>
+		<string>MallPresentViewController</string>
 	</array>
 	<key>Swift</key>
 	<array>

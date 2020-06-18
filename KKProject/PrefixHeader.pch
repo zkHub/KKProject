@@ -13,6 +13,8 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import "KKProject-Swift.h"
-
+#import "YYKit.h"
+#import "Masonry.h"
+#import "NSDictionary+WXUtility.h"
 
 #endif /* PrefixHeader_pch */
