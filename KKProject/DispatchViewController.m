@@ -144,18 +144,18 @@
             int tag = i;
             NSLog(@"%d-%@\n%@",tag,urlStr,[NSThread currentThread]);
 
-            [sessionManager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-                
-            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                NSLog(@"success-%d-%@\n%@",tag,urlStr,[NSThread currentThread]);
-                //信号量+1，会唤醒之前正在等待的线程
-                dispatch_semaphore_signal(semaphore);
-                
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                NSLog(@"failure-%d-%@\n%@",tag,urlStr,[NSThread currentThread]);
-                dispatch_semaphore_signal(semaphore);
-                
-            }];
+//            [sessionManager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+//
+//            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//                NSLog(@"success-%d-%@\n%@",tag,urlStr,[NSThread currentThread]);
+//                //信号量+1，会唤醒之前正在等待的线程
+//                dispatch_semaphore_signal(semaphore);
+//
+//            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//                NSLog(@"failure-%d-%@\n%@",tag,urlStr,[NSThread currentThread]);
+//                dispatch_semaphore_signal(semaphore);
+//
+//            }];
             //信号量-1，当返回值小于0时，函数返回会等待，阻塞当前线程
             dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
             NSLog(@"%d",tag);
@@ -180,17 +180,17 @@
         NSString *urlStr = array[i];
         int tag = i;
         dispatch_group_enter(group);//标志着一个任务追加到 group
-        [sessionManager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-            
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSLog(@"success-%d-%@\n%@",tag,urlStr,[NSThread currentThread]);
-            dispatch_group_leave(group);//标志着一个任务离开了 group
-            
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            NSLog(@"failure-%d-%@\n%@",tag,urlStr,[NSThread currentThread]);
-            dispatch_group_leave(group);
-            
-        }];
+//        [sessionManager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+//            
+//        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//            NSLog(@"success-%d-%@\n%@",tag,urlStr,[NSThread currentThread]);
+//            dispatch_group_leave(group);//标志着一个任务离开了 group
+//            
+//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//            NSLog(@"failure-%d-%@\n%@",tag,urlStr,[NSThread currentThread]);
+//            dispatch_group_leave(group);
+//            
+//        }];
         
     }
     //当 group 中未执行完毕任务数为0的时候，才会使dispatch_group_wait解除阻塞，以及执行追加到dispatch_group_notify中的任务。

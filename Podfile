@@ -4,7 +4,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 #source 'https://cdn.cocoapods.org/'
 
 # Uncomment the next line to define a global platform for your project
- platform :ios, '8.0'
+ platform :ios, '11.0'
 
 pod 'Reachability'
 
@@ -25,26 +25,36 @@ target 'KKProject' do
     pod 'ReactiveObjC'
     pod 'FMDB'
     pod 'SocketRocket'
-
     pod 'SnapKit'
-    pod "HJDanmaku",:git => "git@git.100tal.com:wangxiao_xueyanios_3rdcomponents/HJDanmaku.git",:branch => "dev"
-
+    pod "HJDanmaku"
+#    pod 'MMKV'
+    
     #私有库
 #    pod 'podLibTest'
 
 target 'MonitorFlow' do
-        
+
 end
-
-
-  target 'KKProjectTests' do
-    inherit! :search_paths
-    # Pods for testing
+#
+#
+#  target 'KKProjectTests' do
+#    inherit! :search_paths
+#    # Pods for testing
+#  end
+#
+#  target 'KKProjectUITests' do
+#    inherit! :search_paths
+#    # Pods for testing
+#  end
+  
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+      end
+    end
   end
 
-  target 'KKProjectUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  
 
 end
