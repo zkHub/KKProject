@@ -10,7 +10,7 @@
 #import <Reachability/Reachability.h>
 #include <ifaddrs.h>
 #include <net/if.h>
-
+#import <AFNetworking/AFNetworking.h>
 
 @implementation MonitorData
 
@@ -31,7 +31,8 @@
 
 
 - (void)startMonitor {
-    
+//    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+
     [self currentFlow];
     self.timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(refreshFlow) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
@@ -46,7 +47,7 @@
     
     // 上传、下载
     //不需要连通网络获取的是总的数据
-    Reachability *reachability = [Reachability reachabilityWithHostName:@"Yes-Cui"];
+    Reachability *reachability = [Reachability reachabilityWithHostName:@"www.apple.com"];
     MonitorData *monitor = [self getMonitorDataDetail];
     switch (reachability.currentReachabilityStatus) {
         case ReachableViaWiFi:

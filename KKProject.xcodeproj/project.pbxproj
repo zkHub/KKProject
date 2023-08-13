@@ -78,6 +78,19 @@
 		12EE26E622549237003BE489 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EE26E522549237003BE489 /* BaseViewController.swift */; };
 		12EE26E8225492A2003BE489 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EE26E7225492A2003BE489 /* HomeViewController.swift */; };
 		3CA01A50093785FEA5777A91 /* Pods_KKProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93D1ECD53CB2105A2163ECA /* Pods_KKProject.framework */; };
+		587329A22A1F5B50000F9566 /* WXVideoResourceLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 587329862A1F5B50000F9566 /* WXVideoResourceLog.m */; };
+		587329A32A1F5B50000F9566 /* WXVideoResourceLoaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 587329872A1F5B50000F9566 /* WXVideoResourceLoaderManager.m */; };
+		587329A42A1F5B50000F9566 /* WXVideoCacheAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5873298A2A1F5B50000F9566 /* WXVideoCacheAction.m */; };
+		587329A52A1F5B50000F9566 /* WXVideoCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5873298C2A1F5B50000F9566 /* WXVideoCacheConfig.m */; };
+		587329A62A1F5B50000F9566 /* WXVideoCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5873298D2A1F5B50000F9566 /* WXVideoCacheManager.m */; };
+		587329A72A1F5B50000F9566 /* WXVideoCacheWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5873298F2A1F5B50000F9566 /* WXVideoCacheWorker.m */; };
+		587329A82A1F5B50000F9566 /* WXVideoLoadRequestWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 587329922A1F5B50000F9566 /* WXVideoLoadRequestWorker.m */; };
+		587329A92A1F5B50000F9566 /* NSString+resMd5.m in Sources */ = {isa = PBXBuildFile; fileRef = 587329932A1F5B50000F9566 /* NSString+resMd5.m */; };
+		587329AA2A1F5B50000F9566 /* WXVideoResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 587329952A1F5B50000F9566 /* WXVideoResourceLoader.m */; };
+		587329AB2A1F5B50000F9566 /* WXVideoDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 587329982A1F5B50000F9566 /* WXVideoDownloader.m */; };
+		587329AC2A1F5B50000F9566 /* WXVideoContentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 587329992A1F5B50000F9566 /* WXVideoContentInfo.m */; };
+		587329AD2A1F5B50000F9566 /* WXMediaCachePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5873299F2A1F5B50000F9566 /* WXMediaCachePlayer.m */; };
+		587329AE2A1F5B50000F9566 /* WXCachePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 587329A02A1F5B50000F9566 /* WXCachePlayer.m */; };
 		58DD5FB32466B40D00207FCE /* MallPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DD5FB22466B40D00207FCE /* MallPresentViewController.m */; };
 		58DD5FB62466B9FD00207FCE /* UIScreen+WXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DD5FB42466B9FD00207FCE /* UIScreen+WXUtility.m */; };
 		58DD5FBA24692A8900207FCE /* MallOverallCouponView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DD5FB924692A8900207FCE /* MallOverallCouponView.m */; };
@@ -238,6 +251,32 @@
 		12EE26E522549237003BE489 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		12EE26E7225492A2003BE489 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		26961DDEA30955676FA6D99A /* Pods-KKProject-MonitorFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKProject-MonitorFlow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KKProject-MonitorFlow/Pods-KKProject-MonitorFlow.debug.xcconfig"; sourceTree = "<group>"; };
+		587329862A1F5B50000F9566 /* WXVideoResourceLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXVideoResourceLog.m; sourceTree = "<group>"; };
+		587329872A1F5B50000F9566 /* WXVideoResourceLoaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXVideoResourceLoaderManager.m; sourceTree = "<group>"; };
+		587329892A1F5B50000F9566 /* WXVideoCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXVideoCacheManager.h; sourceTree = "<group>"; };
+		5873298A2A1F5B50000F9566 /* WXVideoCacheAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXVideoCacheAction.m; sourceTree = "<group>"; };
+		5873298B2A1F5B50000F9566 /* WXVideoCacheWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXVideoCacheWorker.h; sourceTree = "<group>"; };
+		5873298C2A1F5B50000F9566 /* WXVideoCacheConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXVideoCacheConfig.m; sourceTree = "<group>"; };
+		5873298D2A1F5B50000F9566 /* WXVideoCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXVideoCacheManager.m; sourceTree = "<group>"; };
+		5873298E2A1F5B50000F9566 /* WXVideoCacheAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXVideoCacheAction.h; sourceTree = "<group>"; };
+		5873298F2A1F5B50000F9566 /* WXVideoCacheWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXVideoCacheWorker.m; sourceTree = "<group>"; };
+		587329902A1F5B50000F9566 /* WXVideoCacheConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXVideoCacheConfig.h; sourceTree = "<group>"; };
+		587329912A1F5B50000F9566 /* WXVideoDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXVideoDownloader.h; sourceTree = "<group>"; };
+		587329922A1F5B50000F9566 /* WXVideoLoadRequestWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXVideoLoadRequestWorker.m; sourceTree = "<group>"; };
+		587329932A1F5B50000F9566 /* NSString+resMd5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+resMd5.m"; sourceTree = "<group>"; };
+		587329942A1F5B50000F9566 /* WXVideoContentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXVideoContentInfo.h; sourceTree = "<group>"; };
+		587329952A1F5B50000F9566 /* WXVideoResourceLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXVideoResourceLoader.m; sourceTree = "<group>"; };
+		587329962A1F5B50000F9566 /* WXVideoResourceLoaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXVideoResourceLoaderManager.h; sourceTree = "<group>"; };
+		587329972A1F5B50000F9566 /* WXVideoResourceLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXVideoResourceLog.h; sourceTree = "<group>"; };
+		587329982A1F5B50000F9566 /* WXVideoDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXVideoDownloader.m; sourceTree = "<group>"; };
+		587329992A1F5B50000F9566 /* WXVideoContentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXVideoContentInfo.m; sourceTree = "<group>"; };
+		5873299A2A1F5B50000F9566 /* NSString+resMd5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+resMd5.h"; sourceTree = "<group>"; };
+		5873299B2A1F5B50000F9566 /* WXVideoLoadRequestWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXVideoLoadRequestWorker.h; sourceTree = "<group>"; };
+		5873299D2A1F5B50000F9566 /* WXMediaCachePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXMediaCachePlayer.h; sourceTree = "<group>"; };
+		5873299E2A1F5B50000F9566 /* WXCachePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCachePlayer.h; sourceTree = "<group>"; };
+		5873299F2A1F5B50000F9566 /* WXMediaCachePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMediaCachePlayer.m; sourceTree = "<group>"; };
+		587329A02A1F5B50000F9566 /* WXCachePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCachePlayer.m; sourceTree = "<group>"; };
+		587329A12A1F5B50000F9566 /* WXVideoResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXVideoResourceLoader.h; sourceTree = "<group>"; };
 		58DD5FB12466B40D00207FCE /* MallPresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MallPresentViewController.h; sourceTree = "<group>"; };
 		58DD5FB22466B40D00207FCE /* MallPresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MallPresentViewController.m; sourceTree = "<group>"; };
 		58DD5FB42466B9FD00207FCE /* UIScreen+WXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+WXUtility.m"; sourceTree = "<group>"; };
@@ -485,6 +524,7 @@
 		1264AC2321F5A670008AA568 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				587329842A1F5B50000F9566 /* WXMediaCachePlayer */,
 				1264AC2421F5A670008AA568 /* JX_GCDTimer */,
 				1264AC2721F5A670008AA568 /* YYFPSLabel */,
 				1264AC2A21F5A670008AA568 /* LXDAppFluecyMonitor */,
@@ -541,6 +581,63 @@
 				A4C38BB855B30B0ED768F470 /* Pods-KKProject-MonitorFlow.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		587329842A1F5B50000F9566 /* WXMediaCachePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				587329852A1F5B50000F9566 /* Classes */,
+			);
+			path = WXMediaCachePlayer;
+			sourceTree = "<group>";
+		};
+		587329852A1F5B50000F9566 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				587329882A1F5B50000F9566 /* cache */,
+				5873299A2A1F5B50000F9566 /* NSString+resMd5.h */,
+				587329932A1F5B50000F9566 /* NSString+resMd5.m */,
+				5873299C2A1F5B50000F9566 /* Player */,
+				587329942A1F5B50000F9566 /* WXVideoContentInfo.h */,
+				587329992A1F5B50000F9566 /* WXVideoContentInfo.m */,
+				587329912A1F5B50000F9566 /* WXVideoDownloader.h */,
+				587329982A1F5B50000F9566 /* WXVideoDownloader.m */,
+				5873299B2A1F5B50000F9566 /* WXVideoLoadRequestWorker.h */,
+				587329922A1F5B50000F9566 /* WXVideoLoadRequestWorker.m */,
+				587329A12A1F5B50000F9566 /* WXVideoResourceLoader.h */,
+				587329952A1F5B50000F9566 /* WXVideoResourceLoader.m */,
+				587329962A1F5B50000F9566 /* WXVideoResourceLoaderManager.h */,
+				587329872A1F5B50000F9566 /* WXVideoResourceLoaderManager.m */,
+				587329972A1F5B50000F9566 /* WXVideoResourceLog.h */,
+				587329862A1F5B50000F9566 /* WXVideoResourceLog.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		587329882A1F5B50000F9566 /* cache */ = {
+			isa = PBXGroup;
+			children = (
+				5873298E2A1F5B50000F9566 /* WXVideoCacheAction.h */,
+				5873298A2A1F5B50000F9566 /* WXVideoCacheAction.m */,
+				587329902A1F5B50000F9566 /* WXVideoCacheConfig.h */,
+				5873298C2A1F5B50000F9566 /* WXVideoCacheConfig.m */,
+				587329892A1F5B50000F9566 /* WXVideoCacheManager.h */,
+				5873298D2A1F5B50000F9566 /* WXVideoCacheManager.m */,
+				5873298B2A1F5B50000F9566 /* WXVideoCacheWorker.h */,
+				5873298F2A1F5B50000F9566 /* WXVideoCacheWorker.m */,
+			);
+			path = cache;
+			sourceTree = "<group>";
+		};
+		5873299C2A1F5B50000F9566 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				5873299E2A1F5B50000F9566 /* WXCachePlayer.h */,
+				587329A02A1F5B50000F9566 /* WXCachePlayer.m */,
+				5873299D2A1F5B50000F9566 /* WXMediaCachePlayer.h */,
+				5873299F2A1F5B50000F9566 /* WXMediaCachePlayer.m */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		58DD5FB7246926B000207FCE /* Mall */ = {
@@ -838,6 +935,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1264AC3221F5A670008AA568 /* YYFPSLabel.m in Sources */,
+				587329A92A1F5B50000F9566 /* NSString+resMd5.m in Sources */,
 				0A07389E208C46BA006900EE /* RACViewController.m in Sources */,
 				58DD5FBD246932C500207FCE /* MallCouponHeaderView.m in Sources */,
 				12C1E365224DFC60002B28CD /* WKWebViewController.swift in Sources */,
@@ -846,6 +944,7 @@
 				12124C7222840DCE003E44A7 /* CustomMapVC.swift in Sources */,
 				12385B0422855A7600D5645C /* MapAnnotation.swift in Sources */,
 				0A71680B241A3BD100110655 /* PropertyViewController.m in Sources */,
+				587329A52A1F5B50000F9566 /* WXVideoCacheConfig.m in Sources */,
 				12211FD922954866004D53C5 /* CustomCIFilterVC.swift in Sources */,
 				0A27C37D249A2216008C8B3E /* DanmakuModel.m in Sources */,
 				0A91115522D741BE00D58E44 /* ViewController.m in Sources */,
@@ -854,6 +953,9 @@
 				0A28DDB5248DEE4200E372BF /* ShadowViewController.m in Sources */,
 				1264AC3421F5A670008AA568 /* LXDBacktraceLogger.m in Sources */,
 				0A0BB6661FE3A72D0062C55D /* KKAdjustedButton.m in Sources */,
+				587329AC2A1F5B50000F9566 /* WXVideoContentInfo.m in Sources */,
+				587329A32A1F5B50000F9566 /* WXVideoResourceLoaderManager.m in Sources */,
+				587329A72A1F5B50000F9566 /* WXVideoCacheWorker.m in Sources */,
 				0ABC244B2088BDE600434692 /* DispatchViewController.m in Sources */,
 				0AFCAB0C1F177BF000D60FA4 /* KKBackgroudConstantConnect.m in Sources */,
 				0A52741C1F5E9F0400D74D9C /* KKPHTextView.m in Sources */,
@@ -868,29 +970,37 @@
 				1249F99422812CE0008F1499 /* BLECentralInteractVC.swift in Sources */,
 				0AB1EBBF22C1C67F005EF041 /* ProducerConsumerVC.m in Sources */,
 				0AFCAACB1F176FEB00D60FA4 /* main.m in Sources */,
+				587329AB2A1F5B50000F9566 /* WXVideoDownloader.m in Sources */,
 				0AEF051A204698F6003AECAF /* KKSymmetricEncryption.m in Sources */,
 				0A825F7A2303FF9600D5005A /* NSObject+Run.m in Sources */,
 				124C5512228D3C7900B82C94 /* DragAndDropVC.swift in Sources */,
 				12EE26E8225492A2003BE489 /* HomeViewController.swift in Sources */,
 				127F28D6225347C100BC70CA /* BLEPeripheralViewController.swift in Sources */,
+				587329A22A1F5B50000F9566 /* WXVideoResourceLog.m in Sources */,
 				1213F9AA228952DA008D224A /* AnimationVC.swift in Sources */,
 				0A0BB6691FE3AD910062C55D /* KKNavigationController.m in Sources */,
 				58EBBB3A246BD150000299B6 /* WXTermLabel.m in Sources */,
 				58DD5FC02469338D00207FCE /* MallOverallCouponCell.m in Sources */,
 				125501B621D5D2660057AE0A /* CollectionViewController.m in Sources */,
 				0AFCAB091F177BF000D60FA4 /* KKUtilityClass.m in Sources */,
+				587329AD2A1F5B50000F9566 /* WXMediaCachePlayer.m in Sources */,
 				58DD5FB62466B9FD00207FCE /* UIScreen+WXUtility.m in Sources */,
 				58EBBB3D246BD287000299B6 /* NSDictionary+WXUtility.m in Sources */,
 				1284C9E72276EA2400B8512A /* BLEConnectPeripheralVC.swift in Sources */,
 				12E83A732251FF7800D691ED /* BLECentralViewController.swift in Sources */,
 				0AFCAAD71F176FEB00D60FA4 /* KKProject.xcdatamodeld in Sources */,
 				0A27C377249A2160008C8B3E /* DanmakuCell.m in Sources */,
+				587329AA2A1F5B50000F9566 /* WXVideoResourceLoader.m in Sources */,
 				1264AC3021F5A670008AA568 /* JX_GCDTimerManager.m in Sources */,
 				0A825F7D2303FFA800D5005A /* Run.m in Sources */,
 				0AB1EBC322C60B58005EF041 /* StringConst.m in Sources */,
 				0A27C371249866AA008C8B3E /* DragViewController.m in Sources */,
 				0A2823E0208D945E008234EB /* KKBaseViewController.m in Sources */,
+				587329A82A1F5B50000F9566 /* WXVideoLoadRequestWorker.m in Sources */,
 				58DD5FB32466B40D00207FCE /* MallPresentViewController.m in Sources */,
+				587329A62A1F5B50000F9566 /* WXVideoCacheManager.m in Sources */,
+				587329AE2A1F5B50000F9566 /* WXCachePlayer.m in Sources */,
+				587329A42A1F5B50000F9566 /* WXVideoCacheAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
